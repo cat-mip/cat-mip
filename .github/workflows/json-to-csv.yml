@@ -5,24 +5,12 @@ on:
     branches: [main]
     paths:
       - "terms.json"
-      - "scripts/json_to_csv.py"
-  pull_request:
-    types: [closed]
-    branches: [main]
-    paths:
-      - "terms.json"
-      - "scripts/json_to_csv.py"
   workflow_dispatch:
-  schedule:
-    # Daily refresh at 6:17 AM UTC
-    - cron: "17 6 * * *"
 
 jobs:
   export-csv:
-    if: github.event_name == 'push' || github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    if: github.event_name == 'push' || github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout
@@ -45,12 +33,6 @@ jobs:
             --input "terms.json" \
             --outdir "generated-csvs" \
             --std-version "v1.0"
-
-      - name: Commit CSV dataset
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore(data): regenerate prompts CSV for v1.0"
-          file_pattern: "generated-csvs/*.csv"
 
       - name: Upload CSV as artifact
         uses: actions/upload-artifact@v4
