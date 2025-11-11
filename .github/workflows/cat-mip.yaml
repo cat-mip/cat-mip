@@ -1,0 +1,104 @@
+name: CAT-MIP CI
+
+on:
+  push:
+    branches: [ '**' ]  touch
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install yamllint
+        run: pip install yamllint
+
+      - name: Lint YAML
+        run: |
+          yamllint standards/ || (echo "YAML lint failed — fix before merging" && exit 1)
+
+  build-and-deploy:
+    needs: lint  # ← only runs if lint passes
+    if: github.ref == 'refs/heads/main'  # ← only on main
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate site
+        run: python scripts/build_site.py
+
+      - name: Build JSON & SKOS
+        run: |
+          python scripts/build_json.py
+          python scripts/build_skos.py
+
+      - name: Export CSV
+        run: |
+          python scripts/json_to_csv.py \
+            --input "build/terms.json" \
+            --outdir "generated-csvs" \
+            --std-version "v1.0"
+
+      - name: Build PDF
+        run: python scripts/json_to_pdf.py --input "build/terms.json" --outdir "build"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cat-mip-assets
+          path: |
+            build/terms.json
+            build/terms-dev.json
+            build/cat-mip-skos.ttl
+            build/*.pdf
+            generated-csvs/*.csv
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build MkDocs
+        run: mkdocs build --site-dir site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ github.run_number }}
+          name: CAT-MIP v${{ github.run_number }}
+          files: |
+            build/terms.json
+            build/terms-dev.json
+            build/cat-mip-skos.ttl
+            build/*.pdf
+            generated-csvs/*.csv
+          body: |
+            Automated release from commit ${{ github.sha }}
