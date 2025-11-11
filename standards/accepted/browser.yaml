@@ -1,0 +1,50 @@
+id: 'CAT-MIP-000000031'
+term: Browser
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Browser is a client application used to access and interact with content and services on the World Wide Web. It renders web pages, processes scripts, and facilitates communication with remote servers using protocols such as HTTPS. In MSP and IT environments, browsers are used to access web-based portals, dashboards, APIs, and SaaS platforms. They may also be managed through policies for security, compliance, and performance.'
+history:
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Client Browser
+  - Desktop Browser
+  - GUI Browser
+  - Internet Browser
+  - Web Browser
+relationships:
+  - 'Browser accesses Web Page, Portal, or API'
+  - 'Browser isControlledBy Policy, Extension, or Configuration'
+  - 'Browser isMonitoredFor Usage, Version, or Threats'
+  - Browser mayBeIsolatedBy Remote Browser or Sandbox
+  - 'Browser runs on Endpoint, Workstation, or Virtual Desktop'
+prompt_examples:
+  - Deploy the web security extension to all Chrome browsers.
+  - Ensure all browsers in the environment are running the latest secure version.
+  - Report which browsers are used most frequently across all managed endpoints.
+  - Restrict browser access to approved domains only for student users.
+agent_execution:
+  interpretation: 'When a prompt refers to a "Browser," the AI agent will'
+  actions:
+    - 'Apply browser-related policies or updates as needed'
+    - Identify installed browser applications on the target endpoint or environment
+    - 'Log browser-related actions or events for auditing and reporting'
+    - 'Monitor for unsafe browsing activity, outdated versions, or non-compliant settings'
+    - 'Retrieve version, configuration, and extension data for compliance and security'

@@ -1,0 +1,50 @@
+id: 'CAT-MIP-000000261'
+term: MAC Address
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A MAC Address (Media Access Control Address) is a unique hardware identifier assigned to a network interface card (NIC) used for communication on a local network segment. It is typically represented as a 12-digit hexadecimal value separated by colons or dashes (e.g., 00:1A:2B:3C:4D:5E). In MSP and IT operations, MAC addresses are used for device identification, inventory tracking, access control, and network diagnostics.'
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Ethernet Address
+  - Hardware Address
+  - Layer 2 Address
+  - NIC Address
+  - Physical Address
+relationships:
+  - MAC Address identifies Endpoint on LocalNetwork
+  - MAC Address isAssignedTo NetworkInterface or Device
+  - MAC Address isCollectedBy Discovery Tool or Agent
+  - MAC Address isUsedIn DHCP Reservations and Access Policies
+  - MAC Address mayBeMappedTo IP Address or Hostname
+prompt_examples:
+  - Block devices not recognized by MAC address in the guest network.
+  - Export a list of MAC addresses and IPs for all online printers.
+  - 'Find the device with MAC address 00:1C:B3:09:85:15 on the network map.'
+  - List all MAC addresses associated with managed endpoints at the Austin site.
+agent_execution:
+  interpretation: 'When a prompt refers to a "MAC Address," the AI agent will'
+  actions:
+    - 'Log any actions involving MAC-based identification or control'
+    - 'Match MAC addresses to known endpoints, vendors, or IP addresses'
+    - 'Provide detailed reports or summaries including MAC-to-IP mapping'
+    - 'Search the device inventory, network discovery data, or ARP tables'
+    - 'Take action such as tagging, isolating, or blocking a device based on MAC identification'

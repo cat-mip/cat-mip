@@ -1,0 +1,49 @@
+id: 'CAT-MIP-000000365'
+term: Tenant
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: "A Customer is an organization or individual that receives IT services from an MSP. In technical terms, this is represented as a Tenant -- a logically isolated environment within an MSP's management system. Each Tenant contains its own devices, users, policies, and configuration, and does not have visibility into other tenants. \"Customer\" is the business-facing term; \"Tenant\" is the system-facing canonical term."
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Client
+  - Customer
+  - End Customer
+  - Site
+relationships:
+  - Tenant belongsTo Distributor
+  - Tenant has Device
+  - Tenant has Policy
+  - Tenant has SLA or ServiceAgreement
+  - Tenant has Sites
+  - Tenant isManagedBy MSP
+  - Tenant isMonitoredBy Agent
+prompt_examples:
+  - Apply the new antivirus policy to all tenants in the finance sector.
+  - List all devices owned by the customer 'Lighthouse Legal Group'.
+  - "Which customers haven't checked in within the last 24 hours?"
+agent_execution:
+  interpretation: 'When the prompt includes "Customer," the agent maps this to a Tenant object in the system. It will'
+  actions:
+    - Enforce data and action boundaries so one tenant cannot affect another
+    - Resolve the correct tenant based on name or ID
+    - 'Retrieve or apply policies, scripts, or configurations owned by the MSP'
+    - Scope queries or actions to that tenant's isolated environment

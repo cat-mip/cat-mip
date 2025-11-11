@@ -1,0 +1,50 @@
+id: 'CAT-MIP-000000091'
+term: CLI
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'CLI (Command-Line Interface) is a text-based interface that allows users or systems to interact with software, operating systems, or devices by typing commands. The CLI provides direct access to system functions, configuration, and diagnostics without a graphical user interface. In MSP and IT environments, CLI tools are widely used for scripting, automation, remote troubleshooting, and advanced configuration.'
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Command Line
+  - Console
+  - Prompt
+  - 'Shell (context-specific)'
+  - Terminal
+relationships:
+  - CLI executes Command or Script
+  - 'CLI interfacesWith OS, Application, or Network Device'
+  - 'CLI isAccessedBy Technician, Script, or Remote Agent'
+  - 'CLI isUsedFor Automation, Troubleshooting, or Configuration'
+  - CLI mayBeLoggedIn Session History or Audit Log
+prompt_examples:
+  - Execute the patch deployment script via CLI on endpoints missing updates.
+  - Log all CLI activity performed by admin accounts.
+  - Run a CLI command to restart the DNS service on all Linux servers.
+  - 'Which CLI tool is available for managing VMware hosts?'
+agent_execution:
+  interpretation: 'When a prompt refers to "CLI," the AI agent will'
+  actions:
+    - 'Capture output, errors, and system responses'
+    - Execute the requested command or script using available permissions
+    - 'Identify the appropriate CLI environment based on the target system (e.g., Bash, PowerShell, Command Prompt)'
+    - 'Log all CLI interactions for auditing, error tracking, or rollback'
+    - Validate results and proceed with next steps if part of a workflow

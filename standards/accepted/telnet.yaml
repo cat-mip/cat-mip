@@ -1,0 +1,49 @@
+id: 'CAT-MIP-000000363'
+term: Telnet
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'Telnet is a legacy network protocol used to provide text-based, remote command-line access to devices over TCP. Unlike SSH, Telnet does not encrypt the session, making it insecure for use over untrusted networks. In MSP and IT environments, Telnet may still be used for legacy systems, internal diagnostics, or device configuration, but it is generally replaced by more secure alternatives.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Remote Terminal
+  - TCP Port 23 Access
+  - Telnet Session
+  - Unencrypted CLI Access
+relationships:
+  - Telnet connects User or Script to Remote Device
+  - 'Telnet isEnabledOn Router, Switch, or Legacy System'
+  - Telnet isReplacedBy SSH in Secure Environments
+  - Telnet isUsedFor Configuration or Testing
+  - Telnet mayBeBlockedBy Firewall or Policy
+prompt_examples:
+  - 'Disable Telnet on all managed switches and enforce SSH-only access.'
+  - List all devices with Telnet services still enabled.
+  - Test connectivity to port 25 using Telnet for SMTP troubleshooting.
+  - Use Telnet to access the legacy PBX system for a configuration check.
+agent_execution:
+  interpretation: 'When a prompt refers to "Telnet," the AI agent will'
+  actions:
+    - Attempt to establish a session to the target IP and port using Telnet
+    - Execute diagnostic or configuration commands if access is successful
+    - Log Telnet usage events for audit or deprecation planning
+    - Recommend or initiate migration to secure alternatives like SSH
+    - 'Warn if Telnet is being used over insecure channels or in non-compliant environments'

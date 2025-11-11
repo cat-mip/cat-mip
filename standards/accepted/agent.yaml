@@ -1,0 +1,48 @@
+id: 'CAT-MIP-000000021'
+term: Agent
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'An Agent is a lightweight software component installed on a managed Device (Asset) that enables remote monitoring, management, automation, and communication with company or integrated systems. Agents collect telemetry, enforce policies, run scripts, initiate backups, and trigger alerts based on configured logic. In the MSP context, agents are essential for endpoint visibility, proactive issue resolution, and executing AI-assisted or automated workflows.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Endpoint Agent
+  - Management Agent
+  - Monitoring Agent
+relationships:
+  - Agent enables Action or Automation
+  - Agent executes Script or Task
+  - Agent isInstalledOn Device
+  - 'Agent isManagedBy Product (e.g., N-central, Cove)'
+  - 'Agent monitors Performance, Security, and PolicyCompliance'
+  - Agent reportsTo Platform or OrchestrationService
+prompt_examples:
+  - "Check if the N-central agent is online on device 'HR-LT-003'."
+  - List all agents running outdated versions across the 'Finance' tenant.
+  - Trigger the backup task via the local agent on all Windows servers.
+agent_execution:
+  interpretation: 'When a prompt refers to an "Agent," the AI agent will'
+  actions:
+    - 'Check health, version, and last check-in time'
+    - "Determine the agent's capabilities (e.g., scripting, monitoring, backup)"
+    - Identify the installed agent on the specified device(s)
+    - 'Initiate agent-driven tasks such as running scripts, collecting metrics, or applying policies'
+    - 'Return results or errors from agent-initiated actions'

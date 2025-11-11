@@ -1,0 +1,49 @@
+id: 'CAT-MIP-000000291'
+term: Network
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Network is a collection of interconnected devices, systems, and services that communicate using standard protocols. In the DevOps Infrastructure Ontology, it includes both physical infrastructure (e.g., routers, switches, cabling) and logical constructs (e.g., IP subnets, VLANs, virtual networks). In the MSP and vendor context, networks are monitored for availability, performance, security, and connectivity, often segmented by customer, site, or service.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - 'LAN / WAN (context-specific -- use when defining scope)'
+  - Segment
+  - Subnet
+  - Virtual Network (when hosted in cloud environments)
+relationships:
+  - Network connects Device or Service
+  - Network contains IPAddressRange
+  - Network hasTopology including Nodes and Links
+  - Network isAssociatedWith Site or Tenant
+  - Network isMonitoredBy Agent or NMS (Network Monitoring System)
+  - Network isSecuredBy Firewall or AccessControlList
+prompt_examples:
+  - Check for latency issues in the network segment at the Dallas site.
+  - "Is the backup network isolated from production traffic in tenant 'HealthBridge'?"
+  - "List all devices connected to the 'Guest Wi-Fi' network."
+agent_execution:
+  interpretation: 'When a prompt refers to a "Network," the AI agent will'
+  actions:
+    - Determine what devices or services are connected to or dependent on the network
+    - 'Identify policy violations or anomalies (e.g., unauthorized access, unencrypted traffic)'
+    - 'Identify the relevant network(s) based on name, address range, or associated site/tenant'
+    - 'Retrieve monitoring metrics (latency, packet loss, uptime, etc.)'
+    - 'Trigger diagnostics, isolation, or notification workflows if thresholds are breached'

@@ -1,0 +1,48 @@
+id: 'CAT-MIP-000000081'
+term: Certificate
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Certificate is a digital credential that authenticates the identity of an entity (such as a user, device, or service) and facilitates secure communication through encryption. Certificates are issued by a Certificate Authority (CA) and are integral to Public Key Infrastructure (PKI). They ensure data integrity, confidentiality, and authenticity in digital communications.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Digital Certificate
+  - Public Key Certificate
+  - SSL/TLS Certificate
+  - X.509 Certificate
+relationships:
+  - Certificate hasValidityPeriod StartDate and EndDate
+  - Certificate isAssignedTo Device or User
+  - Certificate isIssuedBy Certificate Authority
+  - Certificate isRevokedBy Certificate Authority
+  - Certificate isStoredIn Certificate Repository
+  - Certificate isUsedFor Authentication or Encryption
+prompt_examples:
+  - "Check if the SSL certificate for 'client-portal.example.com' is valid."
+  - List all certificates expiring within the next 30 days.
+  - "Revoke the compromised certificate assigned to device 'ENG-LT-05'."
+agent_execution:
+  interpretation: 'When a prompt includes "Certificate," the AI agent will'
+  actions:
+    - 'Identify the specific certificate(s) based on context (e.g., domain name, device ID)'
+    - 'Perform actions like validation checks, renewal processes, or revocation procedures'
+    - 'Retrieve certificate details such as issuer, subject, validity period, and status'
+    - Update relevant systems or repositories with the current certificate status

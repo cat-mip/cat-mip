@@ -1,0 +1,47 @@
+id: 'CAT-MIP-000000342'
+term: Script
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Script is a predefined, executable set of instructions used to automate actions on devices, services, or platforms. In the MSP context, scripts are widely used for tasks such as remediation, deployment, configuration, and monitoring. Scripts can be written in various languages (e.g., PowerShell, Bash, Python) and are executed manually, on a schedule, or as part of automation policies triggered by events or conditions.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Automation Script
+  - Command Script
+  - Playbook
+  - Routine
+relationships:
+  - Script isExecutedOn Device or CloudResource
+  - Script isPartOf AutomationPolicy or Workflow
+  - Script isTriggeredBy Event or Schedule
+  - Script produces OutputData or modifies Configuration
+prompt_examples:
+  - List all scripts that have failed in the last 24 hours.
+  - Run the disk cleanup script on all Windows servers in the 'Finance' tenant.
+  - Schedule the user offboarding script for every Friday at 6 PM.
+agent_execution:
+  interpretation: 'When a prompt refers to a "Script," the AI agent will'
+  actions:
+    - 'Enforce execution limits or policy constraints (e.g., tenant isolation, script approval)'
+    - Locate the script in the approved script repository or library
+    - 'Monitor for success/failure, capture output, and log results'
+    - 'Trigger the script as requested (immediate, scheduled, or conditional)'
+    - 'Validate execution scope (target devices, permissions, timing)'

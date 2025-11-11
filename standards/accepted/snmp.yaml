@@ -1,0 +1,49 @@
+id: 'CAT-MIP-000000357'
+term: SNMP
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'SNMP (Simple Network Management Protocol) is a widely used protocol for monitoring and managing devices on IP networks. It enables IT systems to collect data from network devices such as routers, switches, firewalls, servers, and printers. SNMP agents expose device metrics, statuses, and configurations, which can be queried or acted upon by monitoring tools. In MSP environments, SNMP is essential for device discovery, health checks, and alerting.'
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Network Monitoring Protocol
+  - SNMP Polling
+  - SNMP Trap
+  - Simple Network Management Protocol
+relationships:
+  - SNMP communicatesVia Port 161 (Polling) or 162 (Traps)
+  - 'SNMP exposes OID, Metric, or Status'
+  - SNMP isEnabledOn Device or Interface
+  - SNMP isUsedBy Probe or Monitoring Tool
+  - SNMP mayTrigger Alert or Script
+prompt_examples:
+  - List devices that failed SNMP authentication in the last 24 hours.
+  - 'Poll all SNMP-enabled switches for current interface utilization.'
+  - Trigger an alert when SNMP reports a fan failure on any core router.
+  - 'What is the OID for CPU usage on Fortinet firewalls using SNMP?'
+agent_execution:
+  interpretation: 'When a prompt refers to "SNMP," the AI agent will'
+  actions:
+    - 'Apply any configured thresholds or escalation rules for SNMP-derived data'
+    - 'Collect and interpret metrics such as uptime, bandwidth, temperature, or error rates'
+    - Handle SNMP traps or unsolicited messages and route them to the alerting system
+    - 'Query SNMP-enabled devices using the appropriate OIDs and community strings'
+    - Record SNMP poll results and triggered actions in the monitoring system or audit log

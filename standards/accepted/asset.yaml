@@ -1,0 +1,42 @@
+id: 'CAT-MIP-000000051'
+term: Asset
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: "An Asset refers to any physical or logical entity managed by portfolio products. This includes, but is not limited to, endpoints (e.g., laptops, desktops, servers), edge systems, mobile devices, cloud resources, Entra (Azure AD) identities, and Microsoft 365 services. Assets represent the lowest-level managed object within a hierarchy. Use the canonical term Asset instead of 'Device,' which is a limited synonym. Assets can exist in various environments--on-prem, cloud, hybrid--and across tenants, sites, and service organizations."
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Device
+  - Endpoint
+  - 'Laptop (ambiguous -- use only when specifically identifying form factor)'
+  - Node (legacy)
+relationships:
+  - Asset belongsTo Tenant
+  - Asset contains Software
+  - Asset has Policy
+  - Asset has RiskScore
+  - Asset hasStatus HealthState
+  - Asset isMonitoredBy Agent
+  - Asset runs Script
+prompt_examples:
+  - "Reboot the asset named 'ENG-WORKSTATION-03' if it's unresponsive."
+  - 'Run the disk cleanup script on all Windows 10 assets with over 80% disk usage.'
+  - "What's the patch compliance status of all assets in the 'Sales' department?"

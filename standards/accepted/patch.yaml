@@ -1,0 +1,50 @@
+id: 'CAT-MIP-000000333'
+term: Patch
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Patch is a specific update package intended to correct known issues, fix vulnerabilities, or improve functionality in existing software. Patches may be distributed by vendors as part of regular update cycles (e.g., Microsoft Patch Tuesday), or released ad hoc in response to critical security flaws. In the MSP context, patches are applied across multiple tenants, devices, or sites using automation policies, schedules, or manual triggers.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Hotfix
+  - Security Fix
+  - Software Update
+  - Update (use only when not referring to feature upgrades)
+relationships:
+  - Patch hasSeverity Level
+  - Patch isAppliedTo Device or Software
+  - Patch isMonitoredBy ComplianceEngine
+  - Patch isPartOf UpdatePolicy
+  - Patch isPublishedBy Vendor
+  - Patch isScheduledBy AutomationPolicy
+prompt_examples:
+  - "Apply all high-severity patches to servers in the 'Finance' tenant before Friday."
+  - Generate a report of missing security patches for all Windows 11 laptops.
+  - 'Patch the application Foo immediately for tenant Jonson & Jonson'
+  - 'What patches failed to install on the devices at the Boston site?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Patch," the AI agent will'
+  actions:
+    - Determine installation status on applicable devices
+    - 'Identify the relevant patch based on vendor, product, severity, or classification'
+    - 'If applicable, check for required reboots or follow-up tasks'
+    - 'Log results, including success/failure per device, and update compliance reports'
+    - 'Schedule or trigger patch installation (immediate, deferred, or staged)'

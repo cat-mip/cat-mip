@@ -1,0 +1,50 @@
+id: 'CAT-MIP-000000343'
+term: Serial Number
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Serial Number is a unique identifier assigned to a specific hardware or software asset by the manufacturer or vendor. It is used to distinguish one physical or virtual item from another for purposes such as inventory tracking, warranty management, licensing, and support. In MSP and IT environments, serial numbers are commonly used to manage devices like laptops, servers, network hardware, and backup appliances.'
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Asset Tag
+  - Device ID
+  - Hardware ID
+  - Product Serial
+  - S/N
+relationships:
+  - Serial Number identifies Device or Component
+  - 'Serial Number isCollectedBy Discovery, Agent, or ManualEntry'
+  - Serial Number isStoredIn Inventory or CMDB
+  - Serial Number isUsedFor Warranty Check or Support Lookup
+  - Serial Number mayBeMappedTo Asset Record or Purchase Info
+prompt_examples:
+  - Check if the serial number 9B2K3T1 is still under manufacturer warranty.
+  - Export a list of serial numbers for all backup appliances with errors this month.
+  - Retrieve the serial numbers of all Dell laptops at the Toronto office.
+  - 'Which devices in the inventory are missing serial numbers?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Serial Number," the AI agent will'
+  actions:
+    - Record actions involving serial number lookups or updates in the system log
+    - 'Retrieve related data such as device model, location, status, and warranty info'
+    - Search the inventory or asset database for matching serial numbers
+    - 'Trigger workflows related to warranty validation, asset tracking, or vendor escalation'
+    - Validate the uniqueness and format of the serial number

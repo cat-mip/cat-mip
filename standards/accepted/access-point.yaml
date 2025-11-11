@@ -1,0 +1,50 @@
+id: 'CAT-MIP-000000010'
+term: Access Point
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'An Access Point is a network device that allows wireless-capable devices to connect to a wired network using Wi-Fi or other wireless standards. It acts as a bridge between wireless clients and the wired infrastructure, managing traffic, authentication, and radio frequency (RF) coverage. In MSP and IT environments, access points are centrally monitored and managed to ensure reliable wireless connectivity, performance, and security.'
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - AP
+  - Access Point broadcasts SSID and enforces Wireless Policy
+  - Access Point serves Wireless Client or Endpoint
+  - 'Apply changes such as SSID updates, channel adjustments, or firmware upgrades'
+  - Hotspot (informal or public context)
+  - Locate the access point in the inventory or network topology
+  - Log all actions related to access point configuration and status for auditing
+  - 'Retrieve and report configuration, client associations, and health metrics'
+  - 'Wi-Fi AP'
+  - Wireless Access Point
+  - 'Wireless Controller (context-specific)'
+relationships:
+  - Access Point isConnectedTo Switch or Router
+  - 'Access Point isManagedBy Controller, Agent, or Cloud Console'
+  - 'Access Point isMonitoredFor Signal Strength, Client Load, or Interference'
+  - 'Monitor real-time performance and connectivity issues'
+prompt_examples:
+  - Configure SSID and VLAN tagging on all indoor access points.
+  - List all access points at the Denver office and their client count.
+  - Restart the rooftop access point remotely due to packet loss reports.
+  - 'Which access points are using outdated firmware?'
+agent_execution:
+  interpretation: 'When a prompt refers to an "Access Point," the AI agent will'
+  actions:

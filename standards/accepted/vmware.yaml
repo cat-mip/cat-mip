@@ -1,0 +1,50 @@
+id: 'CAT-MIP-000000369'
+term: VMware
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'VMware is a widely used virtualization and cloud infrastructure platform that enables the creation, management, and operation of virtual machines (VMs) and virtualized environments. VMware products support server, desktop, and network virtualization, allowing multiple workloads to run on shared physical hardware. In MSP and IT environments, VMware is often integrated for infrastructure management, backup, monitoring, and automation.'
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - ESXi Host
+  - VMware Infrastructure
+  - VMware Platform
+  - Virtualization Stack
+  - vSphere Environment
+relationships:
+  - 'VMware exposes Metrics, Inventory, and ConfigurationData'
+  - VMware hosts Virtual Machine
+  - 'VMware integratesWith Backup, Discovery, and Patch Tools'
+  - VMware isManagedBy vCenter or API
+  - 'VMware isMonitoredBy Agent, Probe, or SNMP'
+prompt_examples:
+  - Add the new ESXi host to the existing VMware inventory group.
+  - Backup all virtual machines in the VMware cluster nightly.
+  - List all VMware hosts with over 80 percent CPU usage.
+  - 'Which VMware guest VMs are running outdated tools?'
+agent_execution:
+  interpretation: 'When a prompt refers to "VMware," the AI agent will'
+  actions:
+    - Connect to the VMware environment via vSphere API or integration endpoint
+    - 'Execute tasks such as backup, VM tagging, or automated provisioning'
+    - Log interactions and changes for audit and compliance reporting
+    - Monitor performance metrics and status indicators for virtualization health
+    - 'Retrieve inventory and configuration data on hosts, VMs, and resource usage'

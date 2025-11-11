@@ -1,0 +1,49 @@
+id: 'CAT-MIP-000000354'
+term: Service
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Service is a functional capability delivered through software, infrastructure, or human operations. In the DevOps Infrastructure Ontology, a service may be a system-level process (e.g., a daemon or microservice), a cloud-hosted API, or a business-facing offering (e.g., backup service, monitoring service). In the MSP context, services may be IT services provided to tenants (e.g., endpoint protection), or software-based services running on devices or in the cloud.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - API Service
+  - Feature
+  - Managed Service
+  - System Service
+relationships:
+  - Service dependsOn Software or Configuration
+  - Service isConsumedBy User or Tenant
+  - Service isHostedOn Device or Cloud
+  - Service isMonitoredBy Agent
+  - Service isPartOf ServiceOffering or SLA
+  - Service isProvidedBy Product or Vendor
+prompt_examples:
+  - Check if the backup service is running on all servers in the 'Legal' tenant.
+  - List all services provided to the customer 'BrightPath Health'.
+  - "Which services are failing health checks in the 'EU Data Center'?"
+agent_execution:
+  interpretation: 'When a prompt refers to a "Service," the AI agent will'
+  actions:
+    - 'Correlate with configuration, dependencies, or SLA status'
+    - 'Determine whether the service is a system-level process or a business-level offering'
+    - 'Identify the devices, tenants, or environments associated with that service'
+    - 'Query service status (running, failed, degraded, stopped)'
+    - 'Take remediation steps if authorized (e.g., restart, notify, escalate)'

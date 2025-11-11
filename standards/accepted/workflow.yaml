@@ -1,0 +1,48 @@
+id: 'CAT-MIP-000000374'
+term: Workflow
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Workflow is a structured sequence of tasks or activities designed to accomplish a specific objective within a system or process. In the DevOps Infrastructure Ontology, a workflow represents the orchestration of actions, often automated, that manage and control various aspects of IT infrastructure and software development. Workflows are essential for ensuring consistency, efficiency, and repeatability in operations.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Automation Sequence
+  - Operational Procedure
+  - Process Flow
+  - Task Pipeline
+relationships:
+  - Workflow consistsOf Actions or Tasks
+  - Workflow hasOutcome Result or StateChange
+  - 'Workflow interactsWith Resources such as Devices, Services, or Applications'
+  - Workflow isManagedBy OrchestrationTool or AutomationPlatform
+  - Workflow isTriggeredBy Event or Condition
+prompt_examples:
+  - Initiate the onboarding workflow for a new employee in the 'Sales' department.
+  - Modify the backup workflow to include encryption before data transfer.
+  - 'What workflows are currently active for patch management across all servers?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Workflow," the AI agent will'
+  actions:
+    - 'Execute the defined sequence of tasks, ensuring each step is completed successfully.'
+    - Identify the specific workflow based on context and naming conventions.
+    - Log the execution details for auditing and compliance purposes.
+    - Monitor the workflow's progress and handle exceptions or errors as defined.
+    - Provide feedback or notifications upon completion or if intervention is required.

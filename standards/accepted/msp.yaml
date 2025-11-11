@@ -1,0 +1,51 @@
+id: 'CAT-MIP-000000271'
+term: MSP
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'An MSP (Managed Service Provider) is a type of Partner responsible for delivering IT services to one or more customer environments (tenants). MSPs use vendor products to monitor, manage, secure, and automate infrastructure for their clients. They typically own the relationship with the end customer, administer devices, apply policies, run scripts, and handle service tickets.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - 'Admin Organization (rare/legacy -- avoid)'
+  - IT Provider
+  - Partner (when the context is service delivery)
+  - Service Provider
+relationships:
+  - MSP applies Policy
+  - MSP has AccessControl for Agent
+  - MSP isProvisionedBy Distributor or vendor
+  - MSP isSupportedBy vendor or Distributor
+  - MSP manages Tenant
+  - 'MSP owns Asset | Device'
+  - MSP provides Service to End Customer
+  - MSP runs Script
+prompt_examples:
+  - Check for outdated antivirus software across all MSPs in the Western region.
+  - List all tenants managed by the MSP 'BrightNet Solutions'.
+  - "What scripts are frequently used by the MSP 'DataSecure' during onboarding?"
+agent_execution:
+  interpretation: 'When a prompt refers to an MSP, the agent identifies a Partner entity that actively delivers services to customer tenants. The agent will'
+  actions:
+    - "Access the MSP's configuration (e.g., available scripts, policies, tools)"
+    - "Determine which Devices, Agents, and Users fall under the MSP's control"
+    - Execute actions or retrieve data within the scope of that MSP's environment only
+    - Resolve the MSP's list of managed Tenants
+    - 'Respect role-based access boundaries for visibility, control, and policy enforcement'

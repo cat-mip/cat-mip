@@ -1,0 +1,50 @@
+id: 'CAT-MIP-000000368'
+term: Version
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Version is a specific state or release of a software application, configuration, operating system, firmware, or document that reflects its development or deployment stage. Versions are used to track changes, ensure compatibility, and manage updates across environments. In MSP and IT operations, versioning is critical for patching, compliance, supportability, and rollback planning.'
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Build
+  - Firmware Version
+  - Release
+  - Revision
+  - Software Version
+relationships:
+  - 'Version appliesTo Software, Device, OS, Policy, or Script'
+  - Version isComparedTo RequiredVersion or LatestVersion
+  - Version isReportedIn Device Summary or Compliance Report
+  - 'Version isTrackedIn Inventory, Patch Manager, or CMDB'
+  - 'Version mayTrigger Update, Alert, or Compatibility Check'
+prompt_examples:
+  - 'Is the backup agent version compatible with the current OS version?'
+  - List all devices running a version of Chrome older than 115.
+  - Update all endpoints to the latest version of the RMM agent.
+  - 'Which scripts have multiple versions saved in the automation library?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Version," the AI agent will'
+  actions:
+    - 'Compare it to known baselines, approved versions, or available updates'
+    - Identify the current version of the referenced object
+    - 'Initiate version-specific actions such as patching, blocking, or rollback'
+    - 'Log version changes, comparisons, and actions for auditing or reporting'
+    - Surface compatibility warnings or compliance gaps when mismatched

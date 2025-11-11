@@ -1,0 +1,49 @@
+id: 'CAT-MIP-000000191'
+term: Hardware
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'Hardware refers to the physical components of an IT environment, including servers, laptops, desktops, networking gear, storage devices, and peripherals. In the vendor context, hardware is typically associated with managed Devices, and its properties (e.g., CPU type, RAM, disk size, serial number) are collected for inventory, health monitoring, and compliance tracking. Hardware may also include embedded systems and edge devices under MSP management.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Equipment
+  - Host (when referring to physical servers)
+  - 'Machine (context-specific - avoid)'
+  - Physical Asset
+relationships:
+  - 'Hardware hasComponent CPU, Memory, Disk, NIC, etc.'
+  - Hardware hasWarrantyStatus or LifecycleStage
+  - Hardware isLocatedAt Site
+  - Hardware isMonitoredBy Agent
+  - Hardware isPartOf Device
+  - Hardware supports Software
+prompt_examples:
+  - Generate a hardware inventory report for all remote offices.
+  - List all hardware with less than 8GB RAM across the 'Education' tenant.
+  - "What hardware components are failing on server 'NY-DC-001'?"
+agent_execution:
+  interpretation: 'When a prompt refers to "Hardware," the AI agent will'
+  actions:
+    - Associate the hardware with the parent device and customer context
+    - 'Identify hardware failures, warnings, or threshold violations'
+    - Query the device inventory or telemetry sources to extract physical specs
+    - 'Report lifecycle status (e.g., warranty expired, asset due for replacement)'
+    - Trigger alerts or automations if hardware is underperforming or failing

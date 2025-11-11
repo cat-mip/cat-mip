@@ -1,0 +1,50 @@
+id: 'CAT-MIP-000000081'
+term: Shadow IT
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'Shadow IT refers to the use of software, hardware, cloud services, or other technology solutions within an organization without formal approval, visibility, or oversight from the IT department. This includes unmanaged SaaS tools, personal devices, and unauthorized data storage or sharing platforms. In MSP and IT environments, shadow IT poses risks related to security, compliance, data loss, and operational inefficiencies.'
+history:
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - BYO Tools
+  - Rogue IT
+  - Unauthorized App Usage
+  - Unmanaged IT
+  - Unsanctioned Technology
+relationships:
+  - Shadow IT bypasses IT Policy or Approval Workflow
+  - Shadow IT isDetectedBy Monitoring Tool or AI Agent
+  - Shadow IT isReportedIn Risk Assessment or Compliance Audit
+  - Shadow IT isUsedBy End User or Department
+  - Shadow IT mayExpose PII or Sensitive Data
+prompt_examples:
+  - Alert when new devices connect to the network without registration.
+  - Generate a report on potential shadow IT usage by department.
+  - Identify all SaaS applications in use that are not approved by IT.
+  - 'What shadow IT risks were flagged during the last endpoint scan?'
+agent_execution:
+  interpretation: 'When a prompt refers to "Shadow IT," the AI agent will'
+  actions:
+    - 'Classify shadow IT by risk level, user group, and type of service'
+    - Compare discovered assets against approved technology inventories or whitelists
+    - Log all detections and actions related to shadow IT for auditing and review
+    - 'Monitor network, device, and usage data to detect unauthorized tools or services'
+    - 'Trigger alerts, initiate risk remediation workflows, or generate compliance reports'

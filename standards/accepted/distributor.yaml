@@ -1,0 +1,48 @@
+id: 'CAT-MIP-000000141'
+term: Distributor
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Distributor is an organization authorized to resell vendor products and services. Distributors may operate under their own branding, manage multiple MSPs or sub-distributors, and may either directly support their downstream entities or rely on vendor for support. Distributors typically have visibility and limited control over the environments of their managed MSPs.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Aggregator (in legacy or specific sales contexts)
+  - Channel Partner
+  - 'Partner (ambiguous - avoid unless context is clear)'
+  - Reseller (not exact. do not use. Resellers do not typically support products or access interfaces)
+relationships:
+  - Distributor follows PolicyTemplate from vendor
+  - Distributor has Visibility into Tenant
+  - Distributor isManagedBy vendor
+  - Distributor manages SubDistributor
+  - Distributor resells Product
+  - Distributor supports MSP
+prompt_examples:
+  - Deploy the onboarding script to all new tenants under the distributor 'CloudBridge'.
+  - "Does the distributor 'EuroSecure' manage support for its MSPs or is it handled by vendor?"
+  - List all MSPs under the distributor 'AlphaTech'.
+agent_execution:
+  interpretation: 'When the term "Distributor" is used, the agent interprets the request as applying to an intermediary layer between vendor and one or more MSPs. The agent will'
+  actions:
+    - Check configuration settings to determine whether the Distributor or vendor owns support responsibilities
+    - 'Determine available product sets, policies, or automation workflows that the Distributor can access or propagate'
+    - Query the organizational hierarchy to identify associated MSPs or tenants
+    - Restrict or allow actions based on permissions assigned at the Distributor level

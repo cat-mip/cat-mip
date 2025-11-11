@@ -1,0 +1,49 @@
+id: 'CAT-MIP-000000373'
+term: WMI
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'WMI (Windows Management Instrumentation) is a Microsoft technology that provides a standardized interface for accessing and managing data about Windows-based systems. It allows scripts, agents, and monitoring tools to query system information such as hardware status, software inventory, services, processes, and configuration settings. In MSP environments, WMI is widely used for device discovery, performance monitoring, remote execution, and automation.'
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - WMI Provider
+  - WMI Query
+  - WMI Service
+  - Windows Management Instrumentation
+relationships:
+  - 'WMI exposes SystemInfo, Metrics, or ConfigurationData'
+  - WMI isEnabledOn Windows Device
+  - 'WMI isQueriedBy Agent, Script, or Monitoring Tool'
+  - WMI isSecuredBy User Permissions and Firewall Rules
+  - 'WMI mayBeUsedIn Discovery, Alerting, or Reporting'
+prompt_examples:
+  - Alert if WMI reports CPU usage over 90 percent for 10 minutes.
+  - 'Query WMI for disk health and available storage on all domain-joined devices.'
+  - Use WMI to collect a list of installed applications across the fleet.
+  - 'Which devices have WMI disabled or returning errors?'
+agent_execution:
+  interpretation: 'When a prompt refers to "WMI," the AI agent will'
+  actions:
+    - Establish a connection to the target Windows device using proper credentials and network access
+    - Execute the WMI query to retrieve requested information
+    - 'Log WMI query outcomes, including failures or access issues'
+    - 'Parse and format results for reporting, monitoring, or policy evaluation'
+    - 'Respect configured permissions, throttling rules, and audit requirements for WMI usage'

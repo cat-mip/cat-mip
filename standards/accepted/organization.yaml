@@ -1,0 +1,48 @@
+id: 'CAT-MIP-000000331'
+term: Organization
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'This term should probably be avoided due to ambiguity. An Organization is a general-purpose container representing any structured business or entity within the vendor ecosystem. It may refer to a Distributor, MSP, Tenant, or even vendor itself, depending on context. "Organization" is primarily used in internal models, system hierarchies, or data structures to abstract the roles of different actors in the platform. In end-user contexts, the more specific terms (MSP, Tenant, etc.) are preferred.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - 'Account (ambiguous - avoid unless referring to billing)'
+  - Business Unit (when referring to internal structures)
+  - 'Entity (generic or API-level use)'
+  - Org (internal shorthand)
+relationships:
+  - Organization applies Policy
+  - Organization has AccessLevel
+  - Organization has SubOrganization
+  - Organization manages Users
+  - 'Organization mayBe vendor | Vendor | Distributor | MSP | Tenant'
+  - 'Organization owns Devices | Assets'
+prompt_examples:
+  - 'Does this organization have access to the advanced automation catalog?'
+  - List all organizations managed by the distributor 'TechBridge Global'.
+  - 'Which organizations have more than 50 active scripts deployed?'
+agent_execution:
+  interpretation: "When a prompt refers to an \"Organization,\" the agent interprets it as a flexible node in the hierarchy. It resolves the entity's role based on its metadata"
+  actions:
+    - If it delivers services → MSP
+    - If it receives services → Tenant
+    - If it resells to others → Distributor
+    - If it's at the top of the hierarchy with publishing rights → vendor

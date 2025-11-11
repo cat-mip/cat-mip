@@ -1,0 +1,50 @@
+id: 'CAT-MIP-000000211'
+term: Inventory
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'Inventory refers to the complete, current list of assets such as devices, software, licenses, or users that are tracked and managed. Inventory systems typically collect metadata like status, version, location, ownership, and lifecycle state. Accurate inventory enables visibility, reporting, compliance, capacity planning, and automation.'
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Asset Inventory
+  - 'Configuration Inventory (context-specific)'
+  - IT Inventory
+  - Inventory Database
+  - Resource List
+relationships:
+  - 'Inventory contains Device, Software, License, or User'
+  - Inventory feeds CMDB or Asset Management Platform
+  - 'Inventory isMaintainedBy Discovery, Agent, or ManualEntry'
+  - 'Inventory isQueriedBy AI Agent, Technician, or Policy'
+  - 'Inventory isUsedFor Reporting, Compliance, or Automation'
+prompt_examples:
+  - Export the full software inventory for client 'GreenByte Solutions'.
+  - Identify unlicensed software in the current inventory.
+  - List all Windows 11 devices in the inventory with less than 8 GB of RAM.
+  - 'When was the last time inventory was updated for the Chicago site?'
+agent_execution:
+  interpretation: 'When a prompt refers to "Inventory," the AI agent will'
+  actions:
+    - 'Filter or sort based on asset type, attributes, or compliance rules'
+    - 'Generate summaries, reports, or trigger remediation workflows'
+    - Identify gaps such as unmanaged devices or expired licenses
+    - Query the relevant inventory system or asset database
+    - Record any actions taken or inventory queries in the system log

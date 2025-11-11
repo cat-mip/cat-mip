@@ -1,0 +1,50 @@
+id: 'CAT-MIP-000000251'
+term: Location
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'Location refers to the physical or geographic place associated with an asset, user, or organization. It can represent where a Device is physically deployed, where a User typically operates, or where a Site is situated. While similar to a Site, "Location" focuses strictly on geography (e.g., city, region, country, GPS), whereas Site can be a logical grouping. Location data is useful for geofencing, compliance, asset tracking, threat analysis, and assigning regional policies.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - 'Area (context-dependent -- avoid unless defined)'
+  - Geo (informal)
+  - Office Location
+  - Physical Address
+  - 'Region (when scoped to country-level or zones)'
+relationships:
+  - Device isLocatedAt Location
+  - Location belongsTo Tenant
+  - Location influences PolicyScope
+  - Location mayHave RiskProfile or ComplianceZone
+  - Site isLocatedAt Location
+  - User operatesFrom Location
+prompt_examples:
+  - Apply the EU compliance policy to locations within the EMEA region.
+  - List all devices currently located in Germany.
+  - 'Which locations show unusual login activity after business hours?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Location," the agent will'
+  actions:
+    - 'Consider location-aware policies (e.g., regional compliance rules, threat intelligence mappings)'
+    - 'Enable geolocation-sensitive workflows, alerts, or risk analysis'
+    - 'Filter relevant entities (devices, users, sites) assigned to or operating from that location'
+    - 'Resolve the geographic identifier (e.g., country, city, GPS tag, custom label)'
+    - 'Return context-specific responses, such as compliance status, threat levels, or regional usage trends'

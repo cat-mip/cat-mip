@@ -1,0 +1,44 @@
+id: 'CAT-MIP-000000011'
+term: Account
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: "The term Account is discouraged due to its ambiguity. It can refer to multiple different roles in the ecosystem, including: a Tenant (a customer managed by an MSP), an MSP (a partner), a Distributor Customer (a client of a distributor), or a Billing Entity (used in financial systems). Because of this ambiguity, using 'Account' in prompts or documentation can cause confusion or incorrect agent actions."
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - 'Account (ambiguous - avoid)'
+  - 'Client (ambiguous - avoid unless scoped)'
+  - 'Partner (ambiguous - clarify as MSP or Distributor)'
+relationships:
+  - BillingEntity paysFor Subscription
+  - Customer isManagedBy Distributor
+  - Tenant belongsTo MSP
+prompt_examples:
+  - Get a list of all tenants with over 100 devices.
+  - Send onboarding materials to new MSPs and distributors.
+  - 'Which MSPs or tenants are overdue on patch compliance?'
+agent_execution:
+  interpretation: "When 'Account' is used in a prompt, the AI agent will"
+  actions:
+    - 'Attempt to infer the intended object (Tenant, MSP, Customer, etc.)'
+    - 'If inference succeeds, resolve the term to the correct object type and execute accordingly'
+    - Prompt for clarification if multiple interpretations are possible
+    - This behavior increases the risk of misinterpretation and is not recommended

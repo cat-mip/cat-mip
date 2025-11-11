@@ -1,0 +1,49 @@
+id: 'CAT-MIP-000000101'
+term: Subscriber
+version: 1.0
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Subscriber is an entity -- typically a user, client, tenant, or system -- that is actively enrolled in or assigned to a service, product, or data stream. Subscribers receive notifications, updates, access, or resources according to their subscription level or role. In MSP and IT environments, subscribers are often associated with licensing, usage metrics, automation triggers, or event-driven integrations.'
+history:
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Client
+  - Consumer
+  - Enrolled User
+  - Recipient
+  - Tenant
+relationships:
+  - 'Subscriber interactsWith Portal, Agent, or API'
+  - 'Subscriber isAssignedTo Service, Plan, or Policy'
+  - 'Subscriber isTrackedIn CRM, Directory, or Subscription System'
+  - 'Subscriber mayBeBoundTo SLA, License, or Billing Agreement'
+  - 'Subscriber mayReceive Notification, Report, or Update'
+prompt_examples:
+  - Deactivate subscribers with expired licenses.
+  - List all active subscribers to the endpoint monitoring service.
+  - 'Send system health reports to all Gold-level subscribers.'
+  - 'Which subscribers are over their cloud storage limit?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Subscriber," the AI agent will'
+  actions:
+    - 'Determine eligibility or compliance based on policies, thresholds, or entitlements'
+    - 'Identify the subscriber entity and retrieve associated metadata such as service tier, contact info, and usage status'
+    - 'Perform requested actions such as notifications, provisioning, suspension, or escalation'
+    - Update subscriber records and log activity for auditing or billing purposes

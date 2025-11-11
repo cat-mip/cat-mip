@@ -1,0 +1,46 @@
+id: 'CAT-MIP-000000356'
+term: Site
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Site is a physical or logical subdivision within a Tenant (Customer). It may represent a physical location (e.g., office, data center), a virtual group (e.g., cloud region, department), or any operational boundary used for organizing and managing Devices | Assets. Sites provide structure for automation, reporting, and policy scoping beneath the customer level.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Department
+  - Location
+  - Office
+  - Subtenant
+relationships:
+  - Site belongsTo Tenant
+  - 'Site contains Device | Asset'
+  - Site has Policy
+  - Site mayContain Subsite
+prompt_examples:
+  - Apply the new compliance policy to all sites in the customer 'CityGov'.
+  - Check if the New York site for 'Harbor Industries' has any offline devices.
+  - List software installed on devices in the Finance department site.
+agent_execution:
+  interpretation: "When a prompt refers to a 'Site,' the agent"
+  actions:
+    - 'Applies actions (e.g., scans, updates, reports) only to entities within the Site boundary'
+    - 'Filters Devices, Policies, and Scripts to those associated with the Site'
+    - 'If no Site is specified, defaults to all Sites under the Tenant unless scoped otherwise'
+    - Resolves the site within the scope of the specified or inferred Tenant

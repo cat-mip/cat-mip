@@ -1,0 +1,49 @@
+id: 'CAT-MIP-000000131'
+term: Disk
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Disk is a physical or virtual storage component used by a device to persist data. Disks can be hard drives (HDD), solid-state drives (SSD), or virtual volumes (e.g., VHDs in cloud environments). Disk information is collected for monitoring storage capacity, performance, health, and lifecycle. Disks may be local (installed on a device) or network-attached, and are critical for system stability and application functionality.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Drive
+  - HDD / SSD (specific types of disks)
+  - Storage Device
+  - Volume (when partitioned or virtualized)
+relationships:
+  - Disk hasCapacity Size
+  - Disk hasHealthStatus
+  - Disk hasUsedSpace / FreeSpace
+  - Disk isMonitoredBy Agent
+  - Disk isPartOf Device
+  - Disk stores File or Software
+prompt_examples:
+  - 'Alert me when any disk has less than 10% free space.'
+  - Check disk usage on all servers in the 'Legal' tenant.
+  - List all devices with SSDs larger than 512GB.
+agent_execution:
+  interpretation: 'When a prompt refers to a "Disk," the AI agent will'
+  actions:
+    - Differentiate between physical disks and logical partitions/volumes
+    - 'Monitor for thresholds (e.g., low space, high I/O wait times)'
+    - 'Report on total capacity, free space, used percentage, and disk type'
+    - Retrieve storage information from device telemetry or system APIs
+    - Trigger alerts or automated cleanup scripts as needed

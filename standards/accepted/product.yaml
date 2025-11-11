@@ -1,0 +1,48 @@
+id: 'CAT-MIP-000000336'
+term: Product
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Product is a tangible or intangible item offered by a vendor, encompassing software applications, hardware devices, or services. In the DevOps Infrastructure Ontology, a product is an entity that can be deployed, configured, and managed within an IT environment. Products are often associated with specific versions, configurations, and may be part of a larger service offering.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Application (when referring to software products)
+  - Offering
+  - Service (in the context of service products)
+  - Solution
+relationships:
+  - Product hasDependency on other Products
+  - Product hasVersion Version
+  - Product isConfiguredBy Configuration
+  - Product isDeployedOn Device or Infrastructure
+  - Product isPartOf ServiceOffering
+  - Product isProvidedBy Vendor
+prompt_examples:
+  - Check the current version of the antivirus product on all endpoints.
+  - Identify any products with known vulnerabilities in the 'Finance' department.
+  - List all products deployed in the 'Healthcare' tenant.
+agent_execution:
+  interpretation: 'When a prompt refers to a "Product," the AI agent will'
+  actions:
+    - Assess compliance with organizational policies and identify any discrepancies.
+    - 'Identify the specific product(s) based on name, version, or associated vendor.'
+    - 'Provide recommendations for updates, patches, or reconfigurations as needed.'
+    - Retrieve deployment and configuration details across the infrastructure.

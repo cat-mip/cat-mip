@@ -1,0 +1,47 @@
+id: 'CAT-MIP-000000338'
+term: Report
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'A Report is a structured output that presents data collected from systems, policies, or agents over a defined time period. Reports are used for analysis, auditing, compliance, customer communication, or internal performance tracking. In the MSP and vendor context, reports may include information on device health, backup status, patch compliance, license usage, or automation outcomes. Reports can be generated on demand or scheduled, and may be exported in formats such as PDF, CSV, or JSON.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Dashboard
+  - Export
+  - Summary
+relationships:
+  - Report isConfiguredIn ReportingPolicy or Schedule
+  - 'Report isDeliveredTo User, MSP, or Tenant'
+  - 'Report isFilteredBy TimeRange, Entity, or Policy'
+  - 'Report isGeneratedBy Product, Agent, or MonitoringTool'
+  - Report summarizes Data or Metrics
+prompt_examples:
+  - Email the executive summary report to all distributors by Monday.
+  - Generate a weekly patch compliance report for tenant 'SecureTech'.
+  - 'What reports are available for backup status over the past 30 days?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Report," the AI agent will'
+  actions:
+    - 'Aggregate, format, and organize the information into the specified report type'
+    - 'Apply branding, formatting, and delivery settings (if configured)'
+    - 'Export the report to a file or deliver it through email, UI, or third-party systems'
+    - Log the report generation and delivery for traceability
+    - Retrieve relevant data sources based on the requested topic and filters

@@ -1,0 +1,49 @@
+id: 'CAT-MIP-000000360'
+term: Storage
+version: 1.0
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion: 
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: 'Storage refers to the physical or virtual infrastructure used to persist data, including backups, logs, software, configurations, and operating system files. In the MSP and vendor context, storage may include local disk drives, network-attached storage (NAS), cloud storage services (e.g., AWS S3), or specialized backup storage vaults. Storage is a critical resource that supports data retention, recovery, and compliance.'
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: Initial term addition to registry
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Accepted into CAT-MIP registry'
+synonyms:
+  - Repository
+  - Storage Device
+  - Storage Vault
+  - Volume
+relationships:
+  - 'Storage contains File, Backup, or Image'
+  - Storage hasCapacity and UsageThreshold
+  - Storage isAttachedTo Device or Site
+  - Storage isMonitoredBy Agent or StoragePolicy
+  - Storage isProvisionedBy CloudProvider or MSP
+  - Storage isUsedBy Product or Service
+prompt_examples:
+  - 'Alert me when storage usage exceeds 85% on any devices.'
+  - "How much storage is currently available in the backup vault for 'Tenant-Alpha'?"
+  - List all cloud storage accounts used by the Cove backup service.
+agent_execution:
+  interpretation: 'When a prompt refers to "Storage," the AI agent will'
+  actions:
+    - 'Apply configured policies for thresholds, scaling, or cleanup'
+    - 'Identify the storage type (local, NAS, SAN, cloud) and associated devices or services'
+    - 'Query current capacity, usage, and health metrics from telemetry or provider APIs'
+    - 'Track usage by tenant, device group, or product to ensure licensing and compliance alignment'
+    - 'Trigger alerts, archive operations, or storage expansions if needed'
