@@ -1,0 +1,53 @@
+site_name: CAT-MIP Terminology Registry
+site_url: https://cat-mip.github.io/
+docs_dir: build/docs
+repo_url: https://github.com/cat-mip/cat-mip
+edit_uri: edit/main/
+
+theme:
+  name: material
+  logo: images/catmip-150x150.png
+  palette:
+    - scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Accepted: accepted/index.md
+  - Drafts: drafts/index.md
+  - Deprecated: deprecated/index.md
+  - Rejected: rejected/index.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+
+plugins:
+  - offline
+  # - optimize
+  - search
+  - tags
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+
+extra_css:
+  - assets/stylesheets/extra.css
