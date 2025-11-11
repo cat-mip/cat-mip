@@ -1,2 +1,3 @@
 reportlab==4.2.5
 jsonschema>=4.17.0
+yamllint==1.35.*
