@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Router is a network device that forwards data packets between computer networks, directing traffic based on destination IP addresses. Routers connect local networks (LANs) to external networks (such as the internet) and can also route traffic between VLANs or subnets. Routers are critical infrastructure components often managed remotely for monitoring, configuration, and policy enforcement.'
+definition: |
+  A Router is a network device that forwards data packets between computer networks,
+  directing traffic based on destination IP addresses. Routers connect local networks (LANs)
+  to external networks (such as the internet) and can also route traffic between VLANs or
+  subnets. Routers are critical infrastructure components often managed remotely for
+  monitoring, configuration, and policy enforcement.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop

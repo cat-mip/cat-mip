@@ -6,19 +6,23 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'Inventory refers to the complete, current list of assets such as devices, software, licenses, or users that are tracked and managed. Inventory systems typically collect metadata like status, version, location, ownership, and lifecycle state. Accurate inventory enables visibility, reporting, compliance, capacity planning, and automation.'
+definition: |
+  Inventory refers to the complete, current list of assets such as devices, software,
+  licenses, or users that are tracked and managed. Inventory systems typically collect
+  metadata like status, version, location, ownership, and lifecycle state. Accurate
+  inventory enables visibility, reporting, compliance, capacity planning, and automation.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop

@@ -6,19 +6,25 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A File is a discrete unit of digital data stored on a device or in the cloud. Files can represent executables, documents, logs, scripts, configurations, or any other form of structured or unstructured content. In the vendor context, files may be transferred, monitored, scanned for threats, or used as part of automation workflows. Files exist within file systems, storage volumes, or cloud containers, and may be associated with software, devices, or users.'
+definition: |
+  A File is a discrete unit of digital data stored on a device or in the cloud. Files can
+  represent executables, documents, logs, scripts, configurations, or any other form of
+  structured or unstructured content. In the vendor context, files may be transferred,
+  monitored, scanned for threats, or used as part of automation workflows. Files exist
+  within file systems, storage volumes, or cloud containers, and may be associated with
+  software, devices, or users.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -36,13 +42,15 @@ relationships:
   - File isStoredOn Device or CloudStorage
   - File isTaggedWith Label or Policy
 prompt_examples:
-  - "Retrieve the most recent log file from the device 'ENG-LT-05'."
-  - "Scan all executable files on server 'NY-EX01' for known threats."
+  - 'Retrieve the most recent log file from the device ''ENG-LT-05''.'
+  - 'Scan all executable files on server ''NY-EX01'' for known threats.'
   - Upload the installation file to the shared repository and notify the admin.
 agent_execution:
   interpretation: 'When a prompt refers to a "File," the AI agent will'
   actions:
-    - 'Log actions and validate policy or security rules (e.g., blocking executable uploads in restricted environments)'
+    - |
+      Log actions and validate policy or security rules (e.g., blocking executable uploads in
+      restricted environments)
     - 'Perform the specified action (e.g., retrieve, scan, delete, move, check integrity)'
     - 'Resolve the file location (e.g., local device, cloud share, log directory)'
     - 'Use file metadata such as name, type, size, timestamp, and hash to identify the target'

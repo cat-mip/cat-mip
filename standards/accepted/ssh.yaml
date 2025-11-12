@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'SSH (Secure Shell) is a cryptographic network protocol used to securely access and manage remote systems over an unsecured network. SSH provides encrypted command-line access, secure file transfer, and tunneling capabilities. In MSP and IT environments, SSH is commonly used for remote administration of Linux servers, network devices, and virtual machines.'
+definition: |
+  SSH (Secure Shell) is a cryptographic network protocol used to securely access and manage
+  remote systems over an unsecured network. SSH provides encrypted command-line access,
+  secure file transfer, and tunneling capabilities. In MSP and IT environments, SSH is
+  commonly used for remote administration of Linux servers, network devices, and virtual
+  machines.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop

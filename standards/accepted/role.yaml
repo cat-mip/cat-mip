@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Role is a predefined set of permissions, responsibilities, or access rights assigned to a user, system, or agent within an IT or MSP environment. Roles are used to control access to systems, features, or data based on job function or context. They enable policy enforcement, least-privilege access, and streamlined onboarding by grouping permissions into reusable access profiles.'
+definition: |
+  A Role is a predefined set of permissions, responsibilities, or access rights assigned to
+  a user, system, or agent within an IT or MSP environment. Roles are used to control access
+  to systems, features, or data based on job function or context. They enable policy
+  enforcement, least-privilege access, and streamlined onboarding by grouping permissions
+  into reusable access profiles.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop
@@ -39,7 +44,7 @@ prompt_examples:
   - Assign the 'Technician' role to all new users in the MSP portal.
   - List all roles with access to credential management features.
   - Revoke elevated roles from users inactive for more than 30 days.
-  - "What permissions are included in the 'Backup Admin' role?"
+  - 'What permissions are included in the ''Backup Admin'' role?'
 agent_execution:
   interpretation: 'When a prompt refers to a "Role," the AI agent will'
   actions:

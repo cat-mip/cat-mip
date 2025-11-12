@@ -6,19 +6,25 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'VMware is a widely used virtualization and cloud infrastructure platform that enables the creation, management, and operation of virtual machines (VMs) and virtualized environments. VMware products support server, desktop, and network virtualization, allowing multiple workloads to run on shared physical hardware. In MSP and IT environments, VMware is often integrated for infrastructure management, backup, monitoring, and automation.'
+definition: |
+  VMware is a widely used virtualization and cloud infrastructure platform that enables the
+  creation, management, and operation of virtual machines (VMs) and virtualized
+  environments. VMware products support server, desktop, and network virtualization,
+  allowing multiple workloads to run on shared physical hardware. In MSP and IT
+  environments, VMware is often integrated for infrastructure management, backup,
+  monitoring, and automation.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop

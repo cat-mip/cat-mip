@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Policy is a defined set of rules or configurations that govern how systems, devices, users, or services should behave or be managed within an environment. Policies enforce standards related to security, compliance, automation, performance, and access. In MSP and IT operations, policies are applied to endpoints, users, or sites to ensure consistent behavior, streamline operations, and meet organizational or regulatory requirements.'
+definition: |
+  A Policy is a defined set of rules or configurations that govern how systems, devices,
+  users, or services should behave or be managed within an environment. Policies enforce
+  standards related to security, compliance, automation, performance, and access. In MSP and
+  IT operations, policies are applied to endpoints, users, or sites to ensure consistent
+  behavior, streamline operations, and meet organizational or regulatory requirements.
 history:
   -
     date: '2025-08-19'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-19'
     author: roop
@@ -46,5 +51,7 @@ agent_execution:
     - 'Apply the policy settings or rules to the defined devices, users, or services'
     - 'Log all policy applications, changes, and exceptions for auditing and reporting'
     - Monitor for compliance and trigger alerts or remediation if deviations occur
-    - 'Retrieve the policy definition and scope, including affected objects and configuration details'
+    - |
+      Retrieve the policy definition and scope, including affected objects and configuration
+      details
     - Validate the policy's applicability to the specified targets

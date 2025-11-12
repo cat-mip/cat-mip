@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'An Audit Log is a chronological record of system-generated entries that capture actions, events, or changes performed within a platform, application, or network. Each log entry typically includes a timestamp, actor (user or system), action type, and target object. Audit logs are used for accountability, traceability, compliance, security investigations, and operational transparency.'
+definition: |
+  An Audit Log is a chronological record of system-generated entries that capture actions,
+  events, or changes performed within a platform, application, or network. Each log entry
+  typically includes a timestamp, actor (user or system), action type, and target object.
+  Audit logs are used for accountability, traceability, compliance, security investigations,
+  and operational transparency.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole

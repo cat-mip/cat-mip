@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Version is a specific state or release of a software application, configuration, operating system, firmware, or document that reflects its development or deployment stage. Versions are used to track changes, ensure compatibility, and manage updates across environments. In MSP and IT operations, versioning is critical for patching, compliance, supportability, and rollback planning.'
+definition: |
+  A Version is a specific state or release of a software application, configuration,
+  operating system, firmware, or document that reflects its development or deployment stage.
+  Versions are used to track changes, ensure compatibility, and manage updates across
+  environments. In MSP and IT operations, versioning is critical for patching, compliance,
+  supportability, and rollback planning.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop

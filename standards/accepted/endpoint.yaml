@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'An Endpoint is any device that connects to a network and communicates with other systems, services, or users. Common endpoints include laptops, desktops, servers, mobile devices, and virtual machines. In MSP and IT environments, endpoints are managed assets that may be monitored, secured, patched, and inventoried. Endpoints are often the target of policies, automation, alerts, and security controls.'
+definition: |
+  An Endpoint is any device that connects to a network and communicates with other systems,
+  services, or users. Common endpoints include laptops, desktops, servers, mobile devices,
+  and virtual machines. In MSP and IT environments, endpoints are managed assets that may be
+  monitored, secured, patched, and inventoried. Endpoints are often the target of policies,
+  automation, alerts, and security controls.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop
@@ -46,5 +51,7 @@ agent_execution:
     - 'Apply relevant policies, automations, or scripts as requested'
     - Identify the device using inventory or monitoring data
     - Record any actions taken in the system log or ticketing platform
-    - 'Retrieve endpoint-specific attributes such as hostname, IP address, OS, status, and last check-in time'
+    - |
+      Retrieve endpoint-specific attributes such as hostname, IP address, OS, status, and last
+      check-in time
     - Trigger monitoring actions or escalate issues based on endpoint health or configuration

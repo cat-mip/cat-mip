@@ -6,19 +6,25 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'An Incident is an unplanned event or disruption that affects the normal operation of a service, system, or asset and requires investigation, response, or resolution. Incidents can range from device failures and service outages to security breaches or policy violations. In MSP and IT environments, incidents are tracked through ticketing systems and are often subject to escalation paths, service-level agreements (SLAs), and post-resolution analysis.'
+definition: |
+  An Incident is an unplanned event or disruption that affects the normal operation of a
+  service, system, or asset and requires investigation, response, or resolution. Incidents
+  can range from device failures and service outages to security breaches or policy
+  violations. In MSP and IT environments, incidents are tracked through ticketing systems
+  and are often subject to escalation paths, service-level agreements (SLAs), and post-
+  resolution analysis.
 history:
   -
     date: '2025-08-19'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-19'
     author: roop
@@ -45,6 +51,10 @@ agent_execution:
   actions:
     - 'Initiate workflows such as assignment, escalation, or notification based on defined rules'
     - Log all interactions and changes for auditing and service reporting
-    - 'Retrieve and summarize incident details including timestamps, affected assets, and resolution steps'
-    - 'Search the incident management system for relevant records based on status, severity, or source'
+    - |
+      Retrieve and summarize incident details including timestamps, affected assets, and
+      resolution steps
+    - |
+      Search the incident management system for relevant records based on status, severity, or
+      source
     - Update the incident record with actions taken or insights generated

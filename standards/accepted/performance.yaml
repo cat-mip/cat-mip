@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'Performance refers to the operational efficiency and responsiveness of a system, device, or application. It is typically measured through metrics such as CPU usage, memory consumption, disk I/O, network throughput, and latency. In the MSP and vendor context, performance is used to assess the health of devices, detect bottlenecks, and determine whether systems are operating within acceptable thresholds.'
+definition: |
+  Performance refers to the operational efficiency and responsiveness of a system, device,
+  or application. It is typically measured through metrics such as CPU usage, memory
+  consumption, disk I/O, network throughput, and latency. In the MSP and vendor context,
+  performance is used to assess the health of devices, detect bottlenecks, and determine
+  whether systems are operating within acceptable thresholds.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -34,14 +39,20 @@ relationships:
   - Performance isReportedIn Dashboard or Report
   - Performance triggers Alert or Automation
 prompt_examples:
-  - "Check the performance of device 'ENG-LT-05' and flag any CPU or memory spikes."
-  - Generate a performance report for all servers in the 'West Coast' site over the last 7 days.
-  - "What performance metrics are being tracked for the tenant 'SecureNet'?"
+  - 'Check the performance of device ''ENG-LT-05'' and flag any CPU or memory spikes.'
+  - |
+    Generate a performance report for all servers in the 'West Coast' site over the last 7
+    days.
+  - 'What performance metrics are being tracked for the tenant ''SecureNet''?'
 agent_execution:
   interpretation: 'When a prompt refers to "Performance," the AI agent will'
   actions:
     - 'Detect anomalies or degradation (e.g., sustained high CPU, low available RAM)'
     - Evaluate current values against historical baselines and configured thresholds
     - Optionally summarize trends in reports or dashboards
-    - 'Recommend or trigger remediation actions (e.g., restart service, notify admin, scale resources)'
-    - 'Retrieve relevant metrics such as CPU load, memory usage, disk activity, and network traffic'
+    - |
+      Recommend or trigger remediation actions (e.g., restart service, notify admin, scale
+      resources)
+    - |
+      Retrieve relevant metrics such as CPU load, memory usage, disk activity, and network
+      traffic

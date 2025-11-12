@@ -6,19 +6,25 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Network is a collection of interconnected devices, systems, and services that communicate using standard protocols. In the DevOps Infrastructure Ontology, it includes both physical infrastructure (e.g., routers, switches, cabling) and logical constructs (e.g., IP subnets, VLANs, virtual networks). In the MSP and vendor context, networks are monitored for availability, performance, security, and connectivity, often segmented by customer, site, or service.'
+definition: |
+  A Network is a collection of interconnected devices, systems, and services that
+  communicate using standard protocols. In the DevOps Infrastructure Ontology, it includes
+  both physical infrastructure (e.g., routers, switches, cabling) and logical constructs
+  (e.g., IP subnets, VLANs, virtual networks). In the MSP and vendor context, networks are
+  monitored for availability, performance, security, and connectivity, often segmented by
+  customer, site, or service.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -37,8 +43,8 @@ relationships:
   - Network isSecuredBy Firewall or AccessControlList
 prompt_examples:
   - Check for latency issues in the network segment at the Dallas site.
-  - "Is the backup network isolated from production traffic in tenant 'HealthBridge'?"
-  - "List all devices connected to the 'Guest Wi-Fi' network."
+  - 'Is the backup network isolated from production traffic in tenant ''HealthBridge''?'
+  - 'List all devices connected to the ''Guest Wi-Fi'' network.'
 agent_execution:
   interpretation: 'When a prompt refers to a "Network," the AI agent will'
   actions:

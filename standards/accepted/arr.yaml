@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'ARR (Annual Recurring Revenue) is the total value of recurring revenue from subscriptions or service contracts normalized over a one-year period. It represents the predictable income that an MSP or SaaS business expects to receive annually from active customers. ARR is a key metric for evaluating long-term growth, customer retention, and business valuation.'
+definition: |
+  ARR (Annual Recurring Revenue) is the total value of recurring revenue from subscriptions
+  or service contracts normalized over a one-year period. It represents the predictable
+  income that an MSP or SaaS business expects to receive annually from active customers. ARR
+  is a key metric for evaluating long-term growth, customer retention, and business
+  valuation.
 history:
   -
     date: '2025-08-19'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-19'
     author: roop

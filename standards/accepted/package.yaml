@@ -6,21 +6,25 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Package is a discrete unit of software that can be installed, upgraded, or removed on a device or system. It typically contains executable code, configuration files, and metadata needed to deploy software. Packages are distributed through package managers (e.g., MSI, RPM, DEB, EXE) and may represent full applications, libraries, agents, or drivers. In MSP environments, packages are often deployed via scripts, automation workflows, or remote management tools.
-
-Code which is an update may also be referred to as a Patch.'
+definition: |
+  A Package is a discrete unit of software that can be installed, upgraded, or removed on a
+  device or system. It typically contains executable code, configuration files, and metadata
+  needed to deploy software. Packages are distributed through package managers (e.g., MSI,
+  RPM, DEB, EXE) and may represent full applications, libraries, agents, or drivers. In MSP
+  environments, packages are often deployed via scripts, automation workflows, or remote
+  management tools.  Code which is an update may also be referred to as a Patch.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -39,9 +43,9 @@ relationships:
   - Package isManagedBy Script or Automation Policy
   - Package isSignedBy Vendor
 prompt_examples:
-  - "Has the antivirus agent package been successfully installed on device 'HR-LT-002'?"
+  - 'Has the antivirus agent package been successfully installed on device ''HR-LT-002''?'
   - Install the package for Microsoft Edge on all Windows 11 devices.
-  - "Which packages are waiting to be deployed on the 'Sales-Laptops' site?"
+  - 'Which packages are waiting to be deployed on the ''Sales-Laptops'' site?'
 agent_execution:
   interpretation: 'When a prompt refers to a "Package," the AI agent will'
   actions:

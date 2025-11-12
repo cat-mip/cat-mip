@@ -6,19 +6,25 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'An AI Agent is a software-based autonomous entity that interprets natural language prompts and executes multistep reasoning and actions using defined tools, APIs, and structured knowledge. AI Agents interact with the platform, devices, users, and other systems to perform tasks such as triage, reporting, automation, or decision support. AI Agents can chain tools, call scripts, and escalate issues, often acting on behalf of a technician or service provider.'
+definition: |
+  An AI Agent is a software-based autonomous entity that interprets natural language prompts
+  and executes multistep reasoning and actions using defined tools, APIs, and structured
+  knowledge. AI Agents interact with the platform, devices, users, and other systems to
+  perform tasks such as triage, reporting, automation, or decision support. AI Agents can
+  chain tools, call scripts, and escalate issues, often acting on behalf of a technician or
+  service provider.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -36,8 +42,10 @@ relationships:
   - AI Agent produces Result or SuggestedResolution
   - AI Agent queries DataSource or KnowledgeBase
 prompt_examples:
-  - "AI Agent, why is device 'ENG-LT-22' running slowly this week?"
-  - 'Summarize patch compliance across all tenants and suggest remediation for non-compliant devices.'
+  - 'AI Agent, why is device ''ENG-LT-22'' running slowly this week?'
+  - |
+    Summarize patch compliance across all tenants and suggest remediation for non-compliant
+    devices.
   - 'What backup risks exist for customers using Microsoft 365, and how should we address them?'
 agent_execution:
   interpretation: 'When a prompt is directed to an AI Agent, it will'
@@ -47,4 +55,6 @@ agent_execution:
     - 'Optionally escalate, log, or interact with other AI Agents'
     - 'Reason over context (e.g., device health, policy violations, previous incidents)'
     - 'Return human-readable results or initiate further actions'
-    - Use structured terminology (from the MSP MCP Terminology Standard) to disambiguate terms like "asset" vs. "device"
+    - |
+      Use structured terminology (from the MSP MCP Terminology Standard) to disambiguate terms
+      like "asset" vs. "device"

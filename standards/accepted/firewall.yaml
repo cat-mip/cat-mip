@@ -6,19 +6,25 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Firewall is a security system--either hardware-based, software-based, or a combination of both--that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It serves as a barrier between trusted internal networks and untrusted external networks, such as the internet, to prevent unauthorized access and threats. In the DevOps Infrastructure Ontology, a firewall is categorized under network infrastructure components, emphasizing its role in network security management.'
+definition: |
+  A Firewall is a security system--either hardware-based, software-based, or a combination
+  of both--that monitors and controls incoming and outgoing network traffic based on
+  predetermined security rules. It serves as a barrier between trusted internal networks and
+  untrusted external networks, such as the internet, to prevent unauthorized access and
+  threats. In the DevOps Infrastructure Ontology, a firewall is categorized under network
+  infrastructure components, emphasizing its role in network security management.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -36,13 +42,21 @@ relationships:
   - Firewall logsEventsTo MonitoringSystem
   - Firewall monitorsTrafficFor Threat
 prompt_examples:
-  - "Check the current rule set configured on the firewall protecting the 'NYC-DataCenter'."
+  - 'Check the current rule set configured on the firewall protecting the ''NYC-DataCenter''.'
   - Identify any unauthorized access attempts blocked by the firewall in the last 24 hours.
   - List all firewalls deployed across the 'Finance' tenant's network.
 agent_execution:
   interpretation: 'When a prompt refers to a "Firewall," the AI agent will'
   actions:
-    - 'Identify the specific firewall instance(s) based on the context provided (e.g., tenant, location, device)'
-    - 'Monitor and report on traffic patterns, highlighting any anomalies or blocked access attempts'
-    - "Retrieve and analyze the firewall's configuration, including rule sets and access control lists"
-    - 'Suggest or implement updates to firewall rules in response to detected threats or policy changes, if authorized'
+    - |
+      Identify the specific firewall instance(s) based on the context provided (e.g., tenant,
+      location, device)
+    - |
+      Monitor and report on traffic patterns, highlighting any anomalies or blocked access
+      attempts
+    - |
+      Retrieve and analyze the firewall's configuration, including rule sets and access control
+      lists
+    - |
+      Suggest or implement updates to firewall rules in response to detected threats or policy
+      changes, if authorized

@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Browser is a client application used to access and interact with content and services on the World Wide Web. It renders web pages, processes scripts, and facilitates communication with remote servers using protocols such as HTTPS. In MSP and IT environments, browsers are used to access web-based portals, dashboards, APIs, and SaaS platforms. They may also be managed through policies for security, compliance, and performance.'
+definition: |
+  A Browser is a client application used to access and interact with content and services on
+  the World Wide Web. It renders web pages, processes scripts, and facilitates communication
+  with remote servers using protocols such as HTTPS. In MSP and IT environments, browsers
+  are used to access web-based portals, dashboards, APIs, and SaaS platforms. They may also
+  be managed through policies for security, compliance, and performance.
 history:
   -
     date: '2025-08-19'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-19'
     author: roop

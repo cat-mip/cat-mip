@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'API (Application Programming Interface) is a defined set of protocols and methods that allows software systems to communicate with each other. APIs expose functions, data, or services that can be accessed programmatically, enabling integration, automation, and extensibility across platforms. In MSP and IT environments, APIs are used for retrieving data, triggering actions, synchronizing systems, and building custom workflows.'
+definition: |
+  API (Application Programming Interface) is a defined set of protocols and methods that
+  allows software systems to communicate with each other. APIs expose functions, data, or
+  services that can be accessed programmatically, enabling integration, automation, and
+  extensibility across platforms. In MSP and IT environments, APIs are used for retrieving
+  data, triggering actions, synchronizing systems, and building custom workflows.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop
@@ -47,4 +52,6 @@ agent_execution:
     - Identify the correct API endpoint and required authentication method
     - 'Log the API interaction for tracking, troubleshooting, or auditing'
     - Parse the response data and handle errors or exceptions
-    - 'Take follow-up actions based on the API response, such as updating records or triggering alerts'
+    - |
+      Take follow-up actions based on the API response, such as updating records or triggering
+      alerts

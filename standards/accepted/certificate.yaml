@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Certificate is a digital credential that authenticates the identity of an entity (such as a user, device, or service) and facilitates secure communication through encryption. Certificates are issued by a Certificate Authority (CA) and are integral to Public Key Infrastructure (PKI). They ensure data integrity, confidentiality, and authenticity in digital communications.'
+definition: |
+  A Certificate is a digital credential that authenticates the identity of an entity (such
+  as a user, device, or service) and facilitates secure communication through encryption.
+  Certificates are issued by a Certificate Authority (CA) and are integral to Public Key
+  Infrastructure (PKI). They ensure data integrity, confidentiality, and authenticity in
+  digital communications.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -36,9 +41,9 @@ relationships:
   - Certificate isStoredIn Certificate Repository
   - Certificate isUsedFor Authentication or Encryption
 prompt_examples:
-  - "Check if the SSL certificate for 'client-portal.example.com' is valid."
+  - 'Check if the SSL certificate for ''client-portal.example.com'' is valid.'
   - List all certificates expiring within the next 30 days.
-  - "Revoke the compromised certificate assigned to device 'ENG-LT-05'."
+  - 'Revoke the compromised certificate assigned to device ''ENG-LT-05''.'
 agent_execution:
   interpretation: 'When a prompt includes "Certificate," the AI agent will'
   actions:

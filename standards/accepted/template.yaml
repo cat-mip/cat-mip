@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Template is a reusable configuration object that defines a set of settings, rules, or characteristics to be applied to one or more assets, such as devices, scripts, users, or policies. Templates are commonly used to enforce consistency across environments and to streamline the deployment of standardized configurations. In vendor products, templates may be used for onboarding, automation, security settings, or monitoring configurations.'
+definition: |
+  A Template is a reusable configuration object that defines a set of settings, rules, or
+  characteristics to be applied to one or more assets, such as devices, scripts, users, or
+  policies. Templates are commonly used to enforce consistency across environments and to
+  streamline the deployment of standardized configurations. In vendor products, templates
+  may be used for onboarding, automation, security settings, or monitoring configurations.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -41,7 +46,9 @@ prompt_examples:
 agent_execution:
   interpretation: 'When a prompt refers to a "Template," the AI agent will'
   actions:
-    - 'Apply the settings defined in the template to those targets, unless overridden by policy exceptions'
+    - |
+      Apply the settings defined in the template to those targets, unless overridden by policy
+      exceptions
     - 'Determine eligible targets (e.g., Devices, Sites, Tenants)'
     - Log any deviations or errors during application
     - 'Retrieve the template definition, including its scope, settings, and owner'

@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Disk is a physical or virtual storage component used by a device to persist data. Disks can be hard drives (HDD), solid-state drives (SSD), or virtual volumes (e.g., VHDs in cloud environments). Disk information is collected for monitoring storage capacity, performance, health, and lifecycle. Disks may be local (installed on a device) or network-attached, and are critical for system stability and application functionality.'
+definition: |
+  A Disk is a physical or virtual storage component used by a device to persist data. Disks
+  can be hard drives (HDD), solid-state drives (SSD), or virtual volumes (e.g., VHDs in
+  cloud environments). Disk information is collected for monitoring storage capacity,
+  performance, health, and lifecycle. Disks may be local (installed on a device) or network-
+  attached, and are critical for system stability and application functionality.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole

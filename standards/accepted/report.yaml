@@ -6,19 +6,25 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Report is a structured output that presents data collected from systems, policies, or agents over a defined time period. Reports are used for analysis, auditing, compliance, customer communication, or internal performance tracking. In the MSP and vendor context, reports may include information on device health, backup status, patch compliance, license usage, or automation outcomes. Reports can be generated on demand or scheduled, and may be exported in formats such as PDF, CSV, or JSON.'
+definition: |
+  A Report is a structured output that presents data collected from systems, policies, or
+  agents over a defined time period. Reports are used for analysis, auditing, compliance,
+  customer communication, or internal performance tracking. In the MSP and vendor context,
+  reports may include information on device health, backup status, patch compliance, license
+  usage, or automation outcomes. Reports can be generated on demand or scheduled, and may be
+  exported in formats such as PDF, CSV, or JSON.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole

@@ -6,19 +6,23 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'MRR (Monthly Recurring Revenue) is the predictable, recurring portion of revenue generated from active subscriptions or service contracts on a monthly basis. It reflects the value of ongoing client relationships and is commonly used to track growth, retention, and financial health in MSP and SaaS business models.'
+definition: |
+  MRR (Monthly Recurring Revenue) is the predictable, recurring portion of revenue generated
+  from active subscriptions or service contracts on a monthly basis. It reflects the value
+  of ongoing client relationships and is commonly used to track growth, retention, and
+  financial health in MSP and SaaS business models.
 history:
   -
     date: '2025-08-19'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-19'
     author: roop

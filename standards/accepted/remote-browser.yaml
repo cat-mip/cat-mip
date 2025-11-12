@@ -6,19 +6,25 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Remote Browser is a virtualized or cloud-hosted web browser session that runs on a remote server rather than the local device. It allows users to interact with web content securely without exposing their endpoint or internal network. In MSP and security-focused environments, remote browsers are used for isolating risky web activity, protecting against zero-day threats, and enforcing browsing policies without compromising the local system.'
+definition: |
+  A Remote Browser is a virtualized or cloud-hosted web browser session that runs on a
+  remote server rather than the local device. It allows users to interact with web content
+  securely without exposing their endpoint or internal network. In MSP and security-focused
+  environments, remote browsers are used for isolating risky web activity, protecting
+  against zero-day threats, and enforcing browsing policies without compromising the local
+  system.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop
@@ -44,7 +50,11 @@ agent_execution:
   interpretation: 'When a prompt refers to a "Remote Browser," the AI agent will'
   actions:
     - 'Enforce any content filtering, domain restrictions, or recording requirements'
-    - "Initiate or locate a cloud-hosted browser session based on the user's role and policy"
+    - 'Initiate or locate a cloud-hosted browser session based on the user''s role and policy'
     - Monitor session activity and store logs for audit or compliance
-    - Route the requested URL through the remote browser and relay the visual interface to the user
-    - 'Terminate or isolate the session automatically based on timeout, policy, or threat detection'
+    - |
+      Route the requested URL through the remote browser and relay the visual interface to the
+      user
+    - |
+      Terminate or isolate the session automatically based on timeout, policy, or threat
+      detection

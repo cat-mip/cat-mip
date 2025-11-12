@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'An IP Address is a unique numerical identifier assigned to a device or interface within a network, facilitating communication between devices. IP addresses can be either IPv4 or IPv6 and are essential for routing data packets across networks. In the DevOps Infrastructure Ontology, an IP address is considered a fundamental component of network infrastructure, associated with devices, services, and network segments.'
+definition: |
+  An IP Address is a unique numerical identifier assigned to a device or interface within a
+  network, facilitating communication between devices. IP addresses can be either IPv4 or
+  IPv6 and are essential for routing data packets across networks. In the DevOps
+  Infrastructure Ontology, an IP address is considered a fundamental component of network
+  infrastructure, associated with devices, services, and network segments.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -43,5 +48,9 @@ agent_execution:
   actions:
     - 'Check for conflicts, such as duplicate assignments or unauthorized usage.'
     - Determine the network segment or subnet the IP address belongs to.
-    - 'Provide recommendations or actions, such as releasing, reassigning, or monitoring the IP address.'
-    - 'Retrieve the IP address details, including assignment, status, and associated device or service.'
+    - |
+      Provide recommendations or actions, such as releasing, reassigning, or monitoring the IP
+      address.
+    - |
+      Retrieve the IP address details, including assignment, status, and associated device or
+      service.

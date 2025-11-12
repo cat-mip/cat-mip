@@ -6,19 +6,25 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'SSO (Single Sign-On) is an authentication mechanism that allows users to access multiple systems or applications with a single set of login credentials. It streamlines user access while reducing password fatigue and improving security through centralized identity management. In MSP and IT environments, SSO is often integrated with identity providers (IdPs) such as Azure AD, Okta, or Google Workspace to control access across cloud and on-premises services.'
+definition: |
+  SSO (Single Sign-On) is an authentication mechanism that allows users to access multiple
+  systems or applications with a single set of login credentials. It streamlines user access
+  while reducing password fatigue and improving security through centralized identity
+  management. In MSP and IT environments, SSO is often integrated with identity providers
+  (IdPs) such as Azure AD, Okta, or Google Workspace to control access across cloud and on-
+  premises services.
 history:
   -
     date: '2025-08-19'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-19'
     author: roop

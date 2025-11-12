@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'CLI (Command-Line Interface) is a text-based interface that allows users or systems to interact with software, operating systems, or devices by typing commands. The CLI provides direct access to system functions, configuration, and diagnostics without a graphical user interface. In MSP and IT environments, CLI tools are widely used for scripting, automation, remote troubleshooting, and advanced configuration.'
+definition: |
+  CLI (Command-Line Interface) is a text-based interface that allows users or systems to
+  interact with software, operating systems, or devices by typing commands. The CLI provides
+  direct access to system functions, configuration, and diagnostics without a graphical user
+  interface. In MSP and IT environments, CLI tools are widely used for scripting,
+  automation, remote troubleshooting, and advanced configuration.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop
@@ -45,6 +50,8 @@ agent_execution:
   actions:
     - 'Capture output, errors, and system responses'
     - Execute the requested command or script using available permissions
-    - 'Identify the appropriate CLI environment based on the target system (e.g., Bash, PowerShell, Command Prompt)'
+    - |
+      Identify the appropriate CLI environment based on the target system (e.g., Bash,
+      PowerShell, Command Prompt)
     - 'Log all CLI interactions for auditing, error tracking, or rollback'
     - Validate results and proceed with next steps if part of a workflow

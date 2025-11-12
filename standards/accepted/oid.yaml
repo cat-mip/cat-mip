@@ -6,19 +6,25 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'OID (Object Identifier) is a globally unique identifier used in SNMP (Simple Network Management Protocol) to represent a specific piece of data that can be queried or monitored on a managed device. OIDs follow a hierarchical dotted-decimal notation (e.g., 1.3.6.1.2.1.1.3.0) and correspond to specific metrics or attributes such as uptime, CPU usage, or interface status. In MSP and IT environments, OIDs are essential for polling devices and triggering alerts based on performance or health data.'
+definition: |
+  OID (Object Identifier) is a globally unique identifier used in SNMP (Simple Network
+  Management Protocol) to represent a specific piece of data that can be queried or
+  monitored on a managed device. OIDs follow a hierarchical dotted-decimal notation (e.g.,
+  1.3.6.1.2.1.1.3.0) and correspond to specific metrics or attributes such as uptime, CPU
+  usage, or interface status. In MSP and IT environments, OIDs are essential for polling
+  devices and triggering alerts based on performance or health data.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop

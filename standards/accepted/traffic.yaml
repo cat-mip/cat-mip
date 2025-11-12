@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'Traffic refers to the flow of data packets transmitted across a network between devices, services, or endpoints. It includes both inbound and outbound communication and can represent various protocols (e.g., HTTP, DNS, SSH) and applications. In MSP and IT operations, monitoring traffic is essential for performance analysis, bandwidth management, anomaly detection, and security threat identification.'
+definition: |
+  Traffic refers to the flow of data packets transmitted across a network between devices,
+  services, or endpoints. It includes both inbound and outbound communication and can
+  represent various protocols (e.g., HTTP, DNS, SSH) and applications. In MSP and IT
+  operations, monitoring traffic is essential for performance analysis, bandwidth
+  management, anomaly detection, and security threat identification.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -46,6 +51,10 @@ agent_execution:
   actions:
     - 'Aggregate or filter traffic by protocol, source, destination, port, or time window'
     - Correlate traffic patterns with known risks or baseline behaviors
-    - Detect anomalies or threshold violations such as unusual spikes or unauthorized destinations
+    - |
+      Detect anomalies or threshold violations such as unusual spikes or unauthorized
+      destinations
     - 'Query network flow data, packet captures, or traffic logs from monitoring tools'
-    - 'Trigger appropriate actions such as alerting, blocking, throttling, or logging based on configured policies'
+    - |
+      Trigger appropriate actions such as alerting, blocking, throttling, or logging based on
+      configured policies

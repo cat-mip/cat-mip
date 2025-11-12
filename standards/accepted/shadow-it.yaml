@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'Shadow IT refers to the use of software, hardware, cloud services, or other technology solutions within an organization without formal approval, visibility, or oversight from the IT department. This includes unmanaged SaaS tools, personal devices, and unauthorized data storage or sharing platforms. In MSP and IT environments, shadow IT poses risks related to security, compliance, data loss, and operational inefficiencies.'
+definition: |
+  Shadow IT refers to the use of software, hardware, cloud services, or other technology
+  solutions within an organization without formal approval, visibility, or oversight from
+  the IT department. This includes unmanaged SaaS tools, personal devices, and unauthorized
+  data storage or sharing platforms. In MSP and IT environments, shadow IT poses risks
+  related to security, compliance, data loss, and operational inefficiencies.
 history:
   -
     date: '2025-08-19'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-19'
     author: roop

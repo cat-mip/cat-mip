@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Script is a predefined, executable set of instructions used to automate actions on devices, services, or platforms. In the MSP context, scripts are widely used for tasks such as remediation, deployment, configuration, and monitoring. Scripts can be written in various languages (e.g., PowerShell, Bash, Python) and are executed manually, on a schedule, or as part of automation policies triggered by events or conditions.'
+definition: |
+  A Script is a predefined, executable set of instructions used to automate actions on
+  devices, services, or platforms. In the MSP context, scripts are widely used for tasks
+  such as remediation, deployment, configuration, and monitoring. Scripts can be written in
+  various languages (e.g., PowerShell, Bash, Python) and are executed manually, on a
+  schedule, or as part of automation policies triggered by events or conditions.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole

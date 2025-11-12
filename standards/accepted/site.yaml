@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Site is a physical or logical subdivision within a Tenant (Customer). It may represent a physical location (e.g., office, data center), a virtual group (e.g., cloud region, department), or any operational boundary used for organizing and managing Devices | Assets. Sites provide structure for automation, reporting, and policy scoping beneath the customer level.'
+definition: |
+  A Site is a physical or logical subdivision within a Tenant (Customer). It may represent a
+  physical location (e.g., office, data center), a virtual group (e.g., cloud region,
+  department), or any operational boundary used for organizing and managing Devices |
+  Assets. Sites provide structure for automation, reporting, and policy scoping beneath the
+  customer level.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -38,7 +43,7 @@ prompt_examples:
   - Check if the New York site for 'Harbor Industries' has any offline devices.
   - List software installed on devices in the Finance department site.
 agent_execution:
-  interpretation: "When a prompt refers to a 'Site,' the agent"
+  interpretation: 'When a prompt refers to a ''Site,'' the agent'
   actions:
     - 'Applies actions (e.g., scans, updates, reports) only to entities within the Site boundary'
     - 'Filters Devices, Policies, and Scripts to those associated with the Site'

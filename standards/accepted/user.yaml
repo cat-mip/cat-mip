@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A User is an individual or system identity that interacts with IT services, applications, or infrastructure. Each user is typically associated with a unique account and may be assigned roles, permissions, policies, or resources. In MSP and IT environments, users are managed through identity systems, directory services, or RMM platforms to control access, monitor activity, and enforce security.'
+definition: |
+  A User is an individual or system identity that interacts with IT services, applications,
+  or infrastructure. Each user is typically associated with a unique account and may be
+  assigned roles, permissions, policies, or resources. In MSP and IT environments, users are
+  managed through identity systems, directory services, or RMM platforms to control access,
+  monitor activity, and enforce security.
 history:
   -
     date: '2025-08-19'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-19'
     author: roop
@@ -43,7 +48,7 @@ prompt_examples:
 agent_execution:
   interpretation: 'When a prompt refers to a "User," the AI agent will'
   actions:
-    - "Determine the user's roles, group memberships, permissions, and recent activity"
+    - 'Determine the user''s roles, group memberships, permissions, and recent activity'
     - 'Enforce policies related to access, compliance, or security'
     - 'Log all user-related actions for audit, reporting, or troubleshooting'
     - 'Perform actions such as enabling, disabling, updating, or notifying the user'

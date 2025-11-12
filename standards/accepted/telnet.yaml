@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'Telnet is a legacy network protocol used to provide text-based, remote command-line access to devices over TCP. Unlike SSH, Telnet does not encrypt the session, making it insecure for use over untrusted networks. In MSP and IT environments, Telnet may still be used for legacy systems, internal diagnostics, or device configuration, but it is generally replaced by more secure alternatives.'
+definition: |
+  Telnet is a legacy network protocol used to provide text-based, remote command-line access
+  to devices over TCP. Unlike SSH, Telnet does not encrypt the session, making it insecure
+  for use over untrusted networks. In MSP and IT environments, Telnet may still be used for
+  legacy systems, internal diagnostics, or device configuration, but it is generally
+  replaced by more secure alternatives.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole

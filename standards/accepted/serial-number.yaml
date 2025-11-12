@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Serial Number is a unique identifier assigned to a specific hardware or software asset by the manufacturer or vendor. It is used to distinguish one physical or virtual item from another for purposes such as inventory tracking, warranty management, licensing, and support. In MSP and IT environments, serial numbers are commonly used to manage devices like laptops, servers, network hardware, and backup appliances.'
+definition: |
+  A Serial Number is a unique identifier assigned to a specific hardware or software asset
+  by the manufacturer or vendor. It is used to distinguish one physical or virtual item from
+  another for purposes such as inventory tracking, warranty management, licensing, and
+  support. In MSP and IT environments, serial numbers are commonly used to manage devices
+  like laptops, servers, network hardware, and backup appliances.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop

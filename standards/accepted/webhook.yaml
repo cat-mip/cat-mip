@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Webhook is a user-defined HTTP callback that automatically sends real-time data or event notifications from one system to another when a specified condition is met. Unlike APIs that require polling, webhooks push information immediately to an external endpoint. In MSP and IT environments, webhooks are often used to trigger workflows, sync systems, log events, or alert technicians based on changes in tickets, devices, backups, or policies.'
+definition: |
+  A Webhook is a user-defined HTTP callback that automatically sends real-time data or event
+  notifications from one system to another when a specified condition is met. Unlike APIs
+  that require polling, webhooks push information immediately to an external endpoint. In
+  MSP and IT environments, webhooks are often used to trigger workflows, sync systems, log
+  events, or alert technicians based on changes in tickets, devices, backups, or policies.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop

@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Backup is a secure, stored copy of data, system configuration, or application state, used to restore functionality or recover from data loss, corruption, or disaster. In the MSP context, backups may be scheduled, continuous, or event-triggered, and can target endpoints, servers, cloud services (e.g., Microsoft 365), or databases. Backup policies define the scope, frequency, retention, and storage destination of backup operations.'
+definition: |
+  A Backup is a secure, stored copy of data, system configuration, or application state,
+  used to restore functionality or recover from data loss, corruption, or disaster. In the
+  MSP context, backups may be scheduled, continuous, or event-triggered, and can target
+  endpoints, servers, cloud services (e.g., Microsoft 365), or databases. Backup policies
+  define the scope, frequency, retention, and storage destination of backup operations.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -38,7 +43,7 @@ relationships:
 prompt_examples:
   - List all failed backup jobs in the past 48 hours across the 'Retail' tenant.
   - Restore the backup of user 'jane.doe' mailbox from last Monday.
-  - "When was the last successful backup for the server 'NY-SQL-01'?"
+  - 'When was the last successful backup for the server ''NY-SQL-01''?'
 agent_execution:
   interpretation: 'When a prompt refers to a "Backup," the AI agent will'
   actions:

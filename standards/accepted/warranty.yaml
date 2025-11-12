@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Warranty refers to the contractual period during which a hardware asset (e.g., server, laptop, disk) is covered for repairs, replacements, or support by the manufacturer or vendor. In the MSP context, warranty information helps inform lifecycle management, asset planning, and service prioritization. Tracking warranty status enables technicians to escalate hardware issues appropriately and manage risk around unsupported devices.'
+definition: |
+  A Warranty refers to the contractual period during which a hardware asset (e.g., server,
+  laptop, disk) is covered for repairs, replacements, or support by the manufacturer or
+  vendor. In the MSP context, warranty information helps inform lifecycle management, asset
+  planning, and service prioritization. Tracking warranty status enables technicians to
+  escalate hardware issues appropriately and manage risk around unsupported devices.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -34,8 +39,8 @@ relationships:
   - Warranty isProvidedBy Vendor or Manufacturer
   - Warranty isTrackedIn AssetInventory
 prompt_examples:
-  - "Is the disk in device 'HR-LT-004' still under warranty?"
-  - "List all out-of-warranty servers in the 'EMEA' region."
+  - 'Is the disk in device ''HR-LT-004'' still under warranty?'
+  - 'List all out-of-warranty servers in the ''EMEA'' region.'
   - 'Which devices have warranties expiring in the next 30 days?'
 agent_execution:
   interpretation: 'When a prompt includes "Warranty," the AI agent will'

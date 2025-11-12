@@ -6,19 +6,25 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'Hardware refers to the physical components of an IT environment, including servers, laptops, desktops, networking gear, storage devices, and peripherals. In the vendor context, hardware is typically associated with managed Devices, and its properties (e.g., CPU type, RAM, disk size, serial number) are collected for inventory, health monitoring, and compliance tracking. Hardware may also include embedded systems and edge devices under MSP management.'
+definition: |
+  Hardware refers to the physical components of an IT environment, including servers,
+  laptops, desktops, networking gear, storage devices, and peripherals. In the vendor
+  context, hardware is typically associated with managed Devices, and its properties (e.g.,
+  CPU type, RAM, disk size, serial number) are collected for inventory, health monitoring,
+  and compliance tracking. Hardware may also include embedded systems and edge devices under
+  MSP management.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -38,7 +44,7 @@ relationships:
 prompt_examples:
   - Generate a hardware inventory report for all remote offices.
   - List all hardware with less than 8GB RAM across the 'Education' tenant.
-  - "What hardware components are failing on server 'NY-DC-001'?"
+  - 'What hardware components are failing on server ''NY-DC-001''?'
 agent_execution:
   interpretation: 'When a prompt refers to "Hardware," the AI agent will'
   actions:

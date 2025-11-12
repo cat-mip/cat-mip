@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Workflow is a structured sequence of tasks or activities designed to accomplish a specific objective within a system or process. In the DevOps Infrastructure Ontology, a workflow represents the orchestration of actions, often automated, that manage and control various aspects of IT infrastructure and software development. Workflows are essential for ensuring consistency, efficiency, and repeatability in operations.'
+definition: |
+  A Workflow is a structured sequence of tasks or activities designed to accomplish a
+  specific objective within a system or process. In the DevOps Infrastructure Ontology, a
+  workflow represents the orchestration of actions, often automated, that manage and control
+  various aspects of IT infrastructure and software development. Workflows are essential for
+  ensuring consistency, efficiency, and repeatability in operations.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole

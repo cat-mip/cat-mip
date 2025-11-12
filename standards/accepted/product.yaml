@@ -6,19 +6,24 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Product is a tangible or intangible item offered by a vendor, encompassing software applications, hardware devices, or services. In the DevOps Infrastructure Ontology, a product is an entity that can be deployed, configured, and managed within an IT environment. Products are often associated with specific versions, configurations, and may be part of a larger service offering.'
+definition: |
+  A Product is a tangible or intangible item offered by a vendor, encompassing software
+  applications, hardware devices, or services. In the DevOps Infrastructure Ontology, a
+  product is an entity that can be deployed, configured, and managed within an IT
+  environment. Products are often associated with specific versions, configurations, and may
+  be part of a larger service offering.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole

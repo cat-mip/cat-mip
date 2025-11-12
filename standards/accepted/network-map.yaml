@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Network Map is a visual or structured representation of devices, endpoints, and interconnections within a networked environment. It provides topology awareness, showing how elements such as routers, switches, firewalls, servers, and workstations are linked--often including metadata like IP addresses, MAC addresses, status, and roles. Network maps support monitoring, diagnostics, capacity planning, and security audits.'
+definition: |
+  A Network Map is a visual or structured representation of devices, endpoints, and
+  interconnections within a networked environment. It provides topology awareness, showing
+  how elements such as routers, switches, firewalls, servers, and workstations are linked--
+  often including metadata like IP addresses, MAC addresses, status, and roles. Network maps
+  support monitoring, diagnostics, capacity planning, and security audits.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop

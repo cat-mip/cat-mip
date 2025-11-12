@@ -6,19 +6,25 @@ authors:
     name: Nicole Reineke
     github: nicole
     org: 'N-able'
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Server is a physical or virtual computing resource designed to provide services, applications, or data to other devices or clients. In the DevOps Infrastructure Ontology, a Server is a subclass of devopscore:Resource and is characterized by its role in hosting software components, managing workloads, and facilitating networked operations. Servers are integral to IT infrastructures, supporting various functions such as web hosting, database management, and application deployment.'
+definition: |
+  A Server is a physical or virtual computing resource designed to provide services,
+  applications, or data to other devices or clients. In the DevOps Infrastructure Ontology,
+  a Server is a subclass of devopscore:Resource and is characterized by its role in hosting
+  software components, managing workloads, and facilitating networked operations. Servers
+  are integral to IT infrastructures, supporting various functions such as web hosting,
+  database management, and application deployment.
 history:
   -
     date: '2025-08-07'
     author: nicole
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: nicole
@@ -39,11 +45,19 @@ relationships:
 prompt_examples:
   - Deploy the latest security patch to all web servers running Apache HTTP Server.
   - List all servers hosting the 'Customer Relationship Management' application.
-  - "What is the current CPU utilization of servers located in the 'East Coast Data Center'?"
+  - 'What is the current CPU utilization of servers located in the ''East Coast Data Center''?'
 agent_execution:
   interpretation: 'When processing prompts involving "Server," the AI agent will'
   actions:
-    - 'Apply filters such as location (isLocatedIn), hosted software (hosts), or hardware specifications (hasHardwareComponent) to narrow down the relevant servers'
-    - 'Execute the requested operations, such as retrieving performance metrics, deploying software updates, or modifying configurations on the identified servers'
-    - Query the infrastructure inventory to retrieve all entities classified under the Server category
-    - Verify that actions comply with organizational policies and log activities for auditing purposes
+    - |
+      Apply filters such as location (isLocatedIn), hosted software (hosts), or hardware
+      specifications (hasHardwareComponent) to narrow down the relevant servers
+    - |
+      Execute the requested operations, such as retrieving performance metrics, deploying
+      software updates, or modifying configurations on the identified servers
+    - |
+      Query the infrastructure inventory to retrieve all entities classified under the Server
+      category
+    - |
+      Verify that actions comply with organizational policies and log activities for auditing
+      purposes

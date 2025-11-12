@@ -6,19 +6,25 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'A Port is a logical or physical interface used for communication between devices or applications. In networking, a port refers to a numbered endpoint in the transport layer (TCP/UDP) that identifies specific processes or services on a device (e.g., port 22 for SSH, port 443 for HTTPS). In hardware, a port can also refer to a physical connection point on a switch, router, or server. In MSP and IT environments, ports are monitored, managed, and filtered for performance, availability, and security.'
+definition: |
+  A Port is a logical or physical interface used for communication between devices or
+  applications. In networking, a port refers to a numbered endpoint in the transport layer
+  (TCP/UDP) that identifies specific processes or services on a device (e.g., port 22 for
+  SSH, port 443 for HTTPS). In hardware, a port can also refer to a physical connection
+  point on a switch, router, or server. In MSP and IT environments, ports are monitored,
+  managed, and filtered for performance, availability, and security.
 history:
   -
     date: '2025-08-07'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-07'
     author: roop

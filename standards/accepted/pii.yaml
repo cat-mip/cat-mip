@@ -6,19 +6,24 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'PII (Personally Identifiable Information) refers to any data that can be used to identify an individual, either on its own or when combined with other information. This includes names, email addresses, phone numbers, government IDs, financial data, and biometric records. In MSP and IT environments, PII must be handled with strict security and compliance controls to meet privacy regulations such as GDPR, HIPAA, or CCPA.'
+definition: |
+  PII (Personally Identifiable Information) refers to any data that can be used to identify
+  an individual, either on its own or when combined with other information. This includes
+  names, email addresses, phone numbers, government IDs, financial data, and biometric
+  records. In MSP and IT environments, PII must be handled with strict security and
+  compliance controls to meet privacy regulations such as GDPR, HIPAA, or CCPA.
 history:
   -
     date: '2025-08-19'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-19'
     author: roop
@@ -43,8 +48,12 @@ prompt_examples:
 agent_execution:
   interpretation: 'When a prompt refers to "PII," the AI agent will'
   actions:
-    - 'Evaluate whether storage, access, and transmission comply with security and privacy policies'
+    - |
+      Evaluate whether storage, access, and transmission comply with security and privacy
+      policies
     - 'Identify and classify PII using pattern recognition, tags, or predefined rules'
     - Locate data sources likely to contain PII based on content types or metadata
-    - 'Log all actions involving PII discovery, access, or handling for audit and compliance tracking'
+    - |
+      Log all actions involving PII discovery, access, or handling for audit and compliance
+      tracking
     - Trigger alerts or remediation workflows in the event of unauthorized access or exposure

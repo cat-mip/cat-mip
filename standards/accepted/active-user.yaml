@@ -6,19 +6,25 @@ authors:
     name: Roop Petersen
     github: roop
     org: Auvik Networks Inc.
-discussion: 
+discussion:
 categories:
   - Core
 tags:
   - 'cat-mip'
   - core
   - msp
-definition: 'An Active User is a user account that has recently authenticated, initiated a session, performed actions, or otherwise engaged with a system, service, or platform within a defined timeframe. The term is used to distinguish between currently engaged or recently engaged users and those that are inactive, suspended, or dormant. In MSP and IT environments, active users are tracked for licensing, security auditing, capacity planning, and automation targeting.'
+definition: |
+  An Active User is a user account that has recently authenticated, initiated a session,
+  performed actions, or otherwise engaged with a system, service, or platform within a
+  defined timeframe. The term is used to distinguish between currently engaged or recently
+  engaged users and those that are inactive, suspended, or dormant. In MSP and IT
+  environments, active users are tracked for licensing, security auditing, capacity
+  planning, and automation targeting.
 history:
   -
     date: '2025-08-19'
     author: roop
-    reason: Initial term addition to registry
+    reason: Initial term addition to build registry
   -
     date: '2025-08-19'
     author: roop
@@ -46,5 +52,7 @@ agent_execution:
     - 'Apply filters such as time range, role, location, or group'
     - 'Correlate activity with licensing, authentication, or policy enforcement data'
     - Log all queries and actions for auditing or compliance purposes
-    - 'Query the user directory, session logs, or activity metrics to identify accounts meeting the active criteria'
+    - |
+      Query the user directory, session logs, or activity metrics to identify accounts meeting
+      the active criteria
     - Return the list of matching users or perform the requested action on their behalf
