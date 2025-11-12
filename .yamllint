@@ -14,6 +14,7 @@ rules:
     min-spaces-from-content: 1
   truthy:
     allowed-values: ['true', 'false']
-  quotes:
-    forbid: double
-    allow: single
+  quoted-strings:
+    quote-type: single
+    required: false
+  new-line-at-end-of-file: enable
