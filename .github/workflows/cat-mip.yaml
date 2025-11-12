@@ -2,7 +2,7 @@ name: CAT-MIP CI
 
 on:
   push:
-    branches: [ '**' ]  touch
+    branches: [ '**' ]
   workflow_dispatch:
 
 jobs:
