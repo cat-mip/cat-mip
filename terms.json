@@ -1182,7 +1182,7 @@
 ,
 {
   "id": "CAT-MIP-08072025-000000281",
-  "canonical_term": "vendor",
+  "canonical_term": "Vendor",
   "definition": "The top-level platform node representing vendor as the vendor and service provider. This is a unique, singular entity in the model. It serves as the source of platform-wide policies, agent frameworks, product definitions, and integration standards. All tenants, services, and tools exist beneath or are associated with this node.",
   "synonyms": [
     "Platform",
