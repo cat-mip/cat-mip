@@ -3,16 +3,14 @@
 verify-unique-ids.py
 Ensure no two CAT-MIP YAML files share the same 'id:' value.
 
-Works on:
+Now only scans:
   standards/accepted/*.yaml
   standards/draft/*.yaml
-  standards/proposed/*.yaml (if you add it later)
+  standards/deprecated/*.yaml
+  standards/rejected/*.yaml
 
-Features:
-- Exact same style as build-cat-mip.py
-- Reports duplicates with relative paths (just like GitHub)
-- Also reports files missing an 'id:' field
-- Exits with status 1 on duplicates → perfect for CI/CD and pre-commit
+Ignores root standards/*.yaml (like template.yaml) completely.
+Perfect match with build_site.py behavior.
 """
 
 import pathlib
@@ -25,6 +23,9 @@ from collections import defaultdict
 # ----------------------------------------------------------------------
 ROOT = pathlib.Path(__file__).parent.parent
 STANDARDS = ROOT / "standards"
+
+# Only these folders contain real terms
+FOLDERS = ["accepted", "draft", "deprecated", "rejected"]
 
 # Regex: matches  id: 'CAT-MIP-000000025'  or  id: CAT-MIP-000000025
 ID_REGEX = re.compile(r'^\s*id\s*:\s*[\'"`]?([^\'"` ]+)[\'"`]?', re.MULTILINE)
@@ -45,7 +46,7 @@ def extract_id_from_file(file_path: pathlib.Path) -> str | None:
 
 
 # ----------------------------------------------------------------------
-# SCAN ALL YAML FILES UNDER standards/**
+# SCAN ONLY THE STATUS FOLDERS
 # ----------------------------------------------------------------------
 def scan_all_terms() -> tuple[defaultdict[list], list[pathlib.Path]]:
     """
@@ -60,9 +61,11 @@ def scan_all_terms() -> tuple[defaultdict[list], list[pathlib.Path]]:
         print(f"Error: standards/ directory not found at {STANDARDS}")
         sys.exit(1)
 
-    for yaml_path in STANDARDS.rglob("*.yaml"):
-        if not yaml_path.is_file():
-            continue
+    # Only look one level deep inside the known status folders → safe & fast
+    for yaml_path in STANDARDS.glob("*/*.yaml"):
+        folder = yaml_path.parent.name
+        if folder not in FOLDERS:
+            continue  # skip anything not in accepted/draft/deprecated/rejected
 
         term_id = extract_id_from_file(yaml_path)
         if term_id is None:

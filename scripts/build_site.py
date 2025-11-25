@@ -336,7 +336,8 @@ def main():
     all_terms = {}
     folder_terms = {f: [] for f in FOLDERS}
 
-    for yaml_path in STANDARDS.rglob("*.yaml"):
+    # Only YAML files inside the four status folders — ignores root completely
+    for yaml_path in STANDARDS.glob("*/*.yaml"):
         folder = yaml_path.parent.name
         if folder not in FOLDERS:
             continue
@@ -360,7 +361,8 @@ def main():
 
     generate_folder_indexes(folder_terms)
 
-    for yaml_path in STANDARDS.rglob("*.yaml"):
+    # Second pass — same glob, same safety
+    for yaml_path in STANDARDS.glob("*/*.yaml"):
         folder = yaml_path.parent.name
         if folder not in FOLDERS:
             continue
