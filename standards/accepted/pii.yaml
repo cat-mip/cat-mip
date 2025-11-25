@@ -1,6 +1,6 @@
-id: 'CAT-MIP-000000061'
+id: 'CAT-MIP-0000000226'
 term: PII
-version: '1.0'
+version: '1.1.0'
 authors:
   -
     name: Roop Petersen
@@ -28,6 +28,10 @@ history:
     date: '2025-09-19'
     author: roop
     reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2025-11-25'
+    author: jimmypuckett
+    reason: 'Correct ID as it conflicted with "Audit Log"'
 synonyms:
   - Confidential Customer Info
   - Identity Data
