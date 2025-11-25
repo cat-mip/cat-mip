@@ -113,8 +113,8 @@ def build_json():
     (BUILD / "cat-mip.json").write_text(json.dumps(accepted, indent=2, ensure_ascii=False) + "\n")
     (BUILD / "cat-mip-dev.json").write_text(json.dumps(dev_terms, indent=2, ensure_ascii=False) + "\n")
 
-    print(f"\nBuilt cat-mip.json ({len(accepted)} accepted terms — sorted)")
-    print(f"Built cat-mip-dev.json ({len(dev_terms)} total terms — sorted)")
+    print(f"\nBuilt cat-mip.json ({len(accepted)} accepted terms)")
+    print(f"Built cat-mip-dev.json ({len(dev_terms)} total terms)")
 
 
 # ----------------------------------------------------------------------
