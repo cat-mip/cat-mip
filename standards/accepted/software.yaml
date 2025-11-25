@@ -42,7 +42,7 @@ relationships:
   - Software isManagedBy Agent
 prompt_examples:
   - Check if the CRM application is running on the New York site.
-  - 'List all software installed on device ''ENG-LT-05''.'
+  - 'List all software installed on device "ENG-LT-05".'
   - Update the antivirus software to the latest version on all servers.
 agent_execution:
   interpretation: 'When a prompt refers to "Software," the AI agent will'

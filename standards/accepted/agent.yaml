@@ -41,7 +41,7 @@ relationships:
   - 'Agent monitors Performance, Security, and PolicyCompliance'
   - Agent reportsTo Platform or OrchestrationService
 prompt_examples:
-  - 'Check if the N-central agent is online on device ''HR-LT-003''.'
+  - 'Check if the N-central agent is online on device "HR-LT-003".'
   - List all agents running outdated versions across the 'Finance' tenant.
   - Trigger the backup task via the local agent on all Windows servers.
 agent_execution:

@@ -42,7 +42,7 @@ relationships:
 prompt_examples:
   - Analyze event logs and compliance reports for policy violations.
   - Get performance metrics and alert logs for this tenant.
-  - 'Retrieve CPU and memory usage data for device ''ENG-LT-05'' for the past 7 days.'
+  - 'Retrieve CPU and memory usage data for device "ENG-LT-05" for the past 7 days.'
 agent_execution:
   interpretation: 'When "Data" is used in a prompt, the AI agent will'
   actions:

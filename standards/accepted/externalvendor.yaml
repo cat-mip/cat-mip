@@ -42,8 +42,8 @@ relationships:
   - ExternalVendor provides Integration
   - ExternalVendor supports Action
 prompt_examples:
-  - 'Is the external vendor ''Acronis'' certified for cloud backup integrations with Cove?'
-  - 'What actions are available from the external vendor ''SentinelOne'' through its integration?'
+  - 'Is the external vendor "Acronis" certified for cloud backup integrations with Cove?'
+  - 'What actions are available from the external vendor "SentinelOne" through its integration?'
   - 'Which external vendors support remediation workflows via API?'
 agent_execution:
   interpretation: 'When a prompt includes the name of an External Vendor, the agent will'

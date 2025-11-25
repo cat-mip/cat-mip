@@ -43,7 +43,7 @@ relationships:
   - 'Lifecycle transitionsTrigger Alert, Action, or Notification'
 prompt_examples:
   - Automatically archive tickets once they reach the 'Closed' lifecycle stage for 90 days.
-  - 'Display all assets in the ''End-of-Life'' stage.'
+  - 'Display all assets in the "End-of-Life" stage.'
   - Trigger offboarding automation when a user's lifecycle status changes to 'terminated'.
   - 'What is the current lifecycle stage of all laptops deployed last quarter?'
 agent_execution:

@@ -41,7 +41,7 @@ prompt_examples:
   - Send onboarding materials to new MSPs and distributors.
   - 'Which MSPs or tenants are overdue on patch compliance?'
 agent_execution:
-  interpretation: 'When ''Account'' is used in a prompt, the AI agent will'
+  interpretation: 'When "Account" is used in a prompt, the AI agent will'
   actions:
     - 'Attempt to infer the intended object (Tenant, MSP, Customer, etc.)'
     - 'If inference succeeds, resolve the term to the correct object type and execute accordingly'

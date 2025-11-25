@@ -41,9 +41,9 @@ relationships:
   - Certificate isStoredIn Certificate Repository
   - Certificate isUsedFor Authentication or Encryption
 prompt_examples:
-  - 'Check if the SSL certificate for ''client-portal.example.com'' is valid.'
+  - 'Check if the SSL certificate for "client-portal.example.com" is valid.'
   - List all certificates expiring within the next 30 days.
-  - 'Revoke the compromised certificate assigned to device ''ENG-LT-05''.'
+  - 'Revoke the compromised certificate assigned to device "ENG-LT-05".'
 agent_execution:
   interpretation: 'When a prompt includes "Certificate," the AI agent will'
   actions:

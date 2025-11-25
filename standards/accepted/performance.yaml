@@ -39,11 +39,11 @@ relationships:
   - Performance isReportedIn Dashboard or Report
   - Performance triggers Alert or Automation
 prompt_examples:
-  - 'Check the performance of device ''ENG-LT-05'' and flag any CPU or memory spikes.'
+  - 'Check the performance of device "ENG-LT-05" and flag any CPU or memory spikes.'
   - |
     Generate a performance report for all servers in the 'West Coast' site over the last 7
     days.
-  - 'What performance metrics are being tracked for the tenant ''SecureNet''?'
+  - 'What performance metrics are being tracked for the tenant "SecureNet"?'
 agent_execution:
   interpretation: 'When a prompt refers to "Performance," the AI agent will'
   actions:

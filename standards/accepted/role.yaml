@@ -44,7 +44,7 @@ prompt_examples:
   - Assign the 'Technician' role to all new users in the MSP portal.
   - List all roles with access to credential management features.
   - Revoke elevated roles from users inactive for more than 30 days.
-  - 'What permissions are included in the ''Backup Admin'' role?'
+  - 'What permissions are included in the "Backup Admin" role?'
 agent_execution:
   interpretation: 'When a prompt refers to a "Role," the AI agent will'
   actions:

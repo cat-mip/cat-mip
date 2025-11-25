@@ -41,7 +41,7 @@ relationships:
   - 'Notification isTriggeredBy Event, Policy, or Agent'
 prompt_examples:
   - 'Send a notification to the admin group when disk usage exceeds 90%.'
-  - 'Suppress non-critical notifications for tenant ''Acme Legal'' during maintenance.'
+  - 'Suppress non-critical notifications for tenant "Acme Legal" during maintenance.'
   - 'What notifications were generated during last night''s patching window?'
 agent_execution:
   interpretation: 'When a prompt refers to a "Notification," the AI agent will'

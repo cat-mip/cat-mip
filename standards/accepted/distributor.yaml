@@ -44,7 +44,7 @@ relationships:
   - Distributor supports MSP
 prompt_examples:
   - Deploy the onboarding script to all new tenants under the distributor 'CloudBridge'.
-  - 'Does the distributor ''EuroSecure'' manage support for its MSPs or is it handled by vendor?'
+  - 'Does the distributor "EuroSecure" manage support for its MSPs or is it handled by vendor?'
   - List all MSPs under the distributor 'AlphaTech'.
 agent_execution:
   interpretation: |

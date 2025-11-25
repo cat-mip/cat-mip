@@ -43,7 +43,7 @@ prompt_examples:
   - Check if the New York site for 'Harbor Industries' has any offline devices.
   - List software installed on devices in the Finance department site.
 agent_execution:
-  interpretation: 'When a prompt refers to a ''Site,'' the agent'
+  interpretation: 'When a prompt refers to a "Site," the agent'
   actions:
     - 'Applies actions (e.g., scans, updates, reports) only to entities within the Site boundary'
     - 'Filters Devices, Policies, and Scripts to those associated with the Site'

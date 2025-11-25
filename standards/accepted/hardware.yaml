@@ -44,7 +44,7 @@ relationships:
 prompt_examples:
   - Generate a hardware inventory report for all remote offices.
   - List all hardware with less than 8GB RAM across the 'Education' tenant.
-  - 'What hardware components are failing on server ''NY-DC-001''?'
+  - 'What hardware components are failing on server "NY-DC-001"?'
 agent_execution:
   interpretation: 'When a prompt refers to "Hardware," the AI agent will'
   actions:

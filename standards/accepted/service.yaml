@@ -44,7 +44,7 @@ relationships:
 prompt_examples:
   - Check if the backup service is running on all servers in the 'Legal' tenant.
   - List all services provided to the customer 'BrightPath Health'.
-  - 'Which services are failing health checks in the ''EU Data Center''?'
+  - 'Which services are failing health checks in the "EU Data Center"?'
 agent_execution:
   interpretation: 'When a prompt refers to a "Service," the AI agent will'
   actions:

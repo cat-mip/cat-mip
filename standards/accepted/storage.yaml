@@ -42,7 +42,7 @@ relationships:
   - Storage isUsedBy Product or Service
 prompt_examples:
   - 'Alert me when storage usage exceeds 85% on any devices.'
-  - 'How much storage is currently available in the backup vault for ''Tenant-Alpha''?'
+  - 'How much storage is currently available in the backup vault for "Tenant-Alpha"?'
   - List all cloud storage accounts used by the Cove backup service.
 agent_execution:
   interpretation: 'When a prompt refers to "Storage," the AI agent will'

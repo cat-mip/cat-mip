@@ -42,7 +42,7 @@ relationships:
   - Firewall logsEventsTo MonitoringSystem
   - Firewall monitorsTrafficFor Threat
 prompt_examples:
-  - 'Check the current rule set configured on the firewall protecting the ''NYC-DataCenter''.'
+  - 'Check the current rule set configured on the firewall protecting the "NYC-DataCenter".'
   - Identify any unauthorized access attempts blocked by the firewall in the last 24 hours.
   - List all firewalls deployed across the 'Finance' tenant's network.
 agent_execution:

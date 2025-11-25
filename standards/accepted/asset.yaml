@@ -44,6 +44,6 @@ relationships:
   - Asset isMonitoredBy Agent
   - Asset runs Script
 prompt_examples:
-  - 'Reboot the asset named ''ENG-WORKSTATION-03'' if it''s unresponsive.'
+  - 'Reboot the asset named "ENG-WORKSTATION-03" if it''s unresponsive.'
   - 'Run the disk cleanup script on all Windows 10 assets with over 80% disk usage.'
-  - 'What''s the patch compliance status of all assets in the ''Sales'' department?'
+  - 'What''s the patch compliance status of all assets in the "Sales" department?'

@@ -43,7 +43,7 @@ relationships:
 prompt_examples:
   - List all failed backup jobs in the past 48 hours across the 'Retail' tenant.
   - Restore the backup of user 'jane.doe' mailbox from last Monday.
-  - 'When was the last successful backup for the server ''NY-SQL-01''?'
+  - 'When was the last successful backup for the server "NY-SQL-01"?'
 agent_execution:
   interpretation: 'When a prompt refers to a "Backup," the AI agent will'
   actions:

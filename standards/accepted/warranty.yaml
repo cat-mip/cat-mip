@@ -39,8 +39,8 @@ relationships:
   - Warranty isProvidedBy Vendor or Manufacturer
   - Warranty isTrackedIn AssetInventory
 prompt_examples:
-  - 'Is the disk in device ''HR-LT-004'' still under warranty?'
-  - 'List all out-of-warranty servers in the ''EMEA'' region.'
+  - 'Is the disk in device "HR-LT-004" still under warranty?'
+  - 'List all out-of-warranty servers in the "EMEA" region.'
   - 'Which devices have warranties expiring in the next 30 days?'
 agent_execution:
   interpretation: 'When a prompt includes "Warranty," the AI agent will'

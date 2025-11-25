@@ -45,7 +45,7 @@ relationships:
 prompt_examples:
   - Check for outdated antivirus software across all MSPs in the Western region.
   - List all tenants managed by the MSP 'BrightNet Solutions'.
-  - 'What scripts are frequently used by the MSP ''DataSecure'' during onboarding?'
+  - 'What scripts are frequently used by the MSP "DataSecure" during onboarding?'
 agent_execution:
   interpretation: |
     When a prompt refers to an MSP, the agent identifies a Partner entity that actively

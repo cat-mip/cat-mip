@@ -43,8 +43,8 @@ relationships:
   - Network isSecuredBy Firewall or AccessControlList
 prompt_examples:
   - Check for latency issues in the network segment at the Dallas site.
-  - 'Is the backup network isolated from production traffic in tenant ''HealthBridge''?'
-  - 'List all devices connected to the ''Guest Wi-Fi'' network.'
+  - 'Is the backup network isolated from production traffic in tenant "HealthBridge"?'
+  - 'List all devices connected to the "Guest Wi-Fi" network.'
 agent_execution:
   interpretation: 'When a prompt refers to a "Network," the AI agent will'
   actions:

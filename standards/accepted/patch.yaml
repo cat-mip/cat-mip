@@ -42,7 +42,7 @@ relationships:
   - Patch isPublishedBy Vendor
   - Patch isScheduledBy AutomationPolicy
 prompt_examples:
-  - 'Apply all high-severity patches to servers in the ''Finance'' tenant before Friday.'
+  - 'Apply all high-severity patches to servers in the "Finance" tenant before Friday.'
   - Generate a report of missing security patches for all Windows 11 laptops.
   - 'Patch the application Foo immediately for tenant Jonson & Jonson'
   - 'What patches failed to install on the devices at the Boston site?'

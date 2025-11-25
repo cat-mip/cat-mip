@@ -45,7 +45,7 @@ relationships:
 prompt_examples:
   - Deploy the latest security patch to all web servers running Apache HTTP Server.
   - List all servers hosting the 'Customer Relationship Management' application.
-  - 'What is the current CPU utilization of servers located in the ''East Coast Data Center''?'
+  - 'What is the current CPU utilization of servers located in the "East Coast Data Center"?'
 agent_execution:
   interpretation: 'When processing prompts involving "Server," the AI agent will'
   actions:

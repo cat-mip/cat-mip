@@ -47,9 +47,9 @@ prompt_examples:
     Deploy the updated monitoring policy to all customers in the 'Gov Services' service
     organization.
   - List all service organizations under 'CoreTech Systems'.
-  - 'Which users have access to more than one service organization within ''SecureOps MSP''?'
+  - 'Which users have access to more than one service organization within "SecureOps MSP"?'
 agent_execution:
-  interpretation: 'When a prompt includes the term ''Service Organization,'' the AI Agent will'
+  interpretation: 'When a prompt includes the term "Service Organization," the AI Agent will'
   actions:
     - Apply or evaluate configuration or automation at the Service Org level
     - 'Enforce boundary conditions (e.g., policy inheritance, user access isolation)'

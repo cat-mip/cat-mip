@@ -43,9 +43,9 @@ relationships:
   - Package isManagedBy Script or Automation Policy
   - Package isSignedBy Vendor
 prompt_examples:
-  - 'Has the antivirus agent package been successfully installed on device ''HR-LT-002''?'
+  - 'Has the antivirus agent package been successfully installed on device "HR-LT-002"?'
   - Install the package for Microsoft Edge on all Windows 11 devices.
-  - 'Which packages are waiting to be deployed on the ''Sales-Laptops'' site?'
+  - 'Which packages are waiting to be deployed on the "Sales-Laptops" site?'
 agent_execution:
   interpretation: 'When a prompt refers to a "Package," the AI agent will'
   actions:

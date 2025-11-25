@@ -42,8 +42,8 @@ relationships:
   - File isStoredOn Device or CloudStorage
   - File isTaggedWith Label or Policy
 prompt_examples:
-  - 'Retrieve the most recent log file from the device ''ENG-LT-05''.'
-  - 'Scan all executable files on server ''NY-EX01'' for known threats.'
+  - 'Retrieve the most recent log file from the device "ENG-LT-05".'
+  - 'Scan all executable files on server "NY-EX01" for known threats.'
   - Upload the installation file to the shared repository and notify the admin.
 agent_execution:
   interpretation: 'When a prompt refers to a "File," the AI agent will'

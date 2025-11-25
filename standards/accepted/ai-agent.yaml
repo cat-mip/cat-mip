@@ -42,7 +42,7 @@ relationships:
   - AI Agent produces Result or SuggestedResolution
   - AI Agent queries DataSource or KnowledgeBase
 prompt_examples:
-  - 'AI Agent, why is device ''ENG-LT-22'' running slowly this week?'
+  - 'AI Agent, why is device "ENG-LT-22" running slowly this week?'
   - |
     Summarize patch compliance across all tenants and suggest remediation for non-compliant
     devices.
