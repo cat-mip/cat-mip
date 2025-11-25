@@ -18,7 +18,7 @@ import pathlib
 import yaml
 import shutil
 import re
-from typing import Dict, List, Tuple
+from typing import Dict
 
 ROOT = pathlib.Path(__file__).parent.parent
 ASSETS = ROOT / "assets"
@@ -42,24 +42,24 @@ def slugify(term: str) -> str:
     if not term:
         return "unknown"
     s = term.lower()
-    s = re.sub(r'\s+', '-', s)                # spaces → single -
-    s = re.sub(r'[^a-z0-9-]', '-', s)         # keep only alnum + -
-    s = re.sub(r'-+', '-', s)                 # collapse --
+    s = re.sub(r'\s+', '-', s)
+    s = re.sub(r'[^a-z0-9-]', '-', s)
+    s = re.sub(r'-+', '-', s)
     return s.strip('-')
 
 # ----------------------------------------------------------------------
-# LINKIFY ENGINE — skips code, longest first, case-insensitive, preserves case
+# LINKIFY ENGINE
 # ----------------------------------------------------------------------
 def _build_patterns(all_terms: Dict[str, dict], current_slug: str):
     patterns = []
     for norm, info in all_terms.items():
         if info["slug"] == current_slug:
-            continue  # no self-links
+            continue
         display = info["display"]
         escaped = re.escape(display)
         pat = re.compile(r'\b' + escaped + r'\b', re.IGNORECASE)
         patterns.append((len(display), pat, info["slug"], info["folder"]))
-    patterns.sort(key=lambda x: -x[0])  # longest first
+    patterns.sort(key=lambda x: -x[0])
     return patterns
 
 def _match_replace(prose: str, patterns: list, current_slug: str, current_folder: str) -> str:
@@ -90,7 +90,6 @@ def linkify(text: str, all_terms: Dict[str, dict], current_slug: str, current_fo
 
     patterns = _build_patterns(all_terms, current_slug)
 
-    # Skip inline code `...`
     def linkify_prose(prose: str) -> str:
         if not prose:
             return prose
@@ -110,7 +109,6 @@ def linkify(text: str, all_terms: Dict[str, dict], current_slug: str, current_fo
             pos = code_end + 1
         return "".join(res)
 
-    # Skip fenced blocks ``````
     result = []
     pos = 0
     while pos < len(text):
@@ -123,13 +121,12 @@ def linkify(text: str, all_terms: Dict[str, dict], current_slug: str, current_fo
         if fence_end == -1:
             result.append(text[fence_start:])
             break
-        block = text[fence_start:fence_end + 3]
-        result.append(block)
+        result.append(text[fence_start:fence_end + 3])
         pos = fence_end + 3
     return "".join(result)
 
 # ----------------------------------------------------------------------
-# SECTION METHODS (method per Markdown section)
+# SECTION METHODS
 # ----------------------------------------------------------------------
 def section_authors(meta):
     if not meta.get("authors"):
@@ -168,21 +165,45 @@ def section_agent_execution(meta, linkify):
         md += "!!! info\n\n    No actions defined\n\n"
     return md
 
-def section_banner(meta, folder):
+def section_banner(meta: dict, folder: str) -> str:
+    """Folder = source of truth. Date/author only when reason starts with 'Status –'."""
     status_map = {
-        "accepted": ("success", "Accepted"),
-        "draft": ("warning", "Draft"),
-        "deprecated": ("failure", "Deprecated"),
-        "rejected": ("note", "Rejected")
+        "accepted":    ("success",  "Accepted"),
+        "draft":       ("warning",  "Draft"),
+        "deprecated":  ("failure",  "Deprecated"),
+        "rejected":    ("note",     "Rejected"),
     }
-    status_type, status_name = status_map.get(folder, ("note", "Unknown"))
-    latest = meta.get("history", [{}])[-1]
-    banner = status_name
-    if latest.get("date"):
-        banner += f" • {latest['date']}"
-    if latest.get("author"):
-        banner += f" by {latest['author']}"
-    return f"!!! {status_type} \"{banner}\"\n\n"
+    badge_type, badge_name = status_map.get(folder, ("note", "Unknown"))
+
+    history = meta.get("history") or []
+    parts = [badge_name]
+
+    # Draft → always show creation date/author
+    if folder == "draft" and history:
+        first = history[0]
+        date = first.get("date")
+        author = first.get("author")
+        if date:
+            parts.append(date)
+        if author:
+            parts.append(f"by {author}")
+
+    else:
+        # Look for exact "Accepted –", "Deprecated –", "Rejected –" prefix
+        prefix = f"{badge_name} –"
+        for entry in reversed(history):
+            reason = entry.get("reason", "")
+            if reason.startswith(prefix):
+                date = entry.get("date")
+                author = entry.get("author")
+                if date:
+                    parts.append(date)
+                if author:
+                    parts.append(f"by {author}")
+                break
+        # No match → just the status name (clean!)
+
+    return f"!!! {badge_type} \"{ ' • '.join(parts) }\"\n\n"
 
 def section_definition(meta, linkify):
     raw = meta.get("definition", "").strip()
@@ -250,7 +271,6 @@ def generate_term_page(meta: dict, slug: str, folder: str, all_terms: Dict[str, 
     def linkify(text):
         return globals()["linkify"](text, all_terms, slug, folder)
 
-    # Frontmatter
     md = '---\n'
     md += f'title: {term}\n'
     md += f'search_boost: 2.0\n'
@@ -280,11 +300,10 @@ def generate_term_page(meta: dict, slug: str, folder: str, all_terms: Dict[str, 
     out_dir.mkdir(exist_ok=True)
     out_path = out_dir / f"{slug}.md"
     out_path.write_text(md)
-
     print(f"Generated → {out_path}")
 
 # ----------------------------------------------------------------------
-# FOLDER INDEX PAGES
+# FOLDER INDEX PAGES + MAIN
 # ----------------------------------------------------------------------
 def generate_folder_indexes(folder_terms):
     for folder, items in folder_terms.items():
@@ -298,13 +317,8 @@ def generate_folder_indexes(folder_terms):
         }
         title = title_map[folder]
 
-        index_md = '---\n'
-        index_md += 'search:\n'
-        index_md += '  exclude: true\n'
-        index_md += '  boost: 0\n'
-        index_md += '---\n'
-        index_md += f"# {title}\n\n"
-        index_md += f"All {folder} terms in the CAT-MIP registry.\n\n"
+        index_md = '---\nsearch:\n  exclude: true\n  boost: 0\n---\n'
+        index_md += f"# {title}\n\nAll {folder} terms in the CAT-MIP registry.\n\n"
         if items_sorted:
             index_md += "## Terms\n\n"
             for term, term_id, slug in items_sorted:
@@ -315,9 +329,6 @@ def generate_folder_indexes(folder_terms):
         index_path.parent.mkdir(exist_ok=True)
         index_path.write_text(index_md)
 
-# ----------------------------------------------------------------------
-# RUN
-# ----------------------------------------------------------------------
 def main():
     for folder in FOLDERS:
         (DOCS / folder).mkdir(exist_ok=True)
@@ -325,7 +336,6 @@ def main():
     all_terms = {}
     folder_terms = {f: [] for f in FOLDERS}
 
-    # Collect the terms
     for yaml_path in STANDARDS.rglob("*.yaml"):
         folder = yaml_path.parent.name
         if folder not in FOLDERS:
@@ -338,7 +348,7 @@ def main():
 
         if norm in all_terms:
             print(f"WARNING: Duplicate term (ignoring case): {term}")
-            slug += "-dup"  # avoid overwrite
+            slug += "-dup"
 
         all_terms[norm] = {
             "display": term,
@@ -348,10 +358,8 @@ def main():
         }
         folder_terms[folder].append((term, term_id, slug))
 
-    # Generate index per status/folder
     generate_folder_indexes(folder_terms)
 
-    # Generate page per term
     for yaml_path in STANDARDS.rglob("*.yaml"):
         folder = yaml_path.parent.name
         if folder not in FOLDERS:
@@ -364,7 +372,7 @@ def main():
         info = all_terms[norm]
         generate_term_page(meta, info["slug"], folder, all_terms)
 
-    # Copy root index.md
+    # Root index
     standards_index = ASSETS / "docs/index.md"
     target = DOCS / "index.md"
     if standards_index.exists():
@@ -372,21 +380,17 @@ def main():
     else:
         target.write_text("---\nsearch:\n  exclude: true\n---\n\n# CAT-MIP Terminology Registry\n\nWelcome to the official registry.\n")
 
-    # Copy additional assets from assets/docs/ (stylesheets, javascript, images, etc.)
+    # Copy extra assets
     extra_src = ASSETS / "docs"
     if extra_src.exists() and extra_src.is_dir():
-        copied_any = False
         for item in extra_src.iterdir():
             if item.name == "index.md":
-                continue  # already handled above
-            dest_path = DOCS / item.name
+                continue
+            dest = DOCS / item.name
             if item.is_dir():
-                shutil.copytree(item, dest_path, dirs_exist_ok=True)
+                shutil.copytree(item, dest, dirs_exist_ok=True)
             else:
-                shutil.copy2(item, dest_path)
-            copied_any = True
-        if copied_any:
-            print(f"Copied additional assets → {extra_src} → {DOCS}")
+                shutil.copy2(item, dest)
 
     logo = ASSETS / "images/catmip-150x150.png"
     if logo.exists():
