@@ -5,7 +5,7 @@ Generate MkDocs pages from standards/**/*.yaml
 - Alphabetical folder indexes
 - Auto-links terms in definitions, prompts, actions, reasons, etc.
 - Copies exports (ASSETS, JSON, TTL)
-- Cross-folder links (../drafts/term.md)
+- Cross-folder links (../draft/term.md)
 - Longer terms first ("AI Agent" before "Agent")
 - No self-links
 - One method per Markdown section — crystal clear
@@ -33,7 +33,7 @@ shutil.rmtree(DOCS, ignore_errors=True)
 DOCS.mkdir()
 IMAGES.mkdir()
 
-FOLDERS = ["accepted", "drafts", "deprecated", "rejected"]
+FOLDERS = ["accepted", "draft", "deprecated", "rejected"]
 
 # ----------------------------------------------------------------------
 # SLUGIFY
@@ -171,7 +171,7 @@ def section_agent_execution(meta, linkify):
 def section_banner(meta, folder):
     status_map = {
         "accepted": ("success", "Accepted"),
-        "drafts": ("warning", "Draft"),
+        "draft": ("warning", "Draft"),
         "deprecated": ("failure", "Deprecated"),
         "rejected": ("note", "Rejected")
     }
@@ -292,7 +292,7 @@ def generate_folder_indexes(folder_terms):
         index_path = DOCS / folder / "index.md"
         title_map = {
             "accepted": "Accepted Terms",
-            "drafts": "Draft Terms",
+            "draft": "Draft Terms",
             "deprecated": "Deprecated Terms",
             "rejected": "Rejected Terms"
         }

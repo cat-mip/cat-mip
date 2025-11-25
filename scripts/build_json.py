@@ -77,14 +77,11 @@ def load_terms(folder: str) -> list[dict]:
 # ----------------------------------------------------------------------
 def build_json():
     accepted = load_terms("accepted")
-    drafts = load_terms("drafts")
-    dev_terms = accepted + drafts
-
-    # ALPHABETICALLY SORTED overall for dev
+    draft = load_terms("draft")
+    dev_terms = accepted + draft
     dev_terms.sort(key=lambda x: x["canonical_term"].lower())
 
-    # Only delete our own files
-    for file in ["terms.json", "terms-dev.json"]:
+    for file in ["cat-mip.json", "cat-mip-dev.json"]:
         path = BUILD / file
         if path.exists():
             path.unlink()
