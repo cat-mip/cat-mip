@@ -35,7 +35,7 @@ scheme = CATMIP[""]
 g.add((scheme, RDF.type, SKOS.ConceptScheme))
 g.add((scheme, SKOS.prefLabel, Literal("CAT-MIP Terminology Registry", lang="en")))
 g.add((scheme, DCTERMS.creator, Literal("CAT-MIP Community")))
-g.add((scheme, DCTERMS.issued, Literal("2025-11-10")))
+g.add((scheme, DCTERMS.issued, Literal("2025-09-19")))
 
 # Load all terms for linking
 term_to_info = {}  # term_lower → (slug, meta)
