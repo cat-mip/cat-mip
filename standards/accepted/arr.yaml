@@ -23,11 +23,11 @@ history:
   -
     date: '2025-08-19'
     author: roop
-    reason: Initial term addition to build registry
+    reason: 'Draft – initial term proposal'
   -
     date: '2025-09-19'
     author: roop
-    reason: 'Accepted into CAT-MIP registry'
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - Annual Revenue
   - Contracted Revenue (annualized)
