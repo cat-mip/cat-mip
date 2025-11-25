@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
-# CAT-MIP: terms.json --> vendor-ready prompts CSV
+# CAT-MIP: cat-mip.json --> vendor-ready prompts CSV
 from __future__ import annotations
 import argparse, csv, json
 from pathlib import Path
@@ -121,8 +121,8 @@ def iter_rows(terms: List[Dict[str, Any]], std_version: str) -> Iterable[Dict[st
             }
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Export CAT-MIP prompts CSV from terms.json")
-    ap.add_argument("--input", dest="in_path", default="terms.json", help="Path to input JSON file")
+    ap = argparse.ArgumentParser(description="Export CAT-MIP prompts CSV from cat-mip.json")
+    ap.add_argument("--input", dest="in_path", default="cat-mip.json", help="Path to input JSON file")
     ap.add_argument("--outdir", dest="out_dir", default="generated-csvs", help="Output directory")
     ap.add_argument("--outfile", dest="out_file", default=None, help="Optional explicit output filename")
     ap.add_argument("--std-version", dest="std_version", default="v1.0", help="Standard version")

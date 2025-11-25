@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Build terms.json and terms-dev.json from standards/**/*.yaml
-- terms.json = accepted only
-- terms-dev.json = accepted + drafts
+Build cat-mip.json and cat-mip-dev.json from standards/**/*.yaml
+- cat-mip.json = accepted only
+- cat-mip-dev.json = accepted + draft
 - Output to build/
 - ALPHABETICALLY SORTED by canonical_term (case-insensitive)
 - Full metadata matching original JSON
@@ -89,14 +89,12 @@ def build_json():
         if path.exists():
             path.unlink()
 
-    # Write terms.json (accepted only)
-    (BUILD / "terms.json").write_text(json.dumps(accepted, indent=2, ensure_ascii=False) + "\n")
+    (BUILD / "cat-mip.json").write_text(json.dumps(accepted, indent=2, ensure_ascii=False) + "\n")
+    (BUILD / "cat-mip-dev.json").write_text(json.dumps(dev_terms, indent=2, ensure_ascii=False) + "\n")
 
-    # Write terms-dev.json (accepted + drafts)
-    (BUILD / "terms-dev.json").write_text(json.dumps(dev_terms, indent=2, ensure_ascii=False) + "\n")
+    print(f"\nBuilt cat-mip.json ({len(accepted)} accepted terms — sorted)")
+    print(f"Built cat-mip-dev.json ({len(dev_terms)} total terms — sorted)")
 
-    print(f"\nBuilt terms.json ({len(accepted)} accepted terms — sorted)")
-    print(f"Built terms-dev.json ({len(dev_terms)} total terms — sorted)")
 
 # ----------------------------------------------------------------------
 # RUN
