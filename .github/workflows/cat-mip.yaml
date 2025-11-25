@@ -23,9 +23,13 @@ jobs:
         run: |
           yamllint standards/ || (echo "YAML lint failed — fix before merging" && exit 1)
 
+      - name: Verify Unique IDs
+        run: |
+          python scripts/verify-unique-ids.py || (echo "Duplicate or missing 'id:' fields detected!" && exit 1)
+
   build-and-deploy:
-    needs: lint  # ← only runs if lint passes
-    if: github.ref == 'refs/heads/main'  # ← only on main
+    needs: lint
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: write
