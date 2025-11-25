@@ -56,22 +56,21 @@ jobs:
 
       - name: Export CSV
         run: |
-          python scripts/json_to_csv.py \
-            --input "build/terms.json" \
+          python scripts/build_csv.py \
+            --input "build/cat-mip.json" \
             --outdir "generated-csvs" \
             --std-version "v1.0"
 
       - name: Build PDF
-        run: python scripts/json_to_pdf.py --input "build/terms.json" --outdir "build"
+        run: python scripts/json_to_pdf.py --input "build/cat-mip.json" --outdir "build"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cat-mip-assets
           path: |
-            build/terms.json
-            build/terms-dev.json
-            build/cat-mip-skos.ttl
+            build/*.json
+            build/*.ttl
             build/*.pdf
             generated-csvs/*.csv
 
@@ -95,9 +94,8 @@ jobs:
           tag_name: v${{ github.run_number }}
           name: CAT-MIP v${{ github.run_number }}
           files: |
-            build/terms.json
-            build/terms-dev.json
-            build/cat-mip-skos.ttl
+            build/*.json
+            build/*.ttl
             build/*.pdf
             generated-csvs/*.csv
           body: |
