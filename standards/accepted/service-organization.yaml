@@ -1,0 +1,58 @@
+id: 'CAT-MIP-000000355'
+term: Service Organization
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Service Organization is a hierarchical container used within on-premises N-central
+  deployments to group and manage multiple customer environments under a single Partner (MSP
+  or IT Pro). It acts as an intermediary layer between the Partner and the Customer (Tenant)
+  and allows for administrative separation, reporting, and delegation of services across
+  logically distinct client accounts. Service Organizations are primarily used for internal
+  structuring of accounts, enabling MSPs to manage multiple customers without cross-
+  contamination of access or policy.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Branch
+  - Client Organization
+  - Department
+  - Organization Unit
+  - 'Sub-Customer'
+relationships:
+  - Service Organization contains Customer (Tenant)
+  - 'Service Organization groups Devices, Policies, and Users'
+  - Service Organization inherits or overrides Policies from Partner
+  - Service Organization isLoggedInTo by AssignedUser or Admin
+  - Service Organization isManagedBy Partner
+prompt_examples:
+  - |
+    Deploy the updated monitoring policy to all customers in the 'Gov Services' service
+    organization.
+  - List all service organizations under 'CoreTech Systems'.
+  - 'Which users have access to more than one service organization within "SecureOps MSP"?'
+agent_execution:
+  interpretation: 'When a prompt includes the term "Service Organization," the AI Agent will'
+  actions:
+    - Apply or evaluate configuration or automation at the Service Org level
+    - 'Enforce boundary conditions (e.g., policy inheritance, user access isolation)'
+    - 'Identify all objects (devices, users, policies) scoped to the Service Organization'
+    - 'Resolve the organizational hierarchy: Partner → Service Organization → Customer'
+    - Return filtered results or execute actions within the correct hierarchy node

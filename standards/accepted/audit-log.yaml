@@ -1,0 +1,55 @@
+id: 'CAT-MIP-000000061'
+term: Audit Log
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  An Audit Log is a chronological record of system-generated entries that capture actions,
+  events, or changes performed within a platform, application, or network. Each log entry
+  typically includes a timestamp, actor (user or system), action type, and target object.
+  Audit logs are used for accountability, traceability, compliance, security investigations,
+  and operational transparency.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Activity Log
+  - Audit Trail
+  - Change Log
+  - 'Event Log (context-specific)'
+  - System Log (partial overlap)
+relationships:
+  - 'Audit Log appliesTo Object (e.g., Device, Policy, Ticket, File)'
+  - 'Audit Log isQueriedFor Compliance, Forensics, or Reporting'
+  - Audit Log isStoredIn LogDatabase or SIEM
+  - Audit Log mayTrigger Alert or Review
+  - Audit Log records Action performedBy User or Agent
+prompt_examples:
+  - Alert if audit logs indicate repeated failed login attempts.
+  - 'Did any agent scripts get modified without approval?'
+  - Export the audit log for all policy changes made this quarter.
+  - Show all audit log entries for user 'jsmith' in the last 30 days.
+agent_execution:
+  interpretation: 'When a prompt refers to an "Audit Log," the AI agent will'
+  actions:
+    - 'Access the appropriate audit logging source (e.g., N-central, RMM, backup system)'
+    - Detect anomalies or compliance breaches if configured
+    - 'Filter entries based on actors, actions, time ranges, or object types'
+    - Format relevant data for review or export
+    - 'Log the audit query or access action itself, if required by policy'

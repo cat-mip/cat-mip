@@ -32,7 +32,7 @@ The CAT-MIP Registry is a centralized repository for standardized terms, synonym
 It simplifies interoperability between AI Agents, systems, and tools by ensuring that prompts, instructions, and automated actions map to the same canonical meaning.
 
 # Features
-JSON CAT-MIP vocabulary entries 
+JSON CAT-MIP vocabulary entries
 
 Synonyms to map multiple terms to a single canonical definition
 
@@ -99,4 +99,4 @@ We reserve the right to update or modify these Terms at any time. Changes will b
 
 For questions, feedback, or permissions, please contact us at:
 
-Nicole.reineke @ n-able 
+Nicole.reineke @ n-able

@@ -1,0 +1,61 @@
+id: 'CAT-MIP-000000161'
+term: ExternalVendor
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  An External Vendor is a third-party company that provides software, hardware, or services
+  which integrate with vendor products. These vendors are typically integration partners and
+  may offer functionality in areas such as security, backup, PSA (Professional Services
+  Automation), billing, remote access, or threat detection. External Vendors participate in
+  the vendor ecosystem by exposing APIs, actions, or event streams that can be called by or
+  respond to AI Agents, scripts, and workflows.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Integration Partner
+  - 'Third-Party Provider'
+  - 'Tool Vendor (context-specific)'
+  - Vendor
+relationships:
+  - ExternalVendor collaboratesWith MSP
+  - ExternalVendor integratesWith Product
+  - ExternalVendor mayBeCertifiedBy vendor
+  - ExternalVendor owns ExternalSystem
+  - ExternalVendor provides Integration
+  - ExternalVendor supports Action
+prompt_examples:
+  - 'Is the external vendor "Acronis" certified for cloud backup integrations with Cove?'
+  - 'What actions are available from the external vendor "SentinelOne" through its integration?'
+  - 'Which external vendors support remediation workflows via API?'
+agent_execution:
+  interpretation: 'When a prompt includes the name of an External Vendor, the agent will'
+  actions:
+    - |
+      Determine integration status (enabled, not installed, in error) for the current MSP or
+      Tenant
+    - 'Retrieve associated integrations, available actions, and certified products'
+    - |
+      Return actionable metadata such as supported event types, playbooks, or remediation
+      capabilities
+    - |
+      Route API calls or automation flows to the appropriate external system, respecting
+      authentication and permission boundaries
+    - Search the vendor Integration Registry for known vendors

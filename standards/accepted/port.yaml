@@ -1,0 +1,56 @@
+id: 'CAT-MIP-000000335'
+term: Port
+version: '1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Port is a logical or physical interface used for communication between devices or
+  applications. In networking, a port refers to a numbered endpoint in the transport layer
+  (TCP/UDP) that identifies specific processes or services on a device (e.g., port 22 for
+  SSH, port 443 for HTTPS). In hardware, a port can also refer to a physical connection
+  point on a switch, router, or server. In MSP and IT environments, ports are monitored,
+  managed, and filtered for performance, availability, and security.
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - 'Interface (context-specific)'
+  - Network Port (logical)
+  - Service Port
+  - Switch Port (physical)
+  - TCP/UDP Port
+relationships:
+  - Port isBlockedBy Firewall or Policy
+  - Port isMappedTo Internal Resource or Endpoint
+  - 'Port isMonitoredFor Status, Traffic, or Security Risk'
+  - 'Port isOpenedOn Device, Firewall, or OS'
+  - 'Port isUsedBy Service, Protocol, or Application'
+prompt_examples:
+  - Alert if port 3389 is accessible from external networks.
+  - Disable unused switch ports for security hardening.
+  - List all open TCP ports on the Windows server in the lab subnet.
+  - 'Which ports are used by the remote monitoring agent?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Port," the AI agent will'
+  actions:
+    - Determine whether the request refers to a logical network port or physical hardware port
+    - 'Evaluate port activity against policies, known vulnerabilities, or usage patterns'
+    - 'Log port-related actions, including scans, changes, or access attempts'
+    - 'Scan, query, or retrieve configuration and status for the specified port'
+    - Trigger alerts or remediations for suspicious or unauthorized port usage

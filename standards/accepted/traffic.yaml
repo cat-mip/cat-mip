@@ -1,0 +1,60 @@
+id: 'CAT-MIP-000000366'
+term: Traffic
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  Traffic refers to the flow of data packets transmitted across a network between devices,
+  services, or endpoints. It includes both inbound and outbound communication and can
+  represent various protocols (e.g., HTTP, DNS, SSH) and applications. In MSP and IT
+  operations, monitoring traffic is essential for performance analysis, bandwidth
+  management, anomaly detection, and security threat identification.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Bandwidth Usage
+  - Data Flow
+  - Network Traffic
+  - Packet Stream
+  - Throughput
+relationships:
+  - 'Traffic influences Bandwidth, Latency, or QoS'
+  - 'Traffic isMonitoredBy Firewall, NetworkProbe, or AI Agent'
+  - Traffic isSentTo DestinationDevice or ExternalService
+  - Traffic mayBeClassifiedAs Normal or Suspicious
+  - Traffic mayTrigger Alert or PolicyAction
+  - Traffic originatesFrom SourceDevice or Endpoint
+prompt_examples:
+  - Analyze outbound traffic from the finance VLAN over the past 24 hours.
+  - Block all traffic to known malicious IPs using the firewall policy.
+  - Detect unusual traffic spikes to external DNS servers.
+  - Summarize HTTP traffic patterns by device for the last 7 days.
+agent_execution:
+  interpretation: 'When a prompt refers to "Traffic," the AI agent will'
+  actions:
+    - 'Aggregate or filter traffic by protocol, source, destination, port, or time window'
+    - Correlate traffic patterns with known risks or baseline behaviors
+    - |
+      Detect anomalies or threshold violations such as unusual spikes or unauthorized
+      destinations
+    - 'Query network flow data, packet captures, or traffic logs from monitoring tools'
+    - |
+      Trigger appropriate actions such as alerting, blocking, throttling, or logging based on
+      configured policies

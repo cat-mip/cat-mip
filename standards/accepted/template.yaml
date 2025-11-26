@@ -1,0 +1,54 @@
+id: 'CAT-MIP-000000364'
+term: Template
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Template is a reusable configuration object that defines a set of settings, rules, or
+  characteristics to be applied to one or more assets, such as devices, scripts, users, or
+  policies. Templates are commonly used to enforce consistency across environments and to
+  streamline the deployment of standardized configurations. In vendor products, templates
+  may be used for onboarding, automation, security settings, or monitoring configurations.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Blueprint
+  - Configuration Template
+  - Policy Template
+  - Profile
+relationships:
+  - Template appliesTo Device
+  - Template defines Settings
+  - Template isBasedOn Policy or Script
+  - Template isOwnedBy MSP or vendor
+  - Template mayBeAssignedTo Site or Tenant
+prompt_examples:
+  - Apply the Windows onboarding template to all new laptops at the Boston site.
+  - 'Does the antivirus compliance template include real-time protection settings?'
+  - List all templates owned by the MSP 'CoreNet Services'.
+agent_execution:
+  interpretation: 'When a prompt refers to a "Template," the AI agent will'
+  actions:
+    - |
+      Apply the settings defined in the template to those targets, unless overridden by policy
+      exceptions
+    - 'Determine eligible targets (e.g., Devices, Sites, Tenants)'
+    - Log any deviations or errors during application
+    - 'Retrieve the template definition, including its scope, settings, and owner'

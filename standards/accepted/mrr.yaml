@@ -1,0 +1,57 @@
+id: 'CAT-MIP-0000000216'
+term: MRR
+version: '1.1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  MRR (Monthly Recurring Revenue) is the predictable, recurring portion of revenue generated
+  from active subscriptions or service contracts on a monthly basis. It reflects the value
+  of ongoing client relationships and is commonly used to track growth, retention, and
+  financial health in MSP and SaaS business models.
+history:
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2025-11-25'
+    author: jimmypuckett
+    reason: 'Correct ID as it conflicted with "Asset"'
+synonyms:
+  - Contracted Monthly Revenue
+  - Monthly Revenue
+  - Recurring Revenue
+  - Subscription Revenue
+relationships:
+  - 'MRR isAffectedBy Upgrades, Cancellations, or Discounts'
+  - MRR isGeneratedBy Subscriber or Customer
+  - MRR isReportedIn Financial Dashboards or KPIs
+  - 'MRR isTiedTo Service Plan, Contract, or License'
+  - MRR isTrackedIn Billing System or CRM
+prompt_examples:
+  - Break down MRR by service type and client tier.
+  - 'How did MRR change after the quarterly contract renewals?'
+  - 'List all clients contributing more than $1,000 in MRR.'
+  - 'What is the total MRR for managed backup services this month?'
+agent_execution:
+  interpretation: 'When a prompt refers to "MRR," the AI agent will'
+  actions:
+    - 'Generate dashboards, alerts, or forecasts based on MRR trends'
+    - 'Identify changes in MRR due to churn, expansion, or pricing adjustments'
+    - Log financial metrics and reporting actions for auditing and business review
+    - Retrieve current and historical MRR data from billing or subscription systems
+    - 'Segment MRR by client, service, or plan for analysis or reporting'

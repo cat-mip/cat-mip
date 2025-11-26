@@ -1,0 +1,58 @@
+id: 'CAT-MIP-000000101'
+term: Cloud
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  Cloud refers to infrastructure, platforms, or services hosted in a remote, internet-
+  accessible environment rather than on-premises. 'Cloud' is typically used to describe:
+  cloud-native products (e.g., Cove, Cloud Commander); third-party integrations with public
+  cloud providers (e.g., AWS, Azure, GCP); and the hosting location or operational model for
+  managed assets, policies, or storage. Because the term is broad, it should be accompanied
+  by a qualifier (e.g., Cloud Backup, Cloud Integration, Cloud Device) to ensure clarity.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Cloud Service Provider (CSP)
+  - Hosted Environment
+  - 'Public Cloud (AWS, Azure, etc.)'
+  - SaaS Platform (when referring to hosted tools)
+relationships:
+  - Cloud contains Asset or Instance
+  - Cloud hosts Service or Product
+  - Cloud isAccessedBy Agent or User
+  - Cloud isIntegratedWith ExternalVendor
+  - Cloud provides Storage or Compute
+  - Cloud runs Automation or ScheduledTask
+prompt_examples:
+  - 'Is this customer using cloud backup?'
+  - List all devices managed through Cloud User Hub that belong to tenant 'BlueSteel LLC'.
+  - 'Scan all Azure-hosted virtual machines for vulnerabilities.'
+agent_execution:
+  interpretation: 'When a prompt includes "Cloud," the AI agent will'
+  actions:
+    - |
+      Attempt to classify the intended meaning: Is it referencing a product (e.g., Cove)? A
+      hosting model (e.g., AWS-based device)? A data source (e.g., cloud backup logs)?
+    - |
+      Resolve actions or queries using the correct integration, platform, or cloud service
+      context
+    - 'Return results filtered by cloud product, provider, or hosting model'
+    - 'Validate scope: Is the object hosted in the cloud? Is it managed via a cloud product?'

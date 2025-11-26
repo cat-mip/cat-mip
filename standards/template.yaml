@@ -1,0 +1,58 @@
+# CAT-MIP Term Template
+#
+# Copy this file to standards/drafts/your-term.yaml
+# Use kebab-case for filename (e.g., access-point.yaml)
+# Fill in EVERY field
+# Follow YAML best practices:
+#   only use quotes when necessary
+#   single quotes preferred
+#   no trailing colons in strings
+# DELETE FROM here up BEFORE committing
+
+# id: CAT-MIP-000000000  # Auto-generated on acceptance
+
+term: # Canonical term (Title Case, singular)
+
+version: 1.0
+
+authors:
+  - name: # Your Name
+    github: # your-github-username
+    org: # Optional, but encouraged
+
+discussion: # https://github.com/cat-mip/cat-mip/issues/XXX
+
+categories:
+  - Core  # ← One or more: Core, Security, Network, Endpoint, etc.
+
+tags:
+  - cat-mip
+  - core
+  -
+
+definition: |
+  Multi-line definition here.
+  Explain exactly what this term means in MSP/IT context.
+  Be precise — this is the source of truth for AI agents.
+
+history:
+  - date: # today
+    author: # your-github-username
+    reason: Initial term proposal
+
+synonyms:
+  -
+
+relationships:
+  -
+
+prompt_examples:
+  -
+
+examples:
+  -
+
+agent_execution:
+  interpretation: 'When a prompt refers to a "Your Term," the AI agent will'
+  actions:
+    -

@@ -1,0 +1,54 @@
+id: 'CAT-MIP-000000362'
+term: Task
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Task is an individual, executable unit of work within a larger Workflow. Tasks perform
+  discrete actions such as running a script, checking system status, applying a patch, or
+  sending a notification. In the DevOps Infrastructure Ontology, a task is an atomic
+  operation that contributes to the overall goal of a workflow or automation policy. Tasks
+  may be triggered manually, scheduled, or invoked automatically based on conditions.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Action
+  - Job
+  - Step
+  - Unit Operation
+relationships:
+  - 'Task hasResult Success, Failure, or Output'
+  - Task isExecutedBy Agent or Platform
+  - Task isExecutedBy Task Manager
+  - Task isPartOf Workflow
+  - Task isTriggeredBy Event or Condition
+  - Task mayDependOn PreviousTask
+  - Task modifies or queries Resource
+prompt_examples:
+  - Create a task to restart all printers in the 'Admin' department every Sunday.
+  - Log the output of every task run as part of the onboarding process.
+  - 'Which tasks failed during last night''s patching workflow?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Task," the AI agent will'
+  actions:
+    - 'Capture results, return outputs, and handle exceptions if configured'
+    - Execute the action associated with the task
+    - 'Identify the specific task definition, either standalone or as part of a workflow'
+    - 'Validate prerequisites and execution context (permissions, scope, triggers)'

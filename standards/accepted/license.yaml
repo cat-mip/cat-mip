@@ -1,0 +1,55 @@
+id: 'CAT-MIP-000000231'
+term: License
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A License is a contractual or system-enforced right to use a product, service, or feature
+  within defined terms (e.g., time, scope, seats, capabilities). In the MSP and vendor
+  context, licenses are required for using specific vendor products (e.g., N-central, Cove)
+  or features (e.g., Take Control, advanced reporting). Licenses may apply at the tenant,
+  device, or user level and are tracked to ensure compliance, billing accuracy, and feature
+  access.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Access Token (avoid unless referring to security/auth)
+  - Entitlement
+  - 'Subscription (context-dependent -- more common in SaaS)'
+  - Usage Right
+relationships:
+  - 'License appliesTo Product, Feature, or Service'
+  - 'License hasValidityPeriod StartDate-EndDate'
+  - License isConsumedBy Device or User
+  - License isEnforcedBy Platform or BillingSystem
+  - 'License isOwnedBy Tenant, MSP, or Distributor'
+  - License isTrackedIn UsageReport or BillingRecord
+prompt_examples:
+  - Alert me when a license is nearing expiration or usage threshold.
+  - List all licenses assigned to tenant 'SecureNet IT'.
+  - 'Which devices are consuming Take Control licenses?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "License," the AI agent will'
+  actions:
+    - 'Enforce policy: enable/disable features based on license state'
+    - 'Look up the license object and its associated terms (type, scope, duration, limits)'
+    - 'Match usage (devices, users, features) to license consumption'
+    - 'Report on current usage, available seats, or overages'
+    - 'Trigger notifications for nearing capacity, expiration, or violations'

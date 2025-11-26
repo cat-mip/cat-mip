@@ -1,0 +1,60 @@
+id: 'CAT-MIP-0000000246'
+term: SSO
+version: '1.1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  SSO (Single Sign-On) is an authentication mechanism that allows users to access multiple
+  systems or applications with a single set of login credentials. It streamlines user access
+  while reducing password fatigue and improving security through centralized identity
+  management. In MSP and IT environments, SSO is often integrated with identity providers
+  (IdPs) such as Azure AD, Okta, or Google Workspace to control access across cloud and on-
+  premises services.
+history:
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2025-11-25'
+    author: jimmypuckett
+    reason: 'Correct ID as it conflicted with "CLI"'
+synonyms:
+  - Centralized Authentication
+  - Federated Login
+  - Identity Federation
+  - 'Single Sign-On'
+  - Unified Login
+relationships:
+  - SSO isEnabledBy Identity Provider (IdP)
+  - SSO isGovernedBy Authentication Policy or Role
+  - SSO isUsedBy User or Technician
+  - SSO mayBeIntegratedWith MFA or Directory Service
+  - 'SSO providesAccessTo Application, Portal, or Service'
+prompt_examples:
+  - Enable SSO for all technicians using Azure AD.
+  - 'Is SSO enforced for access to the backup management console?'
+  - List applications configured to support SSO for this client.
+  - Report failed SSO login attempts in the past 24 hours.
+agent_execution:
+  interpretation: 'When a prompt refers to "SSO," the AI agent will'
+  actions:
+    - Log successful or failed login attempts for auditing and security monitoring
+    - 'Report on SSO usage, errors, and integration status across environments'
+    - Retrieve SSO configuration details for the relevant identity provider and service
+    - 'Trigger conditional access workflows based on role, location, or device compliance'
+    - Validate user identity and access permissions through the SSO process

@@ -1,0 +1,64 @@
+id: 'CAT-MIP-0000000196'
+term: Incident
+version: '1.1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  An Incident is an unplanned event or disruption that affects the normal operation of a
+  service, system, or asset and requires investigation, response, or resolution. Incidents
+  can range from device failures and service outages to security breaches or policy
+  violations. In MSP and IT environments, incidents are tracked through ticketing systems
+  and are often subject to escalation paths, service-level agreements (SLAs), and post-
+  resolution analysis.
+history:
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2025-11-25'
+    author: jimmypuckett
+    reason: 'Correct ID as it conflicted with "API"'
+synonyms:
+  - Disruption
+  - 'Event (context-specific)'
+  - Issue
+  - Outage
+  - Security Incident
+relationships:
+  - 'Incident isAssignedTo Technician, Team, or AI Agent'
+  - 'Incident isLinkedTo Alert, Asset, or Service'
+  - 'Incident isReportedBy User, Agent, or Monitoring Tool'
+  - Incident isTrackedIn Ticketing System or Incident Queue
+  - 'Incident mayTrigger Workflow, Notification, or Escalation'
+prompt_examples:
+  - Escalate critical incidents that remain unresolved after 2 hours.
+  - Generate a monthly report of all incidents by site and root cause.
+  - List all open incidents affecting the backup infrastructure.
+  - 'Which incidents were triggered by failed patch deployments?'
+agent_execution:
+  interpretation: 'When a prompt refers to an "Incident," the AI agent will'
+  actions:
+    - 'Initiate workflows such as assignment, escalation, or notification based on defined rules'
+    - Log all interactions and changes for auditing and service reporting
+    - |
+      Retrieve and summarize incident details including timestamps, affected assets, and
+      resolution steps
+    - |
+      Search the incident management system for relevant records based on status, severity, or
+      source
+    - Update the incident record with actions taken or insights generated

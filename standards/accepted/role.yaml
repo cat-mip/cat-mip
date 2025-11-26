@@ -1,0 +1,55 @@
+id: 'CAT-MIP-000000340'
+term: Role
+version: '1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Role is a predefined set of permissions, responsibilities, or access rights assigned to
+  a user, system, or agent within an IT or MSP environment. Roles are used to control access
+  to systems, features, or data based on job function or context. They enable policy
+  enforcement, least-privilege access, and streamlined onboarding by grouping permissions
+  into reusable access profiles.
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Access Profile
+  - Access Role
+  - Permission Group
+  - Security Role
+  - User Role
+relationships:
+  - 'Role grantsAccessTo System, Feature, or Dataset'
+  - Role influences Credential Use and Audit Visibility
+  - 'Role isAssignedTo User, Agent, or API Client'
+  - Role isDefinedBy Access Policy or Admin
+  - 'Role isStoredIn Directory, Identity System, or RBAC Engine'
+prompt_examples:
+  - Assign the 'Technician' role to all new users in the MSP portal.
+  - List all roles with access to credential management features.
+  - Revoke elevated roles from users inactive for more than 30 days.
+  - 'What permissions are included in the "Backup Admin" role?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Role," the AI agent will'
+  actions:
+    - 'Audit role-related changes and flag violations of least-privilege principles'
+    - Determine who or what currently holds the role
+    - Identify the role definition and its associated permissions
+    - 'Modify role assignments, if requested, while validating scope and security policies'
+    - Reference roles when determining what actions an agent or user is allowed to perform

@@ -1,0 +1,60 @@
+id: 'CAT-MIP-000000337'
+term: Remote Browser
+version: '1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Remote Browser is a virtualized or cloud-hosted web browser session that runs on a
+  remote server rather than the local device. It allows users to interact with web content
+  securely without exposing their endpoint or internal network. In MSP and security-focused
+  environments, remote browsers are used for isolating risky web activity, protecting
+  against zero-day threats, and enforcing browsing policies without compromising the local
+  system.
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Browser Isolation
+  - Cloud Browser
+  - Isolated Browser
+  - Remote Browser Session
+  - Virtual Browser
+relationships:
+  - 'Remote Browser isAccessedBy User, Technician, or Agent'
+  - Remote Browser isHostedOn Remote Server or Virtual Machine
+  - Remote Browser isManagedBy Policy or Security Platform
+  - Remote Browser isUsedFor Secure Browsing or Isolation
+  - Remote Browser mayBeLoggedIn Audit Log or Session History
+prompt_examples:
+  - Launch a remote browser session to safely inspect the suspicious URL.
+  - Log all activity performed via the remote browser in the audit trail.
+  - Restrict remote browser use to technicians only during incident investigations.
+  - 'Which clients have remote browser isolation enabled as part of their security policy?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Remote Browser," the AI agent will'
+  actions:
+    - 'Enforce any content filtering, domain restrictions, or recording requirements'
+    - 'Initiate or locate a cloud-hosted browser session based on the user''s role and policy'
+    - Monitor session activity and store logs for audit or compliance
+    - |
+      Route the requested URL through the remote browser and relay the visual interface to the
+      user
+    - |
+      Terminate or isolate the session automatically based on timeout, policy, or threat
+      detection

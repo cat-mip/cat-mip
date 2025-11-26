@@ -1,0 +1,20 @@
+extends: default
+
+rules:
+  line-length:
+    max: 120
+    level: warning
+  document-start: disable
+  empty-lines:
+    max-end: 1
+  indentation:
+    spaces: 2
+    indent-sequences: true
+  comments:
+    min-spaces-from-content: 1
+  truthy:
+    allowed-values: ['true', 'false']
+  quoted-strings:
+    quote-type: single
+    required: false
+  new-line-at-end-of-file: enable

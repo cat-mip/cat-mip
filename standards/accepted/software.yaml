@@ -1,0 +1,53 @@
+id: 'CAT-MIP-000000358'
+term: Software
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  Software refers to any executable program, application, or system component that performs
+  functions on a computing platform. In the DevOps Infrastructure Ontology, Software is a
+  subclass of devopscore:Resource and encompasses entities such as operating systems,
+  applications, services, and scripts. Software can be installed on physical or virtual
+  devices and is essential for enabling various IT operations and services.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Application
+  - Package
+  - Program
+  - Service
+relationships:
+  - Software canBe Patched
+  - Software dependsOn other Software
+  - Software hasVersion Version
+  - Software isConfiguredBy Configuration
+  - Software isInstalledOn Device
+  - Software isManagedBy Agent
+prompt_examples:
+  - Check if the CRM application is running on the New York site.
+  - 'List all software installed on device "ENG-LT-05".'
+  - Update the antivirus software to the latest version on all servers.
+agent_execution:
+  interpretation: 'When a prompt refers to "Software," the AI agent will'
+  actions:
+    - Determine the devices or environments where the software is installed
+    - Ensure that dependencies and configurations are managed appropriately
+    - 'Identify the specific software entity based on name, version, or other attributes'
+    - 'Perform actions such as installation, update, configuration, or status checks'

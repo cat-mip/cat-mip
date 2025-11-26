@@ -1,0 +1,58 @@
+id: 'CAT-MIP-000000201'
+term: Integration
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  An Integration is a defined connection between an external vendor's product or service and
+  one or more vendor products. Integrations allow data exchange, automation, event handling,
+  and workflow coordination across systems. They may be developed by vendor, by the external
+  vendor, or by a partner, and can vary in complexity from simple scripts and API calls to
+  deeply embedded multi-function toolsets.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Extension
+  - Integration Module
+  - 'Plugin (legacy or context-specific)'
+relationships:
+  - Integration calls vendor Action
+  - Integration connects External Vendor to Product
+  - Integration consumes Data or Event from External Vendor
+  - Integration exposes Action
+  - 'Integration mayBeManagedBy vendor | Vendor | Partner'
+prompt_examples:
+  - |
+    Does the SentinelOne integration support triggering remediation actions from within
+    N-central?
+  - Enable the Bitdefender integration for all MSPs under 'Global IT Solutions'.
+  - 'What integrations are available for ticketing systems like Autotask and ConnectWise?'
+agent_execution:
+  interpretation: 'When a prompt refers to an "Integration," the agent will'
+  actions:
+    - 'Determine whether the integration is installed, active, or requires onboarding'
+    - |
+      Enable or invoke integration-specific functionality, such as data syncs, policy mappings,
+      or scripted triggers
+    - Identify the integration metadata from the vendor Integration Catalog
+    - 'Resolve the associated products, available actions, and required permissions'
+    - |
+      Route follow-up actions to the proper toolset (e.g., PSA ticketing, security alert feed,
+      reporting system)

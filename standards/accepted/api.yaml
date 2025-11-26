@@ -1,0 +1,57 @@
+id: 'CAT-MIP-000000041'
+term: API
+version: '1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  API (Application Programming Interface) is a defined set of protocols and methods that
+  allows software systems to communicate with each other. APIs expose functions, data, or
+  services that can be accessed programmatically, enabling integration, automation, and
+  extensibility across platforms. In MSP and IT environments, APIs are used for retrieving
+  data, triggering actions, synchronizing systems, and building custom workflows.
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Application Programming Interface
+  - Endpoint
+  - Integration Interface
+  - REST API
+  - Web API
+relationships:
+  - 'API exposes Endpoint, Method, and Payload'
+  - 'API isCalledBy Script, Agent, or External System'
+  - 'API isExposedBy Platform, Application, or Service'
+  - 'API isSecuredBy Token, Key, or OAuth'
+  - 'API mayTrigger Workflow, Alert, or Data Sync'
+prompt_examples:
+  - Call the backup API to retrieve job history for the last 7 days.
+  - Create a webhook that posts ticket updates to an external API.
+  - 'Does the N-central API support device onboarding?'
+  - 'List all third-party APIs integrated with our RMM system.'
+agent_execution:
+  interpretation: 'When a prompt refers to an "API," the AI agent will'
+  actions:
+    - 'Format and send a request using the appropriate HTTP method (e.g., GET, POST, PUT, DELETE)'
+    - Identify the correct API endpoint and required authentication method
+    - 'Log the API interaction for tracking, troubleshooting, or auditing'
+    - Parse the response data and handle errors or exceptions
+    - |
+      Take follow-up actions based on the API response, such as updating records or triggering
+      alerts

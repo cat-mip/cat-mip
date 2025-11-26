@@ -1,0 +1,51 @@
+id: 'CAT-MIP-000000339'
+term: Resource
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Resource is a general term that refers to any manageable object within the vendor
+  ecosystem. This includes physical or virtual components such as devices, users, software,
+  network elements, storage, and compute instances. In internal models (and in the DevOps
+  Infrastructure Ontology), "Resource" is often used as an abstract class or grouping term
+  for things that can be monitored, configured, automated, or queried. It is not recommended
+  for use in AI prompts due to its vagueness.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Asset
+  - Entity
+  - Object
+relationships:
+  - Resource belongsTo Site or Tenant
+  - Resource has Status
+  - Resource isManagedBy Agent
+  - Resource isTaggedWith Label or Category
+  - 'Resource mayBe a Device, Server, User, Process, Script, or NetworkComponent'
+prompt_examples:
+  - Check the health of all devices in the customer 'Brightline'.
+  - 'What devices or servers are consuming the most bandwidth?'
+agent_execution:
+  interpretation: 'When the term "Resource" is used, the agent'
+  actions:
+    - 'Attempts to infer the intended object type based on context (e.g., device, server, user)'
+    - Groups results across multiple types unless otherwise specified
+    - Logs a semantic warning if the target object class is unclear
+    - 'May return an ambiguous or overly broad result, reducing the usefulness of the output'

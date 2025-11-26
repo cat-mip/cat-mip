@@ -1,0 +1,55 @@
+id: 'CAT-MIP-000000372'
+term: Webhook
+version: '1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Webhook is a user-defined HTTP callback that automatically sends real-time data or event
+  notifications from one system to another when a specified condition is met. Unlike APIs
+  that require polling, webhooks push information immediately to an external endpoint. In
+  MSP and IT environments, webhooks are often used to trigger workflows, sync systems, log
+  events, or alert technicians based on changes in tickets, devices, backups, or policies.
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Event Hook
+  - HTTP Callback
+  - Notification Endpoint
+  - Outbound Webhook
+  - 'Real-Time Trigger'
+relationships:
+  - 'Webhook isConfiguredIn Platform, Policy, or Integration'
+  - Webhook isLoggedIn Audit Log or Integration History
+  - Webhook isTriggeredBy Event or StateChange
+  - Webhook mayContain Payload with JSON or XML Format
+  - Webhook sendsDataTo External System or Agent
+prompt_examples:
+  - Create a webhook to notify the external ticketing system when a device goes offline.
+  - Disable the webhook that posts alerts to the incident response Slack channel.
+  - List all active webhooks configured for backup failure events.
+  - 'What payload does the policy webhook send when a patch job completes?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Webhook," the AI agent will'
+  actions:
+    - Handle success or failure responses and retry logic if applicable
+    - 'Log webhook activity, errors, and payload content for audit and troubleshooting'
+    - Monitor for relevant events and evaluate webhook triggering conditions
+    - 'Retrieve the webhook configuration, including trigger event, URL, and payload format'
+    - Send structured data to the designated external endpoint

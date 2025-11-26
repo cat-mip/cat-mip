@@ -1,0 +1,59 @@
+id: 'CAT-MIP-0000000306'
+term: User
+version: '1.1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A User is an individual or system identity that interacts with IT services, applications,
+  or infrastructure. Each user is typically associated with a unique account and may be
+  assigned roles, permissions, policies, or resources. In MSP and IT environments, users are
+  managed through identity systems, directory services, or RMM platforms to control access,
+  monitor activity, and enforce security.
+history:
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2025-11-25'
+    author: jimmypuckett
+    reason: 'Correct ID as it conflicted with "Credentials"'
+synonyms:
+  - Account Holder
+  - End User
+  - Identity
+  - Login Account
+  - Operator
+relationships:
+  - 'User interactsWith Device, Application, or Portal'
+  - 'User isAssignedTo Role, Group, or Policy'
+  - User isAuthenticatedBy Identity Provider or Directory
+  - 'User isMonitoredFor Activity, Access, or Compliance'
+  - 'User mayBeLinkedTo License, Ticket, or Alert'
+prompt_examples:
+  - Apply MFA policy to all remote users in the finance department.
+  - Deactivate users who have been inactive for more than 90 days.
+  - List all users with administrator privileges in the RMM platform.
+  - 'What devices are currently assigned to user jsmith@clientdomain.com?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "User," the AI agent will'
+  actions:
+    - 'Determine the user''s roles, group memberships, permissions, and recent activity'
+    - 'Enforce policies related to access, compliance, or security'
+    - 'Log all user-related actions for audit, reporting, or troubleshooting'
+    - 'Perform actions such as enabling, disabling, updating, or notifying the user'
+    - Retrieve the user account and associated metadata from the relevant directory or system

@@ -1,0 +1,20 @@
+# .editorconfig — CAT-MIP YAML Style Guide
+# Enforced in VS Code, JetBrains, Vim, etc.
+root = true
+
+[*.yaml]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 120
+
+# Prefer single quotes for strings with colons
+# (most editors highlight this via YAML linters)
+# We let YAML linters (yamllint) handle quoting rules
+
+# Force lowercase filenames for terms
+[*/*.yaml]
+filename_case = lower

@@ -1,0 +1,56 @@
+id: 'CAT-MIP-000000281'
+term: Vendor
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  The top-level platform node representing vendor as the vendor and service provider. This
+  is a unique, singular entity in the model. It serves as the source of platform-wide
+  policies, agent frameworks, product definitions, and integration standards. All tenants,
+  services, and tools exist beneath or are associated with this node.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - 'Global provider (context-dependent)'
+  - 'Parent org (avoid -- use vendor)'
+  - Platform
+  - Vendor
+relationships:
+  - vendor defines Terminology Standard
+  - vendor manages Distributor
+  - vendor manages Partner
+  - vendor owns AI Agent Framework
+  - vendor provides Product
+  - vendor publishes Template
+  - vendor supports Partner
+prompt_examples:
+  - 'Does vendor have a default patching policy template?'
+  - List all automation policies published by vendor.
+  - 'What monitoring tools does vendor provide for remote access?'
+agent_execution:
+  interpretation: |
+    When the term "vendor" is used in a prompt, the agent interprets it as a query against
+    global or platform-wide definitions that originate from the vendor platform node. The
+    agent resolves requests by
+  actions:
+    - 'Accessing the centralized vendor catalog of tools, templates, and product definitions'
+    - Filtering results not tied to any specific tenant or MSP configuration
+    - 'Providing vendor-wide metadata rather than tenant-specific data'
+    - 'Returning default (global) policies, tools, scripts, or documentation'

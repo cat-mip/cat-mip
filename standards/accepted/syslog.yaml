@@ -1,0 +1,56 @@
+id: 'CAT-MIP-000000361'
+term: Syslog
+version: '1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  Syslog is a standard protocol used to capture and transmit log or event messages from
+  network devices, servers, applications, or operating systems to a central log management
+  system. Syslog messages include structured or semi-structured data that describe system
+  events, warnings, errors, or informational messages. Syslog is commonly used to centralize
+  logs for auditing, monitoring, security incident detection, and compliance.
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Event Log
+  - Logging Protocol
+  - Syslog Message
+  - System Log
+relationships:
+  - 'Syslog contains Severity, Timestamp, and MessageContent'
+  - 'Syslog isGeneratedBy Device, Application, or OperatingSystem'
+  - Syslog isParsedBy LogAnalyzer or AI Agent
+  - Syslog isSentTo SyslogServer or SIEM
+  - Syslog mayTrigger Alert or Workflow
+prompt_examples:
+  - Filter syslog messages for SSH login failures on Linux servers.
+  - 'Forward all syslog messages to the SIEM platform and apply geo-IP tagging.'
+  - Show all syslog entries from firewalls in the last 12 hours.
+  - 'What syslog events triggered critical alerts this week?'
+agent_execution:
+  interpretation: 'When a prompt refers to "Syslog," the AI agent will'
+  actions:
+    - Access the syslog data store or forwarding pipeline
+    - 'Filter or correlate logs based on the prompt (e.g., keyword, device, severity)'
+    - 'Parse and normalize syslog messages for timestamp, source, facility, and severity'
+    - Record any action taken based on syslog analysis in an audit or incident log
+    - |
+      Surface relevant entries or summaries, and optionally initiate an action (e.g., alert,
+      script execution, ticket creation)

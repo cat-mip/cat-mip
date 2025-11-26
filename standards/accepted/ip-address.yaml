@@ -1,0 +1,56 @@
+id: 'CAT-MIP-000000221'
+term: IP Address
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  An IP Address is a unique numerical identifier assigned to a device or interface within a
+  network, facilitating communication between devices. IP addresses can be either IPv4 or
+  IPv6 and are essential for routing data packets across networks. In the DevOps
+  Infrastructure Ontology, an IP address is considered a fundamental component of network
+  infrastructure, associated with devices, services, and network segments.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - 'Host Address (when referring to device-specific IPs)'
+  - IP
+  - Internet Protocol Address
+  - 'Network Address (context-specific)'
+relationships:
+  - IP Address belongsTo IPNetwork
+  - 'IP Address hasType (e.g., Public, Private, Static, Dynamic)'
+  - IP Address isAssignedTo Device or NetworkInterface
+  - IP Address isManagedBy NetworkManagementSystem
+  - IP Address isUsedBy Service or Application
+prompt_examples:
+  - Check if the IP address 192.168.1.10 is currently active on the network.
+  - Identify any duplicate IP addresses within the 'NYC Office' subnet.
+  - List all IP addresses assigned to the 'Finance' department's servers.
+agent_execution:
+  interpretation: 'When a prompt refers to an "IP Address," the AI agent will'
+  actions:
+    - 'Check for conflicts, such as duplicate assignments or unauthorized usage.'
+    - Determine the network segment or subnet the IP address belongs to.
+    - |
+      Provide recommendations or actions, such as releasing, reassigning, or monitoring the IP
+      address.
+    - |
+      Retrieve the IP address details, including assignment, status, and associated device or
+      service.

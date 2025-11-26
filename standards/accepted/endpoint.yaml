@@ -1,0 +1,57 @@
+id: 'CAT-MIP-000000151'
+term: Endpoint
+version: '1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  An Endpoint is any device that connects to a network and communicates with other systems,
+  services, or users. Common endpoints include laptops, desktops, servers, mobile devices,
+  and virtual machines. In MSP and IT environments, endpoints are managed assets that may be
+  monitored, secured, patched, and inventoried. Endpoints are often the target of policies,
+  automation, alerts, and security controls.
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Client Device
+  - Device
+  - Managed Asset
+  - Node (in network or monitoring contexts)
+  - 'Workstation (context-specific)'
+relationships:
+  - Endpoint isMonitoredBy Agent or Probe
+  - 'Endpoint isPartOf Site, Network, or Tenant'
+  - Endpoint isTrackedIn Inventory or CMDB
+  - Endpoint mayGenerate Alert or Ticket
+  - 'Endpoint receives Policy, Update, or Script'
+prompt_examples:
+  - Deploy the antivirus policy to all unmanaged endpoints.
+  - Group endpoints by OS version and patch status.
+  - List all endpoints that haven't checked in within the last 48 hours.
+  - 'Which endpoints have BitLocker encryption enabled?'
+agent_execution:
+  interpretation: 'When a prompt refers to an "Endpoint," the AI agent will'
+  actions:
+    - 'Apply relevant policies, automations, or scripts as requested'
+    - Identify the device using inventory or monitoring data
+    - Record any actions taken in the system log or ticketing platform
+    - |
+      Retrieve endpoint-specific attributes such as hostname, IP address, OS, status, and last
+      check-in time
+    - Trigger monitoring actions or escalate issues based on endpoint health or configuration

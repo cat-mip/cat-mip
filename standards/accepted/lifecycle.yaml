@@ -1,0 +1,58 @@
+id: 'CAT-MIP-000000241'
+term: Lifecycle
+version: '1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Lifecycle is the end-to-end sequence of stages that an asset, service, user, or process
+  goes through--from creation or onboarding to retirement or decommissioning. Lifecycles
+  help MSPs and IT professionals define, automate, and govern the expected progression of
+  objects such as devices, tickets, users, backups, or software. Lifecycle stages typically
+  include onboarding, active use, maintenance, and offboarding, with associated policies and
+  triggers at each step.
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Asset Lifecycle
+  - Life Cycle (alternate spelling)
+  - Lifecycle State
+  - Operational Lifecycle
+  - Service Lifecycle
+relationships:
+  - 'Lifecycle appliesTo Device, User, Ticket, Service, or Backup'
+  - 'Lifecycle includesStage Onboarding, Active, Suspended, Retired'
+  - Lifecycle isManagedBy Policy or Automation
+  - Lifecycle isTrackedIn CMDB or AssetInventory
+  - 'Lifecycle transitionsTrigger Alert, Action, or Notification'
+prompt_examples:
+  - Automatically archive tickets once they reach the 'Closed' lifecycle stage for 90 days.
+  - 'Display all assets in the "End-of-Life" stage.'
+  - Trigger offboarding automation when a user's lifecycle status changes to 'terminated'.
+  - 'What is the current lifecycle stage of all laptops deployed last quarter?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Lifecycle," the AI agent will'
+  actions:
+    - 'Determine if any transitions (e.g., from Active to Retired) are pending or triggered'
+    - 'Execute applicable workflows (e.g., provisioning, patching, decommissioning)'
+    - Identify the object type and its current lifecycle stage
+    - |
+      Log the lifecycle state and any related actions in the appropriate system (e.g., CMDB,
+      Ticketing Platform)
+    - 'Retrieve associated policies, rules, or automations linked to that stage'

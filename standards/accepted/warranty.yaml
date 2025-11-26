@@ -1,0 +1,52 @@
+id: 'CAT-MIP-000000371'
+term: Warranty
+version: '1.0'
+authors:
+  -
+    name: Nicole Reineke
+    github: nicole
+    org: 'N-able'
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Warranty refers to the contractual period during which a hardware asset (e.g., server,
+  laptop, disk) is covered for repairs, replacements, or support by the manufacturer or
+  vendor. In the MSP context, warranty information helps inform lifecycle management, asset
+  planning, and service prioritization. Tracking warranty status enables technicians to
+  escalate hardware issues appropriately and manage risk around unsupported devices.
+history:
+  -
+    date: '2025-08-07'
+    author: nicole
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Hardware Coverage
+  - Manufacturer Service Contract
+  - Support Agreement
+relationships:
+  - Warranty affects ReplacementPlan or LifecycleStage
+  - Warranty has StartDate and EndDate
+  - Warranty isAssociatedWith Hardware or Device
+  - Warranty isProvidedBy Vendor or Manufacturer
+  - Warranty isTrackedIn AssetInventory
+prompt_examples:
+  - 'Is the disk in device "HR-LT-004" still under warranty?'
+  - 'List all out-of-warranty servers in the "EMEA" region.'
+  - 'Which devices have warranties expiring in the next 30 days?'
+agent_execution:
+  interpretation: 'When a prompt includes "Warranty," the AI agent will'
+  actions:
+    - 'Associate warranty status with asset age, performance issues, or incident trends'
+    - 'Flag any expired or soon-to-expire warranties'
+    - Look up asset metadata to determine the warranty start and end dates
+    - Optionally pull warranty verification from vendor portals if integrated
+    - Suggest replacement recommendations or notify stakeholders based on policy

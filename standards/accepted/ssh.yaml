@@ -1,0 +1,55 @@
+id: 'CAT-MIP-000000359'
+term: SSH
+version: '1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  SSH (Secure Shell) is a cryptographic network protocol used to securely access and manage
+  remote systems over an unsecured network. SSH provides encrypted command-line access,
+  secure file transfer, and tunneling capabilities. In MSP and IT environments, SSH is
+  commonly used for remote administration of Linux servers, network devices, and virtual
+  machines.
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - 'Command-Line Login'
+  - Remote Shell
+  - SSH Session
+  - Secure Shell
+  - Terminal Access
+relationships:
+  - SSH connects Technician or Agent to Remote Device
+  - SSH isLoggedIn Audit Log or Session History
+  - SSH isSecuredBy Public Key or Password Authentication
+  - 'SSH isUsedFor Script Execution, Troubleshooting, or Configuration'
+  - 'SSH mayBeRestrictedBy Firewall, Policy, or Role'
+prompt_examples:
+  - 'Disable password-based SSH access and enforce key authentication.'
+  - Initiate an SSH session to the Ubuntu server for patch verification.
+  - List all devices with SSH enabled and open on port 22.
+  - Record all SSH activity for compliance reporting.
+agent_execution:
+  interpretation: 'When a prompt refers to "SSH," the AI agent will'
+  actions:
+    - Authenticate to the target system using configured credentials or key pairs
+    - 'Capture session activity, output, and any resulting changes or errors'
+    - Establish a secure terminal session for executing remote commands
+    - Log the session details and actions taken for audit and security purposes
+    - Optionally run predefined scripts or commands based on the task

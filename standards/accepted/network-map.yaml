@@ -1,0 +1,55 @@
+id: 'CAT-MIP-000000301'
+term: Network Map
+version: '1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Network Map is a visual or structured representation of devices, endpoints, and
+  interconnections within a networked environment. It provides topology awareness, showing
+  how elements such as routers, switches, firewalls, servers, and workstations are linked--
+  often including metadata like IP addresses, MAC addresses, status, and roles. Network maps
+  support monitoring, diagnostics, capacity planning, and security audits.
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Device Map
+  - Infrastructure Map
+  - Logical Map
+  - Network Topology Map
+  - 'Physical Map (context-specific)'
+relationships:
+  - 'Network Map includes Device, Interface, and Connection'
+  - Network Map isGeneratedBy Discovery or Monitoring Tool
+  - Network Map isUpdatedBy NetworkScan or Agent
+  - Network Map isViewedBy Technician or AI Agent
+  - 'Network Map mayInclude VLAN, Subnet, or WirelessSegment'
+prompt_examples:
+  - Export the network map with IP and MAC address details for compliance reporting.
+  - Highlight all unmanaged devices on the current network map.
+  - Regenerate the network map after onboarding new switches.
+  - Show the network map for the Dallas site with device health overlays.
+agent_execution:
+  interpretation: 'When a prompt refers to a "Network Map," the AI agent will'
+  actions:
+    - 'Identify gaps, unmanaged assets, or policy violations'
+    - Organize devices and connections into a logical or physical layout
+    - 'Overlay relevant metrics (e.g., status, alert state, bandwidth) if requested'
+    - 'Present the map visually (if supported), or provide a structured summary as output'
+    - Retrieve or regenerate the latest topology data from discovery tools or agents

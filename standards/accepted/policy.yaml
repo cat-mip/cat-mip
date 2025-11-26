@@ -1,0 +1,61 @@
+id: 'CAT-MIP-0000000236'
+term: Policy
+version: '1.1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Policy is a defined set of rules or configurations that govern how systems, devices,
+  users, or services should behave or be managed within an environment. Policies enforce
+  standards related to security, compliance, automation, performance, and access. In MSP and
+  IT operations, policies are applied to endpoints, users, or sites to ensure consistent
+  behavior, streamline operations, and meet organizational or regulatory requirements.
+history:
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2025-11-25'
+    author: jimmypuckett
+    reason: 'Correct ID as it conflicted with "Backup"'
+synonyms:
+  - Access Policy
+  - Configuration Policy
+  - Enforcement Rule
+  - Management Policy
+  - System Policy
+relationships:
+  - 'Policy defines Rules, Settings, or Thresholds'
+  - 'Policy isAppliedTo Device, User, Group, or Site'
+  - 'Policy isCreatedBy Admin, Technician, or AI Agent'
+  - Policy isMonitoredFor Compliance or Violations
+  - 'Policy mayTrigger Alert, Action, or Workflow'
+prompt_examples:
+  - Alert if a device deviates from the baseline security policy.
+  - Apply the antivirus policy to all unmanaged Windows devices.
+  - 'Create a new patching policy with a 72-hour compliance window.'
+  - 'Which policies are currently assigned to the HR department endpoints?'
+agent_execution:
+  interpretation: 'When a prompt refers to a "Policy," the AI agent will'
+  actions:
+    - 'Apply the policy settings or rules to the defined devices, users, or services'
+    - 'Log all policy applications, changes, and exceptions for auditing and reporting'
+    - Monitor for compliance and trigger alerts or remediation if deviations occur
+    - |
+      Retrieve the policy definition and scope, including affected objects and configuration
+      details
+    - Validate the policy's applicability to the specified targets

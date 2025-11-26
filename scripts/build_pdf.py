@@ -252,8 +252,8 @@ def render_to_pdf(data, out_path, split_items=False):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--input", default="terms.json", help="Path to JSON input")
-    ap.add_argument("--outdir", default="generated-pdfs", help="Output directory")
+    ap.add_argument("--input", default="build/cat-mip.json", help="Path to JSON input")
+    ap.add_argument("--outdir", default="build/pdfs", help="Output directory")
     ap.add_argument("--split-items", action="store_true", help="One PDF per item if input is a list")
     ap.add_argument("--outfile", default=None, help="Optional explicit output filename")
     args = ap.parse_args()

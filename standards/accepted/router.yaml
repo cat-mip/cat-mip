@@ -1,0 +1,55 @@
+id: 'CAT-MIP-000000341'
+term: Router
+version: '1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  A Router is a network device that forwards data packets between computer networks,
+  directing traffic based on destination IP addresses. Routers connect local networks (LANs)
+  to external networks (such as the internet) and can also route traffic between VLANs or
+  subnets. Routers are critical infrastructure components often managed remotely for
+  monitoring, configuration, and policy enforcement.
+history:
+  -
+    date: '2025-08-07'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+synonyms:
+  - Edge Router
+  - Gateway
+  - Network Router
+  - Routing Device
+  - WAN Router
+relationships:
+  - 'Router connects Network, Site, or Subnet'
+  - Router isConfiguredBy Technician or Automation
+  - 'Router isMonitoredBy Probe, Agent, or SNMP'
+  - Router isTrackedIn Inventory or Network Map
+  - Router mayGenerate Alert or LogEntry
+prompt_examples:
+  - Add a static route to the guest VLAN on the main office router.
+  - Identify any routers that have not checked in during the last 24 hours.
+  - List all routers with SNMP polling enabled and CPU load over 80 percent.
+  - Restart the router at the Denver branch after applying the firmware update.
+agent_execution:
+  interpretation: 'When a prompt refers to a "Router," the AI agent will'
+  actions:
+    - 'Apply configuration changes, firmware updates, or routing rules as authorized'
+    - Locate the router in the network inventory or topology map
+    - Monitor connectivity and generate alerts for failures or anomalies
+    - Record all actions and configuration changes in the audit log
+    - 'Retrieve configuration, performance, and health metrics'

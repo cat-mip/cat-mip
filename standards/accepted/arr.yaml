@@ -1,0 +1,58 @@
+id: 'CAT-MIP-000000025'
+term: ARR
+version: '1.1.0'
+authors:
+  -
+    name: Roop Petersen
+    github: roop
+    org: Auvik Networks Inc.
+discussion:
+categories:
+  - Core
+tags:
+  - 'cat-mip'
+  - core
+  - msp
+definition: |
+  ARR (Annual Recurring Revenue) is the total value of recurring revenue from subscriptions
+  or service contracts normalized over a one-year period. It represents the predictable
+  income that an MSP or SaaS business expects to receive annually from active customers. ARR
+  is a key metric for evaluating long-term growth, customer retention, and business
+  valuation.
+history:
+  -
+    date: '2025-08-19'
+    author: roop
+    reason: 'Draft – initial term proposal'
+  -
+    date: '2025-09-19'
+    author: roop
+    reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2025-11-25'
+    author: jimmypuckett
+    reason: 'Correct ID as it conflicted with "Agent"'
+synonyms:
+  - Annual Revenue
+  - Contracted Revenue (annualized)
+  - Recurring Annual Revenue
+  - Subscription ARR
+relationships:
+  - 'ARR isDerivedFrom MRR, multipliedBy 12'
+  - 'ARR isImpactedBy Renewals, Upgrades, or Churn'
+  - ARR isReportedIn KPIs or Growth Dashboards
+  - 'ARR isTiedTo Subscriber, Contract, or Service Plan'
+  - ARR isTrackedIn Financial System or CRM
+prompt_examples:
+  - Compare ARR by client tier and contract length.
+  - Generate an ARR forecast based on current MRR and pipeline data.
+  - 'How has ARR changed year-over-year for the healthcare vertical?'
+  - 'What is the current ARR across all managed security services?'
+agent_execution:
+  interpretation: 'When a prompt refers to "ARR," the AI agent will'
+  actions:
+    - 'Generate reports, dashboards, or financial summaries for strategic planning'
+    - 'Identify factors influencing ARR growth or decline, such as churn or expansion'
+    - Log ARR calculations and forecasting activities for auditing or executive review
+    - Retrieve MRR and related subscription data to calculate ARR
+    - 'Segment ARR by service, customer, or region if specified'
