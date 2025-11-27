@@ -66,7 +66,7 @@ jobs:
             --std-version "v1.0"
 
       - name: Build PDF
-        run: python scripts/json_to_pdf.py --input "build/cat-mip.json" --outdir "build"
+        run: python scripts/build_pdf.py --input "build/cat-mip.json" --outdir "build"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
