@@ -29,7 +29,12 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+
+    date: '2026-01-14'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
+  - Computer Network
   - 'LAN / WAN (context-specific -- use when defining scope)'
   - Segment
   - Subnet
