@@ -28,14 +28,21 @@ history:
     date: '2025-09-19'
     author: roop
     reason: 'Accepted – added to CAT-MIP registry'
+
+    date: '2026-01-14'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - 'Command-Line Login'
   - Remote Shell
+  - SSH Access
+  - SSH Server
   - SSH Session
   - Secure Shell
   - Terminal Access
 relationships:
   - SSH connects Technician or Agent to Remote Device
+  - SSH isAuthenticatedBy Key, Cert, or Certificate
   - SSH isLoggedIn Audit Log or Session History
   - SSH isSecuredBy Public Key or Password Authentication
   - 'SSH isUsedFor Script Execution, Troubleshooting, or Configuration'
