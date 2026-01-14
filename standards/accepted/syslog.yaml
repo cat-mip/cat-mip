@@ -28,7 +28,12 @@ history:
     date: '2025-09-19'
     author: roop
     reason: 'Accepted – added to CAT-MIP registry'
+  
+    date: '2026-01-14'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
+  - Audit Log
   - Event Log
   - Logging Protocol
   - Syslog Message
@@ -37,7 +42,7 @@ relationships:
   - 'Syslog contains Severity, Timestamp, and MessageContent'
   - 'Syslog isGeneratedBy Device, Application, or OperatingSystem'
   - Syslog isParsedBy LogAnalyzer or AI Agent
-  - Syslog isSentTo SyslogServer or SIEM
+  - Syslog isSentTo SyslogServer, Security Information and Event Management, SIEM, Centralized Monitoring Server
   - Syslog mayTrigger Alert or Workflow
 prompt_examples:
   - Filter syslog messages for SSH login failures on Linux servers.
