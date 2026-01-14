@@ -28,6 +28,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+
+    date: '2026-01-14'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - Data Backup
   - Restore Point (when used for rollback)
@@ -40,6 +44,7 @@ relationships:
   - Backup isOwnedBy Tenant or MSP
   - Backup isRestoredBy Restore Job
   - Backup isStoredIn Cove or Cloud Storage
+  - Backup isValidatedBy JobStatus
 prompt_examples:
   - List all failed backup jobs in the past 48 hours across the 'Retail' tenant.
   - Restore the backup of user 'jane.doe' mailbox from last Monday.
