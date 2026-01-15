@@ -14,11 +14,13 @@ tags:
   - core
   - msp
 definition: |
-  An Access Point is a network device that allows wireless-capable devices to connect to a
+  An Access Point is a physcial network device that allows wireless-capable devices to connect to a
   wired network using Wi-Fi or other wireless standards. It acts as a bridge between
   wireless clients and the wired infrastructure, managing traffic, authentication, and radio
-  frequency (RF) coverage. In MSP and IT environments, access points are centrally monitored
-  and managed to ensure reliable wireless connectivity, performance, and security.
+  frequency (RF) coverage.  In MSP and enterprise IT environments, 
+  access points are deployed indoors or outdoors and may include ruggedized industrial models. They manage wireless client connectivity,
+  authentication, RF coverage, and traffic flow, and may also support IoT connectivity protocols such as Bluetooth and Zigbee.
+
 history:
   -
     date: '2025-08-07'
@@ -28,19 +30,13 @@ history:
     date: '2025-09-19'
     author: roop
     reason: 'Accepted – added to CAT-MIP registry'
-    
+  -
     date: '2026-01-13'
     author: mpurtell
     reason: 'added member feedback'
 synonyms:
   - AP
-  - Access Point broadcasts SSID and enforces Wireless Policy
-  - Access Point serves Wireless Client or Endpoint
-  - 'Apply changes such as SSID updates, channel adjustments, or firmware upgrades'
   - Hotspot (informal or public context)
-  - Locate the access point in the inventory or network topology
-  - Log all actions related to access point configuration and status for auditing
-  - 'Retrieve and report configuration, client associations, and health metrics'
   - 'Wi-Fi AP'
   - Wireless Access Point
   - 'Wireless Controller (context-specific)'
@@ -49,11 +45,37 @@ relationships:
   - 'Access Point isManagedBy Controller, Agent, or Cloud Console'
   - 'Access Point isMonitoredFor Signal Strength, Client Load, or Interference'
   - 'Monitor real-time performance and connectivity issues'
+  - Access Point broadcasts SSID and enforces Wireless Policy
+  - Access Point serves Wireless Client or Endpoint
+  - 'Apply changes such as SSID updates, channel adjustments, or firmware upgrades'
+
 prompt_examples:
   - Configure SSID and VLAN tagging on all indoor access points.
   - List all access points at the Denver office and their client count.
   - Restart the rooftop access point remotely due to packet loss reports.
   - 'Which access points are using outdated firmware?'
+  - Locate the access point in the inventory or network topology
+  - Log all actions related to access point configuration and status for auditing
+  - 'Retrieve and report configuration, client associations, and health metrics'
+  
 agent_execution:
-  interpretation: 'When a prompt refers to an "Access Point," the AI agent will'
+  interpretation: 'When a prompt refers to an "Access Point," the AI agent will interpret it as a physical WLAN hardware device that provides wireless connectivity to the wired network.'
   actions:
+    - Identify the access point in inventory or network topology.
+    - Retrieve configuration, firmware version, and operational status.
+    - Retrieve associated wireless clients and connection metrics.
+    - Assess signal strength, channel utilization, interference, and throughput.
+    - Check compliance with defined wireless security and configuration policies.
+    - Surface performance or connectivity anomalies.
+    - Recommend corrective actions such as channel tuning, power adjustment, SSID changes, or firmware updates.
+    - Log all configuration and status changes for audit and troubleshooting purposes.
+
+
+
+
+
+
+
+
+
+
