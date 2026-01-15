@@ -34,8 +34,11 @@ history:
     reason: 'added member feedback'
 synonyms:
   - 'Account (ambiguous - avoid)'
+  - 'Authorization Id (ambiguous - avoid)' 
   - 'Client (ambiguous - avoid unless scoped)'
   - 'Partner (ambiguous - clarify as MSP or Distributor)'
+  - 'Sales Relationship (ambiguous - avoid)'
+  - 'User (ambiguous - avoid)'
 relationships:
   - BillingEntity paysFor Subscription
   - Customer isManagedBy Distributor
