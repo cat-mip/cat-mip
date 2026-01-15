@@ -30,7 +30,6 @@ history:
     reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - Block Store
-  - Bucket
   - Object Store
   - Repository
   - Storage Array
