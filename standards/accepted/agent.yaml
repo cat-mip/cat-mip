@@ -29,17 +29,27 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+   
+    date: '2026-01-14
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
+  - Autonomous System
+  - Embedded Agent
   - Endpoint Agent
   - Management Agent
   - Monitoring Agent
+  - Orchestrator Agent
 relationships:
+  - Agent enables Support Task
   - Agent enables Action or Automation
   - Agent executes Script or Task
   - Agent isInstalledOn Device
   - 'Agent isManagedBy Product (e.g., N-central, Cove)'
-  - 'Agent monitors Performance, Security, and PolicyCompliance'
+  - 'Agent monitors Device, Performance, Security, Telemetry, and PolicyCompliance'
+  - Agent Orchestrates Task
   - Agent reportsTo Platform or OrchestrationService
+  - Agent Schedules Task
 prompt_examples:
   - 'Check if the N-central agent is online on device "HR-LT-003".'
   - List all agents running outdated versions across the 'Finance' tenant.
@@ -50,7 +60,6 @@ agent_execution:
     - 'Check health, version, and last check-in time'
     - 'Determine the agent''s capabilities (e.g., scripting, monitoring, backup)'
     - Identify the installed agent on the specified device(s)
-    - |
-      Initiate agent-driven tasks such as running scripts, collecting metrics, or applying
-      policies
+    - Initiate agent-driven tasks such as running scripts, collecting metrics, or applying policies
     - 'Return results or errors from agent-initiated actions'
+    - 'Return relevant knowledge base articles'
