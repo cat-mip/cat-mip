@@ -28,6 +28,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+
+    date: '2026-01-14'
+    author: nicole
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - Activity Log
   - Audit Trail
@@ -36,7 +40,7 @@ synonyms:
   - System Log (partial overlap)
 relationships:
   - 'Audit Log appliesTo Object (e.g., Device, Policy, Ticket, File)'
-  - 'Audit Log isQueriedFor Compliance, Forensics, or Reporting'
+  - 'Audit Log isQueriedFor Analytics, Compliance, Forensics, or Reporting'
   - Audit Log isStoredIn LogDatabase or SIEM
   - Audit Log mayTrigger Alert or Review
   - Audit Log records Action performedBy User or Agent
