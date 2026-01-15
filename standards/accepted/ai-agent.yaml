@@ -29,13 +29,20 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+
+    date: '2026-01-14'
+    name: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
+  - Agentic AI
+  - Assistant Agent
   - Automation Agent
   - 'GenAI Agent (in LLM-driven systems)'
   - Intelligent Agent
+  - Orchestration Agent
   - Proactive Assistant
 relationships:
-  - AI Agent calls Action or Tool
+  - AI Agent calls Action or Tool or Skill
   - 'AI Agent interactsWith User, Device, or Platform'
   - AI Agent interprets Prompt
   - AI Agent isEnabledBy Model Context Protocol (via MCP)

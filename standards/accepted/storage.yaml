@@ -17,7 +17,7 @@ definition: |
   Storage refers to the physical or virtual infrastructure used to persist data, including
   backups, logs, software, configurations, and operating system files. In the MSP and vendor
   context, storage may include local disk drives, network-attached storage (NAS), cloud
-  storage services (e.g., AWS S3), or specialized backup storage vaults. Storage is a
+  storage services (e.g., AWS S3 buckets), or specialized backup storage vaults. Storage is a
   critical resource that supports data retention, recovery, and compliance.
 history:
   -
@@ -28,13 +28,23 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+        
+    date: '2026-01-13'
+    author: mpurtell
+    reason: 'added member feedback'
 synonyms:
+  - Block Store
+  - Bucket
+  - Object Store
   - Repository
+  - Storage Array
+  - Storage Cluster
   - Storage Device
   - Storage Vault
+  - Storage Volume
   - Volume
 relationships:
-  - 'Storage contains File, Backup, or Image'
+  - 'Storage contains File, Backup, Block, Bucket, or Image'
   - Storage hasCapacity and UsageThreshold
   - Storage isAttachedTo Device or Site
   - Storage isMonitoredBy Agent or StoragePolicy
