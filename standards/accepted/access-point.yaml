@@ -28,6 +28,10 @@ history:
     date: '2025-09-19'
     author: roop
     reason: 'Accepted – added to CAT-MIP registry'
+    
+    date: '2026-01-13'
+    author: mpurtell
+    reason: 'added member feedback'
 synonyms:
   - AP
   - Access Point broadcasts SSID and enforces Wireless Policy
@@ -41,7 +45,7 @@ synonyms:
   - Wireless Access Point
   - 'Wireless Controller (context-specific)'
 relationships:
-  - Access Point isConnectedTo Switch or Router
+  - Access Point isConnectedTo Switch, Router, Wireless Network, Wired Network, WLAN, or IoT Device
   - 'Access Point isManagedBy Controller, Agent, or Cloud Console'
   - 'Access Point isMonitoredFor Signal Strength, Client Load, or Interference'
   - 'Monitor real-time performance and connectivity issues'
