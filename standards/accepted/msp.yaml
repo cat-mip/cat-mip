@@ -28,6 +28,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2026-01-28'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - 'Admin Organization (rare/legacy -- avoid)'
   - IT Provider
@@ -49,10 +53,10 @@ prompt_examples:
 agent_execution:
   interpretation: |
     When a prompt refers to an MSP, the agent identifies a Partner entity that actively
-    delivers services to customer tenants. The agent will
+    delivers services to customer tenants. The AI agent will
   actions:
     - 'Access the MSP''s configuration (e.g., available scripts, policies, tools)'
     - 'Determine which Devices, Agents, and Users fall under the MSP''s control'
-    - Execute actions or retrieve data within the scope of that MSP's environment only
-    - Resolve the MSP's list of managed Tenants
+    - 'Execute actions or retrieve data within the scope of that MSP''s environment only'
+    - 'Resolve the MSP''s list of managed Tenants'
     - 'Respect role-based access boundaries for visibility, control, and policy enforcement'

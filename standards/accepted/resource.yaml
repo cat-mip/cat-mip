@@ -29,6 +29,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2026-01-28'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - Asset
   - Entity
@@ -43,9 +47,9 @@ prompt_examples:
   - Check the health of all devices in the customer 'Brightline'.
   - 'What devices or servers are consuming the most bandwidth?'
 agent_execution:
-  interpretation: 'When the term "Resource" is used, the agent'
+  interpretation: 'When the term "Resource" is used, the AI agent'
   actions:
     - 'Attempts to infer the intended object type based on context (e.g., device, server, user)'
-    - Groups results across multiple types unless otherwise specified
-    - Logs a semantic warning if the target object class is unclear
+    - 'Groups results across multiple types unless otherwise specified'
+    - 'Logs a semantic warning if the target object class is unclear'
     - 'May return an ambiguous or overly broad result, reducing the usefulness of the output'

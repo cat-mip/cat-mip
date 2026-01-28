@@ -1,5 +1,5 @@
 id: 'CAT-MIP-000000161'
-term: ExternalVendor
+term: External Vendor
 version: '1.0'
 authors:
   -
@@ -29,6 +29,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2026-01-28'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - Integration Partner
   - 'Third-Party Provider'
@@ -38,15 +42,15 @@ relationships:
   - ExternalVendor collaboratesWith MSP
   - ExternalVendor integratesWith Product
   - ExternalVendor mayBeCertifiedBy vendor
-  - ExternalVendor owns ExternalSystem
-  - ExternalVendor provides Integration
-  - ExternalVendor supports Action
+  - ExternalVendor ownsExternalSystem
+  - ExternalVendor providesIntegration
+  - ExternalVendor supportsAction
 prompt_examples:
   - 'Is the external vendor "Acronis" certified for cloud backup integrations with Cove?'
   - 'What actions are available from the external vendor "SentinelOne" through its integration?'
   - 'Which external vendors support remediation workflows via API?'
 agent_execution:
-  interpretation: 'When a prompt includes the name of an External Vendor, the agent will'
+  interpretation: 'When a prompt includes the name of an External Vendor, the AI agent will'
   actions:
     - |
       Determine integration status (enabled, not installed, in error) for the current MSP or

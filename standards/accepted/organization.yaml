@@ -29,6 +29,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2026-01-28'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - 'Account (ambiguous - avoid unless referring to billing)'
   - Business Unit (when referring to internal structures)
@@ -48,9 +52,9 @@ prompt_examples:
 agent_execution:
   interpretation: |
     When a prompt refers to an "Organization," the agent interprets it as a flexible node in
-    the hierarchy. It resolves the entity's role based on its metadata
+    the hierarchy. The AI agent resolves the entity's role based on its metadata
   actions:
-    - If it delivers services → MSP
-    - If it receives services → Tenant
-    - If it resells to others → Distributor
-    - If it's at the top of the hierarchy with publishing rights → vendor
+    - Classify as MSP if it delivers services
+    - Classify as Tenant if it receives services
+    - Classify as Distributor if it resells to others
+    - Classify as  Vendor if it's at the top of the hierarchy with publishing rights

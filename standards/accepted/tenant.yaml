@@ -28,6 +28,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2026-01-28'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - Client
   - Customer
@@ -47,7 +51,7 @@ prompt_examples:
   - 'Which customers haven''t checked in within the last 24 hours?'
 agent_execution:
   interpretation: |
-    When the prompt includes "Customer," the agent maps this to a Tenant object in the system.
+    When the prompt includes "Customer," the AI agent maps this to a Tenant object in the system.
     It will
   actions:
     - Enforce data and action boundaries so one tenant cannot affect another

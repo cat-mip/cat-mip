@@ -28,6 +28,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2026-01-28'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - Extension
   - Integration Module
@@ -45,14 +49,14 @@ prompt_examples:
   - Enable the Bitdefender integration for all MSPs under 'Global IT Solutions'.
   - 'What integrations are available for ticketing systems like Autotask and ConnectWise?'
 agent_execution:
-  interpretation: 'When a prompt refers to an "Integration," the agent will'
+  interpretation: 'When a prompt refers to an "Integration," the AI agent will'
   actions:
     - 'Determine whether the integration is installed, active, or requires onboarding'
     - |
-      Enable or invoke integration-specific functionality, such as data syncs, policy mappings,
-      or scripted triggers
-    - Identify the integration metadata from the vendor Integration Catalog
+      'Enable or invoke integration-specific functionality, such as data syncs, policy mappings,
+      or scripted triggers'
+    - 'Identify the integration metadata from the vendor Integration Catalog'
     - 'Resolve the associated products, available actions, and required permissions'
     - |
-      Route follow-up actions to the proper toolset (e.g., PSA ticketing, security alert feed,
-      reporting system)
+      'Route follow-up actions to the proper toolset (e.g., PSA ticketing, security alert feed,
+      reporting system)''

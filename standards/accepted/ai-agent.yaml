@@ -33,6 +33,10 @@ history:
     date: '2026-01-14'
     name: mpurtell
     reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2026-01-28'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - Agentic AI
   - Assistant Agent
@@ -55,13 +59,13 @@ prompt_examples:
     devices.
   - 'What backup risks exist for customers using Microsoft 365, and how should we address them?'
 agent_execution:
-  interpretation: 'When a prompt is directed to an AI Agent, it will'
+  interpretation: 'When a prompt refers to an AI Agent, it will'
   actions:
     - 'Call tools (e.g., APIs, scripts, workflows) to gather data or take action'
-    - Interpret the natural language request and identify intent
+    - 'Interpret the natural language request and identify intent'
     - 'Optionally escalate, log, or interact with other AI Agents'
     - 'Reason over context (e.g., device health, policy violations, previous incidents)'
     - 'Return human-readable results or initiate further actions'
     - |
-      Use structured terminology (from the MSP MCP Terminology Standard) to disambiguate terms
-      like "asset" vs. "device"
+      'Use structured terminology (from the MSP MCP Terminology Standard) to disambiguate terms
+      like "asset" vs. "device"'

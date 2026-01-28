@@ -28,6 +28,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2026-01-28'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - Department
   - Location
@@ -43,9 +47,9 @@ prompt_examples:
   - Check if the New York site for 'Harbor Industries' has any offline devices.
   - List software installed on devices in the Finance department site.
 agent_execution:
-  interpretation: 'When a prompt refers to a "Site," the agent'
+  interpretation: 'When a prompt refers to a "Site," the AI agent'
   actions:
     - 'Applies actions (e.g., scans, updates, reports) only to entities within the Site boundary'
     - 'Filters Devices, Policies, and Scripts to those associated with the Site'
     - 'If no Site is specified, defaults to all Sites under the Tenant unless scoped otherwise'
-    - Resolves the site within the scope of the specified or inferred Tenant
+    - 'Resolves the site within the scope of the specified or inferred Tenant'
