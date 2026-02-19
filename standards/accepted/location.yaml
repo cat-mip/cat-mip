@@ -29,6 +29,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2026-01-28'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - 'Area (context-dependent -- avoid unless defined)'
   - Geo (informal)
@@ -47,16 +51,16 @@ prompt_examples:
   - List all devices currently located in Germany.
   - 'Which locations show unusual login activity after business hours?'
 agent_execution:
-  interpretation: 'When a prompt refers to a "Location," the agent will'
+  interpretation: 'When a prompt refers to a "Location," the AI agent will'
   actions:
     - |
-      Consider location-aware policies (e.g., regional compliance rules, threat intelligence
-      mappings)
+      'Consider location-aware policies (e.g., regional compliance rules, threat intelligence
+      mappings)''
     - 'Enable geolocation-sensitive workflows, alerts, or risk analysis'
     - |
-      Filter relevant entities (devices, users, sites) assigned to or operating from that
-      location
+      'Filter relevant entities (devices, users, sites) assigned to or operating from that
+      location'
     - 'Resolve the geographic identifier (e.g., country, city, GPS tag, custom label)'
     - |
-      Return context-specific responses, such as compliance status, threat levels, or regional
-      usage trends
+      'Return context-specific responses, such as compliance status, threat levels, or regional
+      usage trends'

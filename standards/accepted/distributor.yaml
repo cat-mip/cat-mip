@@ -28,6 +28,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2026-01-28'
+    author: mpurtell
+    reason: 'Accepted – added to CAT-MIP registry'
 synonyms:
   - Aggregator (in legacy or specific sales contexts)
   - Channel Partner
@@ -48,8 +52,8 @@ prompt_examples:
   - List all MSPs under the distributor 'AlphaTech'.
 agent_execution:
   interpretation: |
-    When the term "Distributor" is used, the agent interprets the request as applying to an
-    intermediary layer between vendor and one or more MSPs. The agent will
+    'When the term "Distributor" is used, the agent interprets the request as applying to an
+    intermediary layer between vendor and one or more MSPs. The AI agent will'
   actions:
     - |
       Check configuration settings to determine whether the Distributor or vendor owns support
