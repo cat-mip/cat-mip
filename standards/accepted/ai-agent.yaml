@@ -29,17 +29,14 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
-
+  -
     date: '2026-01-14'
     name: mpurtell
-    reason: 'Accepted – added to CAT-MIP registry'
-<<<<<<< syntax20250128
+    reason: ''
   -
-    date: '2026-01-28'
-    author: mpurtell
-    reason: 'Accepted – added to CAT-MIP registry'
-=======
->>>>>>> main
+    date: '2026-03-02'
+    author: jimmypuckett
+    reason: 'Fix malformed YAML'
 synonyms:
   - Agentic AI
   - Assistant Agent
