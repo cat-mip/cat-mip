@@ -31,7 +31,11 @@ history:
   -
     date: '2026-01-28'
     author: mpurtell
-    reason: 'Accepted – added to CAT-MIP registry'
+    reason: ''
+  -
+    date: '2026-03-02'
+    author: jimmypuckett
+    reason: 'Fix malformed YAML'
 synonyms:
   - Extension
   - Integration Module

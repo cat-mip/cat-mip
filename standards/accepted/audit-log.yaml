@@ -28,10 +28,10 @@ history:
     date: '2025-09-19'
     author: nicole
     reason: 'Accepted – added to CAT-MIP registry'
-
-    date: '2026-01-14'
-    author: nicole
-    reason: 'Accepted – added to CAT-MIP registry'
+  -
+    date: '2026-03-02'
+    author: jimmypuckett
+    reason: 'Fix malformed YAML'
 synonyms:
   - Activity Log
   - Audit Trail
