@@ -1,0 +1,18 @@
+# CAT-MIP MCP server requirements
+# pip install -r scripts/mcp/requirements.txt
+ 
+# MCP server framework (fastmcp 3.x)
+fastmcp>=3.2.4
+ 
+# Vector store
+chromadb>=0.5.0
+ 
+# Embedding model
+sentence-transformers>=3.0.0
+ 
+# Numerical operations (also a chromadb dependency)
+numpy>=1.24.0
+ 
+# YAML parsing — used by build_flat_json.py
+pyyaml>=6.0
+ 
